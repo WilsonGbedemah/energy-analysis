@@ -1,0 +1,19 @@
+[project]
+name = "energy-analysis"
+version = "0.1.0"
+description = "Weather and Energy Data Pipeline"
+authors = ["Felix Wilson Gbedemah"]
+requires-python = ">=3.9"
+
+dependencies = [
+    "requests",
+    "python-dotenv",
+    "pyyaml",
+    "pandas",
+    "streamlit",
+    "plotly",
+    "scikit-learn"
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-mock", "black", "ruff"]
