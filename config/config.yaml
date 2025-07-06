@@ -1,0 +1,29 @@
+cities:
+  - name: New York
+    state: New York
+    station_id: GHCND:USW00094728
+    region_code: NYIS
+
+  - name: Chicago
+    state: Illinois
+    station_id: GHCND:USW00094846
+    region_code: PJM
+
+  - name: Houston
+    state: Texas
+    station_id: GHCND:USW00012960
+    region_code: ERCO
+
+  - name: Phoenix
+    state: Arizona
+    station_id: GHCND:USW00023183
+    region_code: AZPS
+
+  - name: Seattle
+    state: Washington
+    station_id: GHCND:USW00024233
+    region_code: SCL
+
+api:
+  noaa_base_url: https://www.ncei.noaa.gov/cdo-web/api/v2/data
+  eia_base_url: https://api.eia.gov/v2/electricity/rto/daily-region-data/data/
