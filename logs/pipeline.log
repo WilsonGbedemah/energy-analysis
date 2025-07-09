@@ -224,3 +224,262 @@
 2025-07-06 06:54:18,305 - WARNING - Retry 3/5 failed: Expecting value: line 1 column 1 (char 0)
 2025-07-06 06:54:23,004 - WARNING - Retry 4/5 failed: Expecting value: line 1 column 1 (char 0)
 2025-07-06 06:54:31,741 - WARNING - Retry 5/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:26:04,523 - INFO - 🚀 Starting data fetcher...
+2025-07-06 18:26:04,523 - INFO - 📦 Fetching last 90 days of data...
+2025-07-06 18:26:06,089 - WARNING - ⚠️ No weather data for New York
+2025-07-06 18:26:06,972 - WARNING - ⚠️ No weather data for Chicago
+2025-07-06 18:26:07,703 - WARNING - ⚠️ No weather data for Houston
+2025-07-06 18:26:08,776 - WARNING - ⚠️ No weather data for Phoenix
+2025-07-06 18:26:09,909 - WARNING - ⚠️ No weather data for Seattle
+2025-07-06 18:26:11,550 - WARNING - Retry 1/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:26:13,599 - WARNING - Retry 2/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:26:16,466 - WARNING - Retry 3/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:26:21,587 - WARNING - Retry 4/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:26:30,534 - WARNING - Retry 5/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:26:46,534 - ERROR - ❌ Request failed after 5 attempts: https://www.eia.gov/electricity/data/browser/
+2025-07-06 18:26:46,535 - WARNING - ⚠️ No valid EIA response for New York
+2025-07-06 18:26:47,807 - WARNING - Retry 1/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:26:49,857 - WARNING - Retry 2/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:26:52,927 - WARNING - Retry 3/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:26:57,844 - WARNING - Retry 4/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:27:06,856 - WARNING - Retry 5/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:27:22,856 - ERROR - ❌ Request failed after 5 attempts: https://www.eia.gov/electricity/data/browser/
+2025-07-06 18:27:22,857 - WARNING - ⚠️ No valid EIA response for Chicago
+2025-07-06 18:27:24,676 - WARNING - Retry 1/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:27:26,727 - WARNING - Retry 2/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:27:29,798 - WARNING - Retry 3/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:27:34,918 - WARNING - Retry 4/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:27:45,569 - WARNING - Retry 5/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:28:01,570 - ERROR - ❌ Request failed after 5 attempts: https://www.eia.gov/electricity/data/browser/
+2025-07-06 18:28:01,570 - WARNING - ⚠️ No valid EIA response for Houston
+2025-07-06 18:28:03,023 - WARNING - Retry 1/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:28:05,129 - WARNING - Retry 2/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:28:08,102 - WARNING - Retry 3/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:28:12,997 - WARNING - Retry 4/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:28:22,032 - WARNING - Retry 5/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:28:38,032 - ERROR - ❌ Request failed after 5 attempts: https://www.eia.gov/electricity/data/browser/
+2025-07-06 18:28:38,032 - WARNING - ⚠️ No valid EIA response for Phoenix
+2025-07-06 18:28:40,060 - WARNING - Retry 1/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:28:42,314 - WARNING - Retry 2/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:28:45,591 - WARNING - Retry 3/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:28:50,712 - WARNING - Retry 4/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:28:59,931 - WARNING - Retry 5/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:29:15,931 - ERROR - ❌ Request failed after 5 attempts: https://www.eia.gov/electricity/data/browser/
+2025-07-06 18:29:15,932 - WARNING - ⚠️ No valid EIA response for Seattle
+2025-07-06 18:29:15,932 - ERROR - ❌ Failed to merge per-city files: No objects to concatenate
+2025-07-06 18:29:15,932 - ERROR - ❌ Data fetching failed: No objects to concatenate
+2025-07-06 18:33:52,525 - INFO - 🚀 Starting data fetcher...
+2025-07-06 18:33:52,526 - INFO - 📦 Fetching last 90 days of data...
+2025-07-06 18:33:54,075 - WARNING - ⚠️ No weather data for New York
+2025-07-06 18:33:55,175 - WARNING - ⚠️ No weather data for Chicago
+2025-07-06 18:33:55,995 - WARNING - ⚠️ No weather data for Houston
+2025-07-06 18:33:57,150 - WARNING - ⚠️ No weather data for Phoenix
+2025-07-06 18:33:58,378 - WARNING - ⚠️ No weather data for Seattle
+2025-07-06 18:34:01,259 - WARNING - Retry 1/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:34:03,244 - WARNING - Retry 2/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:34:06,573 - WARNING - Retry 3/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:34:11,691 - WARNING - Retry 4/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:34:21,005 - WARNING - Retry 5/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:34:37,005 - ERROR - ❌ Request failed after 5 attempts: https://www.eia.gov/electricity/data/browser/
+2025-07-06 18:34:37,006 - WARNING - ⚠️ No valid EIA response for New York
+2025-07-06 18:34:37,908 - WARNING - Retry 1/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:34:39,957 - WARNING - Retry 2/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:34:43,234 - WARNING - Retry 3/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:34:48,149 - WARNING - Retry 4/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:34:57,060 - WARNING - Retry 5/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:35:13,060 - ERROR - ❌ Request failed after 5 attempts: https://www.eia.gov/electricity/data/browser/
+2025-07-06 18:35:13,061 - WARNING - ⚠️ No valid EIA response for Chicago
+2025-07-06 18:35:14,785 - WARNING - Retry 1/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:35:16,824 - WARNING - Retry 2/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:35:19,898 - WARNING - Retry 3/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:35:25,223 - WARNING - Retry 4/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:35:34,440 - WARNING - Retry 5/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:35:50,441 - ERROR - ❌ Request failed after 5 attempts: https://www.eia.gov/electricity/data/browser/
+2025-07-06 18:35:50,441 - WARNING - ⚠️ No valid EIA response for Houston
+2025-07-06 18:35:53,898 - WARNING - Retry 1/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:35:55,947 - WARNING - Retry 2/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:35:58,903 - WARNING - Retry 3/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:36:07,433 - WARNING - Retry 4/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:36:26,467 - WARNING - Retry 5/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:36:42,467 - ERROR - ❌ Request failed after 5 attempts: https://www.eia.gov/electricity/data/browser/
+2025-07-06 18:36:42,468 - WARNING - ⚠️ No valid EIA response for Phoenix
+2025-07-06 18:36:43,872 - WARNING - Retry 1/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:36:45,920 - WARNING - Retry 2/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:36:48,915 - WARNING - Retry 3/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:36:54,114 - WARNING - Retry 4/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:37:03,022 - WARNING - Retry 5/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:37:19,022 - ERROR - ❌ Request failed after 5 attempts: https://www.eia.gov/electricity/data/browser/
+2025-07-06 18:37:19,023 - WARNING - ⚠️ No valid EIA response for Seattle
+2025-07-06 18:37:19,023 - ERROR - ❌ Failed to merge per-city files: No objects to concatenate
+2025-07-06 18:37:19,023 - ERROR - ❌ Data fetching failed: No objects to concatenate
+2025-07-06 18:48:03,670 - INFO - 🚀 Starting data fetcher...
+2025-07-06 18:48:03,671 - INFO - 📦 Fetching last 90 days of data...
+2025-07-06 18:48:05,168 - WARNING - ⚠️ No weather data for New York
+2025-07-06 18:48:05,899 - WARNING - ⚠️ No weather data for Chicago
+2025-07-06 18:48:06,944 - WARNING - ⚠️ No weather data for Houston
+2025-07-06 18:48:07,766 - WARNING - ⚠️ No weather data for Phoenix
+2025-07-06 18:48:08,523 - WARNING - ⚠️ No weather data for Seattle
+2025-07-06 18:48:09,779 - WARNING - Retry 1/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:48:11,699 - WARNING - Retry 2/5 failed: Expecting value: line 1 column 1 (char 0)
+2025-07-06 18:57:00,132 - INFO - 🚀 Starting data fetcher...
+2025-07-06 18:57:00,132 - INFO - 📦 Fetching last 90 days of data...
+2025-07-06 18:57:01,891 - WARNING - ⚠️ No weather data for New York
+2025-07-06 18:57:03,119 - WARNING - ⚠️ No weather data for Chicago
+2025-07-06 18:57:04,554 - WARNING - ⚠️ No weather data for Houston
+2025-07-06 18:57:05,737 - WARNING - ⚠️ No weather data for Phoenix
+2025-07-06 18:57:36,709 - WARNING - Retry 1/5 failed: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2?datasetid=GHCND&stationid=GHCND%3AUSW00024233&startdate=2025-04-07&enddate=2025-07-06&datatypeid=TMAX%2CTMIN&limit=1000&units=metric
+2025-07-06 18:57:39,664 - WARNING - ⚠️ No weather data for Seattle
+2025-07-06 18:57:39,664 - INFO - 🔍 Trying EIA endpoint: https://api.eia.gov/v2/electricity/rto/daily-region-data/data/
+2025-07-06 18:57:43,265 - INFO - 📡 EIA API response 200 from https://api.eia.gov/v2/electricity/rto/daily-region-data/data/
+2025-07-06 18:57:43,296 - INFO - ✅ Energy data loaded. Shape: (1779, 9)
+2025-07-06 18:57:43,303 - INFO - ✅ Energy data saved: data/raw/energy/New_York_energy_90_days.csv
+2025-07-06 18:57:43,304 - INFO - 🔍 Trying EIA endpoint: https://api.eia.gov/v2/electricity/rto/daily-region-data/data/
+2025-07-06 18:57:46,541 - INFO - 📡 EIA API response 200 from https://api.eia.gov/v2/electricity/rto/daily-region-data/data/
+2025-07-06 18:57:46,576 - INFO - ✅ Energy data loaded. Shape: (1797, 9)
+2025-07-06 18:57:46,582 - INFO - ✅ Energy data saved: data/raw/energy/Chicago_energy_90_days.csv
+2025-07-06 18:57:46,582 - INFO - 🔍 Trying EIA endpoint: https://api.eia.gov/v2/electricity/rto/daily-region-data/data/
+2025-07-06 18:57:49,818 - INFO - 📡 EIA API response 200 from https://api.eia.gov/v2/electricity/rto/daily-region-data/data/
+2025-07-06 18:57:49,853 - INFO - ✅ Energy data loaded. Shape: (1799, 9)
+2025-07-06 18:57:49,859 - INFO - ✅ Energy data saved: data/raw/energy/Houston_energy_90_days.csv
+2025-07-06 18:57:49,859 - INFO - 🔍 Trying EIA endpoint: https://api.eia.gov/v2/electricity/rto/daily-region-data/data/
+2025-07-06 18:57:53,094 - INFO - 📡 EIA API response 200 from https://api.eia.gov/v2/electricity/rto/daily-region-data/data/
+2025-07-06 18:57:53,127 - INFO - ✅ Energy data loaded. Shape: (1713, 9)
+2025-07-06 18:57:53,134 - INFO - ✅ Energy data saved: data/raw/energy/Phoenix_energy_90_days.csv
+2025-07-06 18:57:53,134 - INFO - 🔍 Trying EIA endpoint: https://api.eia.gov/v2/electricity/rto/daily-region-data/data/
+2025-07-06 18:57:56,371 - INFO - 📡 EIA API response 200 from https://api.eia.gov/v2/electricity/rto/daily-region-data/data/
+2025-07-06 18:57:56,405 - INFO - ✅ Energy data loaded. Shape: (1805, 9)
+2025-07-06 18:57:56,411 - INFO - ✅ Energy data saved: data/raw/energy/Seattle_energy_90_days.csv
+2025-07-06 18:57:56,411 - ERROR - ❌ Failed to merge per-city files: No objects to concatenate
+2025-07-06 18:57:56,411 - ERROR - ❌ Data fetching failed: No objects to concatenate
+2025-07-06 19:17:28,652 - INFO - 🚀 Starting data fetcher...
+2025-07-06 19:17:28,653 - INFO - 📁 Running in 'history' mode
+2025-07-06 19:17:28,653 - INFO - 📦 Fetching last 90 days of data...
+2025-07-06 19:17:30,371 - INFO - ✅ Weather data saved: data/raw/weather/New_York_weather_90_days.csv
+2025-07-06 19:17:31,682 - INFO - ✅ Weather data saved: data/raw/weather/Chicago_weather_90_days.csv
+2025-07-06 19:17:33,030 - INFO - ✅ Weather data saved: data/raw/weather/Houston_weather_90_days.csv
+2025-07-06 19:17:34,329 - INFO - ✅ Weather data saved: data/raw/weather/Phoenix_weather_90_days.csv
+2025-07-06 19:17:35,487 - INFO - ✅ Weather data saved: data/raw/weather/Seattle_weather_90_days.csv
+2025-07-06 19:17:35,487 - INFO - 🔍 Trying EIA endpoint: https://api.eia.gov/v2/electricity/rto/daily-region-data/data/
+2025-07-06 19:17:41,008 - INFO - ✅ Energy data loaded from https://api.eia.gov/v2/electricity/rto/daily-region-data/data/
+2025-07-06 19:17:41,015 - INFO - ✅ Energy data saved: data/raw/energy/New_York_energy_90_days.csv
+2025-07-06 19:17:41,015 - INFO - 🔍 Trying EIA endpoint: https://api.eia.gov/v2/electricity/rto/daily-region-data/data/
+2025-07-06 19:17:46,062 - INFO - ✅ Energy data loaded from https://api.eia.gov/v2/electricity/rto/daily-region-data/data/
+2025-07-06 19:17:46,068 - INFO - ✅ Energy data saved: data/raw/energy/Chicago_energy_90_days.csv
+2025-07-06 19:17:46,068 - INFO - 🔍 Trying EIA endpoint: https://api.eia.gov/v2/electricity/rto/daily-region-data/data/
+2025-07-06 19:17:51,290 - INFO - ✅ Energy data loaded from https://api.eia.gov/v2/electricity/rto/daily-region-data/data/
+2025-07-06 19:17:51,296 - INFO - ✅ Energy data saved: data/raw/energy/Houston_energy_90_days.csv
+2025-07-06 19:17:51,296 - INFO - 🔍 Trying EIA endpoint: https://api.eia.gov/v2/electricity/rto/daily-region-data/data/
+2025-07-06 19:17:56,378 - INFO - ✅ Energy data loaded from https://api.eia.gov/v2/electricity/rto/daily-region-data/data/
+2025-07-06 19:17:56,384 - INFO - ✅ Energy data saved: data/raw/energy/Phoenix_energy_90_days.csv
+2025-07-06 19:17:56,384 - INFO - 🔍 Trying EIA endpoint: https://api.eia.gov/v2/electricity/rto/daily-region-data/data/
+2025-07-06 19:18:01,703 - INFO - ✅ Energy data loaded from https://api.eia.gov/v2/electricity/rto/daily-region-data/data/
+2025-07-06 19:18:01,709 - INFO - ✅ Energy data saved: data/raw/energy/Seattle_energy_90_days.csv
+2025-07-06 19:18:01,740 - INFO - 📦 Merged weather and energy files saved to data/raw/
+2025-07-06 19:18:01,740 - INFO - ✅ Data fetching completed successfully.
+2025-07-06 19:33:26,524 - INFO - 🚀 Starting data fetcher...
+2025-07-06 19:33:26,525 - INFO - 📁 Running in 'history' mode
+2025-07-06 19:33:26,525 - INFO - 📦 Fetching last 90 days of data...
+2025-07-06 19:33:28,841 - INFO - ✅ Weather data saved: data/raw/weather/New_York_weather_90_days.csv
+2025-07-06 19:33:30,252 - INFO - ✅ Weather data saved: data/raw/weather/Chicago_weather_90_days.csv
+2025-07-06 19:33:31,710 - INFO - ✅ Weather data saved: data/raw/weather/Houston_weather_90_days.csv
+2025-07-06 19:33:32,789 - INFO - ✅ Weather data saved: data/raw/weather/Phoenix_weather_90_days.csv
+2025-07-06 19:33:33,963 - INFO - ✅ Weather data saved: data/raw/weather/Seattle_weather_90_days.csv
+2025-07-06 19:33:33,963 - INFO - 🔍 Trying EIA endpoint: https://api.eia.gov/v2/electricity/rto/daily-region-data/data/
+2025-07-06 19:33:40,745 - INFO - ✅ Energy data saved: data/raw/energy/New_York_energy_90_days.csv
+2025-07-06 19:33:40,745 - INFO - 🔍 Trying EIA endpoint: https://api.eia.gov/v2/electricity/rto/daily-region-data/data/
+2025-07-06 19:33:44,633 - INFO - ✅ Energy data saved: data/raw/energy/Chicago_energy_90_days.csv
+2025-07-06 19:33:44,633 - INFO - 🔍 Trying EIA endpoint: https://api.eia.gov/v2/electricity/rto/daily-region-data/data/
+2025-07-06 19:33:48,325 - INFO - ✅ Energy data saved: data/raw/energy/Houston_energy_90_days.csv
+2025-07-06 19:33:48,325 - INFO - 🔍 Trying EIA endpoint: https://api.eia.gov/v2/electricity/rto/daily-region-data/data/
+2025-07-06 19:33:52,628 - INFO - ✅ Energy data saved: data/raw/energy/Phoenix_energy_90_days.csv
+2025-07-06 19:33:52,628 - INFO - 🔍 Trying EIA endpoint: https://api.eia.gov/v2/electricity/rto/daily-region-data/data/
+2025-07-06 19:33:56,319 - INFO - ✅ Energy data saved: data/raw/energy/Seattle_energy_90_days.csv
+2025-07-06 19:33:56,334 - INFO - 📦 Merged weather and energy files saved to data/raw/
+2025-07-06 19:33:56,334 - INFO - ✅ Data fetching completed successfully.
+2025-07-09 16:26:08,313 - INFO - 🚀 Starting data fetcher...
+2025-07-09 16:26:08,314 - INFO - 📁 Running in 'history' mode
+2025-07-09 16:26:08,314 - INFO - 📦 Fetching last 90 days of data...
+2025-07-09 16:26:21,287 - WARNING - Request error: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=10), retrying in 1s…
+2025-07-09 16:26:23,910 - INFO - ✅ Weather saved: data/raw/weather/New_York_weather_90_days.csv
+2025-07-09 16:26:25,393 - INFO - ✅ Weather saved: data/raw/weather/Chicago_weather_90_days.csv
+2025-07-09 16:26:26,565 - INFO - ✅ Weather saved: data/raw/weather/Houston_weather_90_days.csv
+2025-07-09 16:26:28,054 - INFO - ✅ Weather saved: data/raw/weather/Phoenix_weather_90_days.csv
+2025-07-09 16:26:29,637 - INFO - ✅ Weather saved: data/raw/weather/Seattle_weather_90_days.csv
+2025-07-09 16:26:44,580 - INFO - ✅ Energy saved: data/raw/energy/New_York_energy_90_days.csv
+2025-07-09 16:26:55,815 - WARNING - Request error: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=10), retrying in 1s…
+2025-07-09 16:27:06,898 - INFO - ✅ Energy saved: data/raw/energy/Chicago_energy_90_days.csv
+2025-07-09 16:27:18,134 - WARNING - Request error: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=10), retrying in 1s…
+2025-07-09 16:27:22,255 - INFO - ✅ Energy saved: data/raw/energy/Houston_energy_90_days.csv
+2025-07-09 16:27:32,903 - INFO - ✅ Energy saved: data/raw/energy/Phoenix_energy_90_days.csv
+2025-07-09 16:27:40,686 - INFO - ✅ Energy saved: data/raw/energy/Seattle_energy_90_days.csv
+2025-07-09 16:27:40,700 - INFO - 📦 Merged 90-day files saved to data/raw/
+2025-07-09 16:27:40,700 - INFO - ✅ Data fetching completed successfully.
+2025-07-09 16:47:13,258 - INFO - 🚀 Starting data fetcher...
+2025-07-09 16:47:13,259 - INFO - 📁 Running in 'history' mode
+2025-07-09 16:47:13,259 - INFO - 📦 Fetching last 90 days of data...
+2025-07-09 16:47:14,657 - INFO - ✅ Weather saved: data/raw/weather/New_York_weather_90_days.csv
+2025-07-09 16:47:16,028 - INFO - ✅ Weather saved: data/raw/weather/Chicago_weather_90_days.csv
+2025-07-09 16:47:17,606 - INFO - ✅ Weather saved: data/raw/weather/Houston_weather_90_days.csv
+2025-07-09 16:47:19,243 - INFO - ✅ Weather saved: data/raw/weather/Phoenix_weather_90_days.csv
+2025-07-09 16:47:20,882 - INFO - ✅ Weather saved: data/raw/weather/Seattle_weather_90_days.csv
+2025-07-09 16:47:29,686 - INFO - ✅ Energy saved: data/raw/energy/New_York_energy_90_days.csv
+2025-07-09 16:47:35,217 - INFO - ✅ Energy saved: data/raw/energy/Chicago_energy_90_days.csv
+2025-07-09 16:47:41,766 - INFO - ✅ Energy saved: data/raw/energy/Houston_energy_90_days.csv
+2025-07-09 16:47:48,934 - INFO - ✅ Energy saved: data/raw/energy/Phoenix_energy_90_days.csv
+2025-07-09 16:47:55,934 - INFO - ✅ Energy saved: data/raw/energy/Seattle_energy_90_days.csv
+2025-07-09 16:47:55,949 - INFO - 📦 Merged 90-day weather and energy saved to data/raw/
+2025-07-09 16:47:55,950 - INFO - ✅ Data fetching completed successfully.
+2025-07-09 16:57:41,854 - INFO - 🚀 Starting data fetcher...
+2025-07-09 16:57:41,855 - INFO - 📁 Running in 'history' mode
+2025-07-09 16:57:41,855 - INFO - 📦 Fetching last 90 days of data...
+2025-07-09 16:57:44,648 - WARNING - ⚠️ Only 87 days of complete weather data found for New York
+2025-07-09 16:57:44,650 - INFO - ✅ Weather saved: data/raw/weather/New_York_weather_90_days.csv
+2025-07-09 16:57:46,030 - WARNING - ⚠️ Only 87 days of complete weather data found for Chicago
+2025-07-09 16:57:46,031 - INFO - ✅ Weather saved: data/raw/weather/Chicago_weather_90_days.csv
+2025-07-09 16:57:47,462 - WARNING - ⚠️ Only 87 days of complete weather data found for Houston
+2025-07-09 16:57:47,464 - INFO - ✅ Weather saved: data/raw/weather/Houston_weather_90_days.csv
+2025-07-09 16:57:48,995 - WARNING - ⚠️ Only 87 days of complete weather data found for Phoenix
+2025-07-09 16:57:48,997 - INFO - ✅ Weather saved: data/raw/weather/Phoenix_weather_90_days.csv
+2025-07-09 16:57:50,428 - WARNING - ⚠️ Only 87 days of complete weather data found for Seattle
+2025-07-09 16:57:50,430 - INFO - ✅ Weather saved: data/raw/weather/Seattle_weather_90_days.csv
+2025-07-09 16:57:55,544 - INFO - ✅ Energy saved: data/raw/energy/New_York_energy_90_days.csv
+2025-07-09 16:57:58,206 - INFO - ✅ Energy saved: data/raw/energy/Chicago_energy_90_days.csv
+2025-07-09 16:58:00,462 - INFO - ✅ Energy saved: data/raw/energy/Houston_energy_90_days.csv
+2025-07-09 16:58:03,223 - INFO - ✅ Energy saved: data/raw/energy/Phoenix_energy_90_days.csv
+2025-07-09 16:58:05,783 - INFO - ✅ Energy saved: data/raw/energy/Seattle_energy_90_days.csv
+2025-07-09 16:58:05,799 - INFO - 📦 Merged 90-day weather and energy saved to data/raw/
+2025-07-09 16:58:05,799 - INFO - ✅ Data fetching completed successfully.
+2025-07-09 17:04:33,274 - INFO - 🚀 Starting data fetcher...
+2025-07-09 17:04:33,275 - INFO - 📁 Running in 'history' mode
+2025-07-09 17:04:33,275 - INFO - 📦 Fetching last 90 days of data...
+2025-07-09 17:04:44,104 - WARNING - ⚠️ Attempt 1: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=10), retrying in 1s…
+2025-07-09 17:04:47,803 - INFO - ✅ Weather saved: data/raw/weather/New_York_weather_90_days.csv
+2025-07-09 17:04:50,149 - INFO - ✅ Weather saved: data/raw/weather/Chicago_weather_90_days.csv
+2025-07-09 17:04:52,297 - INFO - ✅ Weather saved: data/raw/weather/Houston_weather_90_days.csv
+2025-07-09 17:04:54,551 - INFO - ✅ Weather saved: data/raw/weather/Phoenix_weather_90_days.csv
+2025-07-09 17:04:56,803 - INFO - ✅ Weather saved: data/raw/weather/Seattle_weather_90_days.csv
+2025-07-09 17:05:06,010 - INFO - ✅ Energy saved: data/raw/energy/New_York_energy_90_days.csv
+2025-07-09 17:05:17,244 - WARNING - ⚠️ Attempt 1: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=10), retrying in 1s…
+2025-07-09 17:05:28,946 - INFO - ✅ Energy saved: data/raw/energy/Chicago_energy_90_days.csv
+2025-07-09 17:05:38,366 - INFO - ✅ Energy saved: data/raw/energy/Houston_energy_90_days.csv
+2025-07-09 17:05:40,825 - INFO - ✅ Energy saved: data/raw/energy/Phoenix_energy_90_days.csv
+2025-07-09 17:05:43,076 - INFO - ✅ Energy saved: data/raw/energy/Seattle_energy_90_days.csv
+2025-07-09 17:05:43,092 - INFO - 📦 Merged 90-day weather and energy saved to data/raw/
+2025-07-09 17:05:43,092 - INFO - ✅ Data fetching completed successfully.
+2025-07-09 17:15:05,740 - INFO - 🚀 Starting data fetcher...
+2025-07-09 17:15:05,741 - INFO - 📁 Running in 'history' mode
+2025-07-09 17:15:05,741 - INFO - 📦 Fetching last 90 days of data...
+2025-07-09 17:15:07,015 - INFO - ✅ Weather saved: data/raw/weather/New_York_weather_90_days.csv
+2025-07-09 17:15:17,504 - WARNING - ⚠️ Attempt 1: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=10), retrying in 1s…
+2025-07-09 17:15:20,299 - INFO - ✅ Weather saved: data/raw/weather/Chicago_weather_90_days.csv
+2025-07-09 17:15:21,733 - INFO - ✅ Weather saved: data/raw/weather/Houston_weather_90_days.csv
+2025-07-09 17:15:32,344 - WARNING - ⚠️ Attempt 1: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=10), retrying in 1s…
+2025-07-09 17:15:34,837 - INFO - ✅ Weather saved: data/raw/weather/Phoenix_weather_90_days.csv
+2025-07-09 17:15:36,512 - INFO - ✅ Weather saved: data/raw/weather/Seattle_weather_90_days.csv
+2025-07-09 17:15:46,302 - INFO - ✅ Energy saved: data/raw/energy/New_York_energy_90_days.csv
+2025-07-09 17:15:56,236 - INFO - ✅ Energy saved: data/raw/energy/Chicago_energy_90_days.csv
+2025-07-09 17:16:04,733 - INFO - ✅ Energy saved: data/raw/energy/Houston_energy_90_days.csv
+2025-07-09 17:16:13,336 - INFO - ✅ Energy saved: data/raw/energy/Phoenix_energy_90_days.csv
+2025-07-09 17:16:19,092 - INFO - ✅ Energy saved: data/raw/energy/Seattle_energy_90_days.csv
+2025-07-09 17:16:19,110 - INFO - 📦 Merged 90-day weather and energy saved to data/raw/
+2025-07-09 17:16:19,110 - INFO - ✅ Data fetching completed successfully.

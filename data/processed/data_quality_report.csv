@@ -1,4 +1,4 @@
-,count,days_since_last_data,is_fresh
-temperature_outliers,0.0,,
-negative_energy,0.0,,
-data_freshness,,460.0,False
+,count,last_record_date,days_since_last_data,is_fresh
+temperature_outliers,0.0,,,
+energy_issues,70.0,,,
+data_freshness,,2025-04-15,85.0,False

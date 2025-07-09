@@ -47,6 +47,14 @@ process:
 	@echo "🧼 Processing 90-day data and generating quality report..."
 	. $(ENV)/bin/activate && python run_processor.py
 
+analyze:
+	@echo "📊 Running analysis pipeline..."
+	. $(ENV)/bin/activate && python run_analysis.py
+
+pipeline:
+	@echo "🔄 Running full end-to-end pipeline..."
+	. $(ENV)/bin/activate && python run_pipeline.py
+
 run-dashboard:
 	@echo "🚀 Launching Streamlit dashboard..."
 	. $(ENV)/bin/activate && streamlit run dashboards/app.py

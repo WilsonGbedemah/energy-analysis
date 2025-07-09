@@ -1,0 +1,12 @@
+2025-07-06 06:59:43,485 - INFO - ⚙️ Data processor started.
+2025-07-06 06:59:43,488 - ERROR - ❌ Data processing failed: No columns to parse from file
+2025-07-09 17:59:36,479 - INFO - ⚙️ Data processor started.
+2025-07-09 17:59:36,480 - INFO - 🔄 Starting data processing...
+2025-07-09 17:59:36,502 - INFO - ✅ Raw data loaded
+2025-07-09 17:59:36,538 - INFO - 🔗 Merged dataset shape: (450, 9)
+2025-07-09 17:59:36,543 - INFO - 🧹 After dropping nulls: 450 rows
+2025-07-09 17:59:36,554 - WARNING - ⚡ Energy issues found: 70 rows
+2025-07-09 17:59:36,559 - INFO - ⏱️ Data freshness: 85 days since last record
+2025-07-09 17:59:36,567 - INFO - 📋 Data quality report saved to data/processed/data_quality_report.csv
+2025-07-09 17:59:36,591 - INFO - ✅ Cleaned data saved to data/processed/merged_data.csv
+2025-07-09 17:59:36,592 - INFO - ✅ Processing completed successfully. Rows: 450

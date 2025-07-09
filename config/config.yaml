@@ -1,3 +1,5 @@
+# config/config.yaml
+
 cities:
   - name: New York
     state: New York
@@ -23,7 +25,3 @@ cities:
     state: Washington
     station_id: GHCND:USW00024233
     region_code: SCL
-
-api:
-  noaa_base_url: https://www.ncei.noaa.gov/cdo-web/api/v2/data
-  eia_base_url: https://api.eia.gov/v2/electricity/rto/daily-region-data/data/

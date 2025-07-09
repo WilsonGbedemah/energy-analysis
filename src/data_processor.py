@@ -1,83 +1,113 @@
 import os
+import logging
 import pandas as pd
 from datetime import datetime
-from data_fetcher import fetch_last_90_days
 
-# Ensure output directory exists
+# ✅ Setup logging
+os.makedirs("logs", exist_ok=True)
+logging.basicConfig(
+    filename="logs/processor_run.log",
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
+# ✅ Ensure output directory exists
 os.makedirs("data/processed", exist_ok=True)
 
 
 def generate_data_quality_report(df: pd.DataFrame) -> pd.DataFrame:
     """
-    Perform data quality checks and return a summary DataFrame.
-    Saves report to CSV as well.
+    Generate a report summarizing key data quality metrics:
+    1. Missing values
+    2. Temperature outliers
+    3. Negative/missing energy
+    4. Freshness
     """
     report = {}
 
-    # 🔍 Missing values
+    # 1️⃣ Missing values
     missing = df.isnull().sum()
-    report["missing_values"] = missing[missing > 0].to_dict()
+    missing_dict = missing[missing > 0].to_dict()
+    report["missing_values"] = missing_dict
+    if missing_dict:
+        logging.warning(f"⚠️ Missing values found: {missing_dict}")
 
-    # 🌡️ Temperature outliers
+    # 2️⃣ Temperature outliers
     temp_outliers = df[
         (df["tmax_f"] > 130) | (df["tmax_f"] < -50) |
         (df["tmin_f"] > 130) | (df["tmin_f"] < -50)
     ]
     report["temperature_outliers"] = {"count": len(temp_outliers)}
+    if len(temp_outliers) > 0:
+        logging.warning(f"🌡️ Temperature outliers found: {len(temp_outliers)} rows")
 
-    # ⚡ Negative energy consumption
-    energy_outliers = df[df["energy_mwh"] < 0]
-    report["negative_energy"] = {"count": len(energy_outliers)}
+    # 3️⃣ Negative or missing energy
+    energy_issues = df[(df["energy_mwh"].isnull()) | (df["energy_mwh"] < 0)]
+    report["energy_issues"] = {"count": len(energy_issues)}
+    if len(energy_issues) > 0:
+        logging.warning(f"⚡ Energy issues found: {len(energy_issues)} rows")
 
-    # ⏱️ Data freshness
+    # 4️⃣ Freshness
     max_date = pd.to_datetime(df["date"]).max().date()
     today = datetime.today().date()
     freshness_days = (today - max_date).days
     report["data_freshness"] = {
+        "last_record_date": str(max_date),
         "days_since_last_data": freshness_days,
         "is_fresh": freshness_days <= 2
     }
 
-    # ✅ Convert to DataFrame
-    quality_df = pd.DataFrame.from_dict(report, orient="index")
+    logging.info(f"⏱️ Data freshness: {freshness_days} days since last record")
 
-    # ✅ Save
+    # ✅ Save report
+    quality_df = pd.DataFrame.from_dict(report, orient="index")
     quality_df.to_csv("data/processed/data_quality_report.csv")
+    logging.info("📋 Data quality report saved to data/processed/data_quality_report.csv")
 
     return quality_df
 
 
 def process_and_merge_data(save_output=True) -> pd.DataFrame:
     """
-    Fetches last 90 days of data, cleans, merges, validates, and saves output.
-    Returns cleaned DataFrame.
+    Loads raw weather and energy data, merges, validates, logs, and saves cleaned output.
     """
-    # ✅ Step 1: Fetch last 90 days (already built in data_fetcher)
-    weather_df, energy_df = fetch_last_90_days(save=True)
+    weather_path = "data/raw/weather_last_90_days.csv"
+    energy_path = "data/raw/energy_last_90_days.csv"
 
-    # ✅ Step 2: Standardize dates
-    if "date" in weather_df.columns:
+    logging.info("🔄 Starting data processing...")
+
+    if not os.path.exists(weather_path) or not os.path.exists(energy_path):
+        logging.error("❌ Required raw data files not found. Please run the fetcher.")
+        raise FileNotFoundError("Raw data missing")
+
+    # ✅ Load data
+    weather_df = pd.read_csv(weather_path)
+    energy_df = pd.read_csv(energy_path)
+    logging.info("✅ Raw data loaded")
+
+    # ✅ Date standardization
+    try:
         weather_df["date"] = pd.to_datetime(weather_df["date"]).dt.date
-    else:
-        raise ValueError("❌ 'date' column missing in weather_df.")
-
-    if "date" in energy_df.columns:
         energy_df["date"] = pd.to_datetime(energy_df["date"]).dt.date
-    else:
-        raise ValueError("❌ 'date' column missing in energy_df — check your EIA API response.")
+    except Exception as e:
+        logging.error(f"❌ Date conversion error: {e}")
+        raise
 
-    # ✅ Step 3: Merge on city + date
+    # ✅ Merge on city + date
     merged_df = pd.merge(weather_df, energy_df, on=["city", "date"], how="inner")
+    logging.info(f"🔗 Merged dataset shape: {merged_df.shape}")
 
-    # ✅ Step 4: Drop incomplete rows
+    # ✅ Remove incomplete rows
     merged_df = merged_df.dropna(subset=["tmax_f", "tmin_f", "energy_mwh"])
+    logging.info(f"🧹 After dropping nulls: {merged_df.shape[0]} rows")
 
-    # ✅ Step 5: Generate and save data quality report
+    # ✅ Generate quality report
     generate_data_quality_report(merged_df)
 
-    # ✅ Step 6: Save cleaned merged data
+    # ✅ Save merged output
     if save_output:
-        merged_df.to_csv("data/processed/merged_data.csv", index=False)
-        print("✅ Merged data saved to data/processed/merged_data.csv")
+        output_path = "data/processed/merged_data.csv"
+        merged_df.to_csv(output_path, index=False)
+        logging.info(f"✅ Cleaned data saved to {output_path}")
 
     return merged_df
