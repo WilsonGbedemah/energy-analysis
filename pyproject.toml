@@ -9,16 +9,10 @@ dependencies = [
     "pandas>=2.2.3",
     "numpy>=1.26.4",
     "scikit-learn>=1.6.1",
-    "matplotlib>=3.8.4",
-    "seaborn>=0.13.2",
     "plotly>=5.22.0",
     "streamlit>=1.30.0",
     "requests>=2.32.3",
     "python-dotenv>=1.0.1",
-    "pyyaml>=6.0.1",
-    "tqdm>=4.67.1",
-    "loguru>=0.7.3",
-    "statsmodels>=0.14.1" 
 ]
 
 [build-system]
@@ -75,7 +69,7 @@ ignore_missing_imports = true
 
 [tool.deptry]
 exclude = [".venv"]
-known_first_party = ["energy_analysis"]
+known_first_party = ["energy_analysis", "data_fetcher", "data_processor", "src"]
 
 [tool.deptry.per_rule_ignores]
 DEP004 = ["pytest"]

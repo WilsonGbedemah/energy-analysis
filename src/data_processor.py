@@ -1,7 +1,8 @@
-import os
 import logging
-import pandas as pd
+import os
 from datetime import datetime, timedelta
+
+import pandas as pd
 
 # ─── Setup logging ───────────────────────────────────────────── #
 os.makedirs("logs", exist_ok=True)
@@ -16,11 +17,24 @@ os.makedirs("data/processed", exist_ok=True)
 
 # ─── Quality Check Documentation ─────────────────────────────── #
 QUALITY_DOC = {
-    "missing_values": "Counts columns with missing values. Missing data can affect model training and reliability.",
-    "temperature_outliers": "Flags TMAX or TMIN values above 130°F or below -50°F — likely sensor errors or corrupt readings.",
-    "energy_issues": "Detects missing or negative electricity demand values, which are invalid for usage analytics.",
-    "data_freshness": "Checks if the most recent entry is within 2 days. Older data may signal fetch failure or API lag."
+    "missing_values": (
+        "Counts columns with missing values. Missing data can affect model "
+        "training and reliability."
+    ),
+    "temperature_outliers": (
+        "Flags TMAX or TMIN values above 130°F or below -50°F — likely "
+        "sensor errors or corrupt readings."
+    ),
+    "energy_issues": (
+        "Detects missing or negative electricity demand values, which are "
+        "invalid for usage analytics."
+    ),
+    "data_freshness": (
+        "Checks if the most recent entry is within 2 days. Older data may "
+        "signal fetch failure or API lag."
+    ),
 }
+
 
 def generate_data_quality_report(df: pd.DataFrame, city: str) -> pd.DataFrame:
     """
@@ -42,8 +56,8 @@ def generate_data_quality_report(df: pd.DataFrame, city: str) -> pd.DataFrame:
 
     # 2️⃣ Temperature outliers
     temp_outliers = df[
-        (df["tmax_f"] > 130) | (df["tmax_f"] < -50) |
-        (df["tmin_f"] > 130) | (df["tmin_f"] < -50)
+        (df["tmax_f"] > 130) | (df["tmax_f"] < -50)
+        | (df["tmin_f"] > 130) | (df["tmin_f"] < -50)
     ]
     if not temp_outliers.empty:
         report.append({
@@ -87,6 +101,7 @@ def generate_data_quality_report(df: pd.DataFrame, city: str) -> pd.DataFrame:
     report_df.to_csv(out_path, index=False)
     logging.info(f"📋 Quality report saved: {out_path}")
     return report_df
+
 
 def process_city_data(weather_path: str, energy_path: str, city: str) -> pd.DataFrame:
     """
@@ -134,6 +149,7 @@ def process_city_data(weather_path: str, energy_path: str, city: str) -> pd.Data
 
     return cleaned
 
+
 def process_all_cities():
     """
     Iterates over raw files, processes each city's data, and logs outcomes.
@@ -160,6 +176,7 @@ def process_all_cities():
         count += 1
 
     logging.info(f"🎯 Done! {count} cities processed.")
+
 
 # ─── Entrypoint for `make process` ───────────────────────────── #
 if __name__ == "__main__":

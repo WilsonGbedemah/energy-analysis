@@ -1,10 +1,10 @@
 import os
 import sys
+from unittest.mock import MagicMock, patch
+
+import pandas as pd
 import pytest
 import requests
-import pandas as pd
-from unittest.mock import patch, MagicMock
-from datetime import datetime, timedelta
 
 # Add src/ path to allow import of data_fetcher
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src")))
@@ -61,7 +61,7 @@ def test_fetch_historical_energy(mock_get):
             "data": [
                 {"period": "2025-07-10", "value": "1000", "timezone": "Pacific"},
                 {"period": "2025-07-11", "value": "1100", "timezone": "Pacific"},
-                {"period": "2025-07-11", "value": "999", "timezone": "Eastern"},  # Should be excluded
+                {"period": "2025-07-11", "value": "999", "timezone": "Eastern"},
             ]
         }
     }

@@ -1,10 +1,11 @@
+import logging
 import os
 import time
-import requests
-import pandas as pd
 from datetime import datetime, timedelta, timezone
+
+import pandas as pd
+import requests
 from dotenv import load_dotenv
-import logging
 
 # ─── Setup logging ───────────────────────────────────────────── #
 os.makedirs("logs", exist_ok=True)

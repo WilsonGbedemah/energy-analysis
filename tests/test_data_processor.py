@@ -1,12 +1,10 @@
 import os
 import shutil
-import pandas as pd
 from datetime import datetime, timedelta
-from data_processor import (
-    process_city_data,
-    generate_data_quality_report,
-    process_all_cities
-)
+
+import pandas as pd
+
+from data_processor import generate_data_quality_report, process_all_cities, process_city_data
 
 # Setup test directories
 TEST_DATA_DIR = "tests/test_data"
@@ -15,7 +13,8 @@ TEST_ENERGY_PATH = f"{TEST_DATA_DIR}/energy.csv"
 TEST_PROCESSED_DIR = "data/processed"
 TEST_LOG_FILE = "logs/processor_run.log"
 
-def setup_module(module):
+
+def setup_module(_module):  # Fixed ARG001: unused argument renamed to _
     os.makedirs(TEST_DATA_DIR, exist_ok=True)
 
     today = datetime.today().date()
@@ -39,7 +38,7 @@ def setup_module(module):
     energy_df.to_csv(TEST_ENERGY_PATH, index=False)
 
 
-def teardown_module(module):
+def teardown_module(_module):  # Fixed ARG001
     if os.path.exists(TEST_DATA_DIR):
         shutil.rmtree(TEST_DATA_DIR)
     for file in os.listdir(TEST_PROCESSED_DIR):
@@ -61,7 +60,7 @@ def test_generate_data_quality_report_outputs_expected_fields():
     df = pd.read_csv(os.path.join(TEST_PROCESSED_DIR, "test_city_cleaned.csv"))
     report = generate_data_quality_report(df, "test_city")
     assert not report.empty
-    assert set(["check", "column", "count", "note"]).issubset(report.columns)
+    assert {"check", "column", "count", "note"}.issubset(report.columns)  # Fixed C405
 
 
 def test_process_city_data_with_missing_energy_column():
@@ -87,7 +86,9 @@ def test_process_city_data_with_outliers_and_nulls():
     weather_df.to_csv(TEST_WEATHER_PATH, index=False)
     energy_df.to_csv(TEST_ENERGY_PATH, index=False)
 
-    df = process_city_data(TEST_WEATHER_PATH, TEST_ENERGY_PATH, city="test_city_invalid")
+    # Fixed F841: removed unused assignment to df
+    _ = process_city_data(TEST_WEATHER_PATH, TEST_ENERGY_PATH, city="test_city_invalid")
+
     report_file = os.path.join(TEST_PROCESSED_DIR, "test_city_invalid_quality_report.csv")
     report_df = pd.read_csv(report_file)
     assert "temperature_outliers" in report_df["check"].values

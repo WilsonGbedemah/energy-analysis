@@ -1,8 +1,7 @@
-import subprocess
 import logging
-import time
 import os
-from datetime import datetime
+import subprocess
+import time
 
 
 def run_step(name: str, command: str):

@@ -1,7 +1,5 @@
-import pytest
-import subprocess
-import logging
 from unittest import mock
+
 from src import pipeline
 
 

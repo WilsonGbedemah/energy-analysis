@@ -1,8 +1,4 @@
 date,tmax_c,tmin_c,tmax_f,tmin_f,city_x,respondent,respondent-name,type,type-name,timezone,timezone-description,energy_mwh,value-units,city_y,city
-2025-04-16,3.5,1.89,38.3,35.4,phoenix,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,89815,megawatthours,phoenix,phoenix
-2025-04-17,2.78,1.78,37.0,35.2,phoenix,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,80434,megawatthours,phoenix,phoenix
-2025-04-18,2.61,1.17,36.7,34.11,phoenix,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,82099,megawatthours,phoenix,phoenix
-2025-04-19,2.39,1.22,36.3,34.2,phoenix,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,75082,megawatthours,phoenix,phoenix
 2025-04-20,2.89,1.44,37.2,34.59,phoenix,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,77575,megawatthours,phoenix,phoenix
 2025-04-21,3.28,1.72,37.9,35.1,phoenix,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,83202,megawatthours,phoenix,phoenix
 2025-04-22,3.5,1.78,38.3,35.2,phoenix,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,82373,megawatthours,phoenix,phoenix

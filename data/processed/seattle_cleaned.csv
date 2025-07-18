@@ -1,8 +1,4 @@
 date,tmax_c,tmin_c,tmax_f,tmin_f,city_x,respondent,respondent-name,type,type-name,timezone,timezone-description,energy_mwh,value-units,city_y,city
-2025-04-16,1.61,0.72,34.9,33.3,seattle,SCL,Seattle City Light,D,Demand,Pacific,Pacific,22975,megawatthours,seattle,seattle
-2025-04-17,1.83,0.61,35.29,33.1,seattle,SCL,Seattle City Light,D,Demand,Pacific,Pacific,23060,megawatthours,seattle,seattle
-2025-04-18,2.17,0.61,35.91,33.1,seattle,SCL,Seattle City Light,D,Demand,Pacific,Pacific,23362,megawatthours,seattle,seattle
-2025-04-19,1.5,0.83,34.7,33.49,seattle,SCL,Seattle City Light,D,Demand,Pacific,Pacific,22180,megawatthours,seattle,seattle
 2025-04-20,1.44,0.72,34.59,33.3,seattle,SCL,Seattle City Light,D,Demand,Pacific,Pacific,22896,megawatthours,seattle,seattle
 2025-04-21,1.39,0.61,34.5,33.1,seattle,SCL,Seattle City Light,D,Demand,Pacific,Pacific,25441,megawatthours,seattle,seattle
 2025-04-22,1.56,0.44,34.81,32.79,seattle,SCL,Seattle City Light,D,Demand,Pacific,Pacific,24942,megawatthours,seattle,seattle
