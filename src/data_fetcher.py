@@ -1,38 +1,24 @@
 import os
 import time
-import yaml
-import json
-import logging
 import requests
 import pandas as pd
-from dotenv import load_dotenv
 from datetime import datetime, timedelta, timezone
+from dotenv import load_dotenv
+import logging
 
-# Load environment variables
-load_dotenv()
-
-# Setup logging
+# ─── Setup logging ───────────────────────────────────────────── #
 os.makedirs("logs", exist_ok=True)
 logging.basicConfig(
-    filename="logs/pipeline.log",
+    filename="logs/fetcher_run.log",
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
-# Load config.yaml
-try:
-    with open("config/config.yaml", "r") as f:
-        config = yaml.safe_load(f)
-        if config is None:
-            raise ValueError("⚠️ config.yaml is empty or invalid.")
-except FileNotFoundError:
-    raise FileNotFoundError("❌ config/config.yaml file not found.")
-
-# API Keys
+# Load API keys
+load_dotenv()
 NOAA_API_KEY = os.getenv("NOAA_API_KEY")
 EIA_API_KEY = os.getenv("EIA_API_KEY")
 
-# Exponential backoff handler
 def _get_with_backoff(url, params, headers=None, max_retries=3, backoff_factor=1):
     for attempt in range(1, max_retries + 1):
         try:
@@ -40,173 +26,136 @@ def _get_with_backoff(url, params, headers=None, max_retries=3, backoff_factor=1
             resp.raise_for_status()
             return resp
         except requests.exceptions.HTTPError as e:
-            status = e.response.status_code if e.response is not None else None
+            status = e.response.status_code if e.response else None
+            msg = f"HTTP error {status} on attempt {attempt}: {e}"
             if status and 500 <= status < 600 and attempt < max_retries:
                 wait = backoff_factor * (2 ** (attempt - 1))
-                logging.warning(f"⚠️ Attempt {attempt}: HTTP {status}, retrying in {wait}s…")
+                logging.warning(f"{msg} - Retrying in {wait}s")
                 time.sleep(wait)
-                continue
-            raise
+            else:
+                logging.error(msg)
+                raise
         except requests.exceptions.RequestException as e:
+            msg = f"Request exception on attempt {attempt}: {e}"
             if attempt < max_retries:
                 wait = backoff_factor * (2 ** (attempt - 1))
-                logging.warning(f"⚠️ Attempt {attempt}: {e}, retrying in {wait}s…")
+                logging.warning(f"{msg} - Retrying in {wait}s")
                 time.sleep(wait)
-                continue
-            raise  # ✅ Re-raise the original RequestException here
+            else:
+                logging.error(msg)
+                raise
 
 
-# ✅ NOAA Weather Fetch
-def fetch_weather_data(days=90) -> None:
+def fetch_historical_weather(station_id: str, days: int, city_name: str) -> pd.DataFrame:
+    end = datetime.now(timezone.utc).date()
+    start = end - timedelta(days=days * 2)
+
     url = "https://www.ncei.noaa.gov/cdo-web/api/v2/data"
     headers = {"token": NOAA_API_KEY}
-    os.makedirs("data/raw/weather", exist_ok=True)
+    params = {
+        "datasetid": "GHCND",
+        "stationid": station_id,
+        "startdate": start.isoformat(),
+        "enddate": end.isoformat(),
+        "datatypeid": "TMAX,TMIN",
+        "limit": 1000,
+        "units": "metric"
+    }
 
+    logging.info(f"Fetching weather for {city_name} from {start} to {end}")
+    resp = _get_with_backoff(url, params=params, headers=headers)
+    data = resp.json().get("results", [])
+    df = pd.DataFrame(data)
+
+    if df.empty:
+        logging.warning(f"No weather data returned for {city_name}")
+        return pd.DataFrame(columns=["date", "tmax_c", "tmin_c", "tmax_f", "tmin_f", "city"])
+
+    df = df.pivot(index="date", columns="datatype", values="value").reset_index()
+    df["date"] = pd.to_datetime(df["date"]).dt.date
+    df = df.dropna(subset=["TMAX", "TMIN"])
+
+    df["tmax_c"] = (df["TMAX"] / 10).round(2)
+    df["tmin_c"] = (df["TMIN"] / 10).round(2)
+    df["tmax_f"] = ((df["tmax_c"] * 9 / 5) + 32).round(2)
+    df["tmin_f"] = ((df["tmin_c"] * 9 / 5) + 32).round(2)
+    df["city"] = city_name
+
+    df = df.sort_values("date", ascending=False).drop_duplicates("date").head(days)
+    df = df.sort_values("date")
+
+    latest = df["date"].max()
+    if latest < end:
+        logging.warning(f"{city_name}: Weather data not up-to-date (latest: {latest})")
+
+    logging.info(f"✅ Weather data ready for {city_name}: {len(df)} records")
+    return df[["date", "tmax_c", "tmin_c", "tmax_f", "tmin_f", "city"]]
+
+
+def fetch_historical_energy(region_code: str, days: int, city_name: str) -> pd.DataFrame:
     end = datetime.now(timezone.utc).date()
-    start = end - timedelta(days=days * 2)  # get extra to ensure full 90 valid
+    start = end - timedelta(days=days * 2)
 
-    for city in config["cities"]:
-        all_records = []
-        offset = 0
-        limit = 1000
-
-        try:
-            while True:
-                params = {
-                    "datasetid": "GHCND",
-                    "stationid": city["station_id"],
-                    "startdate": start.isoformat(),
-                    "enddate": end.isoformat(),
-                    "datatypeid": "TMAX,TMIN",
-                    "limit": limit,
-                    "offset": offset,
-                    "units": "metric"
-                }
-
-                resp = _get_with_backoff(url, params=params, headers=headers)
-                records = resp.json().get("results", [])
-                if not records:
-                    break
-
-                all_records.extend(records)
-                if len(records) < limit:
-                    break
-                offset += limit
-
-            if not all_records:
-                logging.warning(f"⚠️ No weather data for {city['name']}")
-                continue
-
-            df_raw = pd.DataFrame(all_records)
-            df_pivot = df_raw.pivot_table(index="date", columns="datatype", values="value", aggfunc="first").reset_index()
-
-            # Convert and rename
-            if "TMAX" in df_pivot:
-                df_pivot["tmax_f"] = df_pivot["TMAX"].apply(lambda x: (x / 10 * 9/5) + 32 if pd.notnull(x) else None)
-            if "TMIN" in df_pivot:
-                df_pivot["tmin_f"] = df_pivot["TMIN"].apply(lambda x: (x / 10 * 9/5) + 32 if pd.notnull(x) else None)
-
-            df_pivot["city"] = city["name"]
-            df_pivot["date"] = pd.to_datetime(df_pivot["date"])
-            df_pivot = df_pivot.sort_values("date")
-
-            # Keep only complete rows
-            df_complete = df_pivot.dropna(subset=["tmax_f", "tmin_f"]).tail(days)
-
-            if len(df_complete) < days:
-                logging.warning(f"⚠️ Only {len(df_complete)} complete days found for {city['name']} (expected: {days})")
-
-            file_path = f"data/raw/weather/{city['name'].replace(' ', '_')}_weather_90_days.csv"
-            df_complete.to_csv(file_path, index=False)
-            logging.info(f"✅ Weather saved: {file_path}")
-
-        except Exception as e:
-            logging.error(f"❌ Weather fetch failed for {city['name']}: {e}")
-
-# ✅ EIA Energy Fetch
-def fetch_energy_data(days=90) -> None:
     url = "https://api.eia.gov/v2/electricity/rto/daily-region-data/data/"
-    os.makedirs("data/raw/energy", exist_ok=True)
+    params = {
+        "api_key": EIA_API_KEY,
+        "frequency": "daily",
+        "start": start.isoformat(),
+        "end": end.isoformat(),
+        "data[0]": "value",
+        "facets[respondent][]": region_code,
+        "sort[0][column]": "period",
+        "sort[0][direction]": "asc",
+        "offset": 0,
+        "length": 5000
+    }
 
-    end = datetime.now(timezone.utc).date()
-    start = end - timedelta(days=days - 1)
+    logging.info(f"Fetching energy for {city_name} from {start} to {end}")
+    resp = _get_with_backoff(url, params)
+    data = resp.json().get("response", {}).get("data", [])
+    df = pd.DataFrame(data)
 
-    for city in config["cities"]:
-        try:
-            params = {
-                "api_key": EIA_API_KEY,
-                "frequency": "daily",
-                "start": start.isoformat(),
-                "end": end.isoformat(),
-                "data[0]": "value",
-                "facets[respondent][]": city["region_code"],
-                "sort[0][column]": "period",
-                "sort[0][direction]": "asc",
-                "offset": 0,
-                "length": days
-            }
+    if df.empty:
+        logging.warning(f"No energy data for {city_name}")
+        return pd.DataFrame(columns=["date", "demand", "city"])
 
-            resp = _get_with_backoff(url, params=params)
-            data = resp.json().get("response", {}).get("data", [])
-            if not data:
-                logging.warning(f"⚠️ No energy data for {city['name']}")
-                continue
+    df = df[df["timezone"] == "Pacific"]
+    df = df.rename(columns={"period": "date", "value": "demand"})
+    df["date"] = pd.to_datetime(df["date"]).dt.date
+    df["demand"] = pd.to_numeric(df["demand"], errors="coerce")
+    df = df.dropna(subset=["demand"]).drop_duplicates("date")
 
-            df = pd.DataFrame(data)
+    df = df.sort_values("date", ascending=False).head(days).sort_values("date")
+    df["city"] = city_name
 
-            # Rename and structure
-            df["city"] = city["name"]
-            df["date"] = pd.to_datetime(df["period"])
-            df = df.rename(columns={
-                "value": "energy_mwh",
-                "respondent": "region_code",
-                "respondent-name": "region_name",
-                "fueltype": "fuel_type",
-                "unit": "unit"
-            })
-
-            # Filter required date range
-            df = df.sort_values("date")
-            df = df[df["date"].dt.date.between(start, end)]
-
-            # Optional: drop unwanted columns
-            keep_cols = ["city", "date", "energy_mwh", "unit", "region_code", "region_name", "fuel_type"]
-            df = df[[col for col in keep_cols if col in df.columns]]
-
-            file_path = f"data/raw/energy/{city['name'].replace(' ', '_')}_energy_90_days.csv"
-            df.to_csv(file_path, index=False)
-            logging.info(f"✅ Energy saved: {file_path}")
-
-        except Exception as e:
-            logging.error(f"❌ Energy fetch failed for {city['name']}: {e}")
+    logging.info(f"✅ Energy data ready for {city_name}: {len(df)} records")
+    return df
 
 
-# ✅ Merge Per-City Files
-def merge_city_files() -> tuple[pd.DataFrame, pd.DataFrame]:
-    weather_path = "data/raw/weather/"
-    energy_path = "data/raw/energy/"
+def main():
+    cities = [
+        ("new_york", "GHCND:USW00094728", "NYIS"),
+        ("chicago", "GHCND:USW00094846", "PJM"),
+        ("houston", "GHCND:USW00012960", "ERCO"),
+        ("phoenix", "GHCND:USW00023183", "AZPS"),
+        ("seattle", "GHCND:USW00024233", "SCL")
+    ]
 
-    weather_files = [os.path.join(weather_path, f) for f in os.listdir(weather_path) if f.endswith(".csv")]
-    energy_files = [os.path.join(energy_path, f) for f in os.listdir(energy_path) if f.endswith(".csv")]
+    for city, station_id, region_code in cities:
+        print(f"\n📡 Fetching weather data for {city}...")
+        weather_df = fetch_historical_weather(station_id, days=90, city_name=city)
+        os.makedirs("data/raw/weather", exist_ok=True)
+        weather_path = f"data/raw/weather/{city}_weather_90_days.csv"
+        weather_df.to_csv(weather_path, index=False)
+        logging.info(f"✅ Saved weather data: {weather_path}")
 
-    try:
-        weather_df = pd.concat([pd.read_csv(f) for f in weather_files], ignore_index=True)
-        energy_df = pd.concat([pd.read_csv(f) for f in energy_files], ignore_index=True)
-        return weather_df, energy_df
-    except Exception as e:
-        logging.error(f"❌ Failed to merge city files: {e}")
-        raise
+        print(f"⚡ Fetching energy data for {city}...")
+        energy_df = fetch_historical_energy(region_code, days=90, city_name=city)
+        os.makedirs("data/raw/energy", exist_ok=True)
+        energy_path = f"data/raw/energy/{city}_energy_90_days.csv"
+        energy_df.to_csv(energy_path, index=False)
+        logging.info(f"✅ Saved energy data: {energy_path}")
 
-# ✅ 90-Day Fetch Trigger
-def fetch_last_90_days(save=True) -> tuple[pd.DataFrame, pd.DataFrame]:
-    fetch_weather_data(days=90)
-    fetch_energy_data(days=90)
 
-    weather_df, energy_df = merge_city_files()
-
-    if save:
-        weather_df.to_csv("data/raw/weather_last_90_days.csv", index=False)
-        energy_df.to_csv("data/raw/energy_last_90_days.csv", index=False)
-        logging.info("📦 Merged 90-day weather and energy saved to data/raw/")
-
-    return weather_df, energy_df
+if __name__ == "__main__":
+    main()

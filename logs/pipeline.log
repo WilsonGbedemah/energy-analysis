@@ -483,3 +483,372 @@
 2025-07-09 17:16:19,092 - INFO - ✅ Energy saved: data/raw/energy/Seattle_energy_90_days.csv
 2025-07-09 17:16:19,110 - INFO - 📦 Merged 90-day weather and energy saved to data/raw/
 2025-07-09 17:16:19,110 - INFO - ✅ Data fetching completed successfully.
+2025-07-10 16:59:35,962 - INFO - \U0001f680 Starting data fetcher at 2025-07-10T16:59:35.962500
+2025-07-10 16:59:35,965 - ERROR - \u274c API keys missing in .env file. Set NOAA_API_KEY and EIA_API_KEY.
+2025-07-10 17:01:05,974 - INFO - \U0001f680 Starting data fetcher at 2025-07-10T17:01:05.974798
+2025-07-10 17:01:05,975 - ERROR - \u274c API keys missing in .env file. Set NOAA_API_KEY and EIA_API_KEY.
+2025-07-10 17:08:05,174 - INFO - \U0001f680 Starting data fetcher at 2025-07-10T17:08:05.174586
+2025-07-10 17:08:05,175 - ERROR - \u274c API keys missing in .env file. Set NOAA_API_KEY and EIA_API_KEY.
+2025-07-10 17:10:04,342 - INFO - \U0001f680 Starting data fetcher at 2025-07-10T17:10:04.342578
+2025-07-10 17:10:04,342 - ERROR - \u274c API keys missing in .env file. Set NOAA_API_KEY and EIA_API_KEY.
+2025-07-10 17:10:16,013 - INFO - \U0001f680 Starting data fetcher at 2025-07-10T17:10:16.013741
+2025-07-10 17:10:16,013 - ERROR - \u274c API keys missing in .env file. Set NOAA_API_KEY and EIA_API_KEY.
+2025-07-10 17:20:10,399 - INFO - \U0001f680 Starting data fetcher...
+2025-07-10 17:20:10,400 - INFO - \U0001f4c1 Running in 'history' mode
+2025-07-10 17:20:10,400 - INFO - \U0001f4e6 Fetching last 90 days of data...
+2025-07-10 17:20:11,804 - INFO - \u2705 Weather saved: data/raw/weather/New_York_weather_90_days.csv
+2025-07-10 17:20:13,046 - INFO - \u2705 Weather saved: data/raw/weather/Chicago_weather_90_days.csv
+2025-07-10 17:20:14,354 - INFO - \u2705 Weather saved: data/raw/weather/Houston_weather_90_days.csv
+2025-07-10 17:20:15,675 - INFO - \u2705 Weather saved: data/raw/weather/Phoenix_weather_90_days.csv
+2025-07-10 17:20:17,019 - INFO - \u2705 Weather saved: data/raw/weather/Seattle_weather_90_days.csv
+2025-07-10 17:20:19,551 - INFO - \u2705 Energy saved: data/raw/energy/New_York_energy_90_days.csv
+2025-07-10 17:20:21,576 - INFO - \u2705 Energy saved: data/raw/energy/Chicago_energy_90_days.csv
+2025-07-10 17:20:23,909 - INFO - \u2705 Energy saved: data/raw/energy/Houston_energy_90_days.csv
+2025-07-10 17:20:26,303 - INFO - \u2705 Energy saved: data/raw/energy/Phoenix_energy_90_days.csv
+2025-07-10 17:20:28,332 - INFO - \u2705 Energy saved: data/raw/energy/Seattle_energy_90_days.csv
+2025-07-10 17:20:28,445 - INFO - \U0001f4e6 Merged 90-day weather and energy saved to data/raw/
+2025-07-10 17:20:28,445 - INFO - \u2705 Data fetching completed successfully.
+2025-07-10 18:38:57,939 - INFO - \U0001f680 Starting raw data fetch (90 days)
+2025-07-10 18:38:59,201 - INFO - \u2705 Raw weather data saved: data/raw/weather/New_York_weather_raw.csv
+2025-07-10 18:39:00,290 - INFO - \u2705 Raw weather data saved: data/raw/weather/Chicago_weather_raw.csv
+2025-07-10 18:39:01,399 - INFO - \u2705 Raw weather data saved: data/raw/weather/Houston_weather_raw.csv
+2025-07-10 18:39:11,839 - WARNING - \u26a0\ufe0f Attempt 1 failed: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=10), retrying in 1s
+2025-07-10 18:39:13,934 - INFO - \u2705 Raw weather data saved: data/raw/weather/Phoenix_weather_raw.csv
+2025-07-10 18:39:15,035 - INFO - \u2705 Raw weather data saved: data/raw/weather/Seattle_weather_raw.csv
+2025-07-10 18:39:20,176 - INFO - \u2705 Raw energy data saved: data/raw/energy/New_York_energy_raw.csv
+2025-07-10 18:39:26,984 - INFO - \u2705 Raw energy data saved: data/raw/energy/Chicago_energy_raw.csv
+2025-07-10 18:39:36,165 - INFO - \u2705 Raw energy data saved: data/raw/energy/Houston_energy_raw.csv
+2025-07-10 18:39:47,069 - WARNING - \u26a0\ufe0f Attempt 1 failed: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=10), retrying in 1s
+2025-07-10 18:39:59,014 - WARNING - \u26a0\ufe0f Attempt 2 failed: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=10), retrying in 2s
+2025-07-10 18:40:03,237 - INFO - \u2705 Raw energy data saved: data/raw/energy/Phoenix_energy_raw.csv
+2025-07-10 18:40:05,780 - INFO - \u2705 Raw energy data saved: data/raw/energy/Seattle_energy_raw.csv
+2025-07-10 18:40:05,782 - INFO - \u2705 Raw data fetch complete
+2025-07-10 19:01:00,589 - INFO - \U0001f680 Starting raw data fetch (last 90 days)
+2025-07-10 19:01:00,589 - INFO - \U0001f324\ufe0f Fetching weather for New York
+2025-07-10 19:01:01,827 - INFO - \u2705 Weather saved: data/raw/weather/New_York_weather_raw.csv
+2025-07-10 19:01:01,827 - INFO - \U0001f324\ufe0f Fetching weather for Chicago
+2025-07-10 19:01:03,011 - INFO - \u2705 Weather saved: data/raw/weather/Chicago_weather_raw.csv
+2025-07-10 19:01:03,011 - INFO - \U0001f324\ufe0f Fetching weather for Houston
+2025-07-10 19:01:04,203 - INFO - \u2705 Weather saved: data/raw/weather/Houston_weather_raw.csv
+2025-07-10 19:01:04,203 - INFO - \U0001f324\ufe0f Fetching weather for Phoenix
+2025-07-10 19:01:05,412 - INFO - \u2705 Weather saved: data/raw/weather/Phoenix_weather_raw.csv
+2025-07-10 19:01:05,412 - INFO - \U0001f324\ufe0f Fetching weather for Seattle
+2025-07-10 19:01:06,557 - INFO - \u2705 Weather saved: data/raw/weather/Seattle_weather_raw.csv
+2025-07-10 19:01:06,558 - INFO - \u26a1 Fetching energy for New York
+2025-07-10 19:01:14,463 - ERROR - \u274c Energy fetch failed for New York: agg function failed [how->mean,dtype->object]
+2025-07-10 19:01:14,464 - INFO - \u26a1 Fetching energy for Chicago
+2025-07-10 19:01:25,378 - WARNING - \u26a0\ufe0f Attempt 1 failed: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=10), retrying in 1s
+2025-07-10 19:01:37,291 - WARNING - \u26a0\ufe0f Attempt 2 failed: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=10), retrying in 2s
+2025-07-10 19:01:50,232 - ERROR - \u274c Final failure: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=10)
+2025-07-10 19:01:50,232 - ERROR - \u274c Energy fetch failed for Chicago: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=10)
+2025-07-10 19:01:50,233 - INFO - \u26a1 Fetching energy for Houston
+2025-07-10 19:02:01,158 - WARNING - \u26a0\ufe0f Attempt 1 failed: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=10), retrying in 1s
+2025-07-10 19:02:13,271 - WARNING - \u26a0\ufe0f Attempt 2 failed: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=10), retrying in 2s
+2025-07-10 19:02:26,217 - ERROR - \u274c Final failure: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=10)
+2025-07-10 19:02:26,217 - ERROR - \u274c Energy fetch failed for Houston: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=10)
+2025-07-10 19:02:26,218 - INFO - \u26a1 Fetching energy for Phoenix
+2025-07-10 19:02:37,126 - WARNING - \u26a0\ufe0f Attempt 1 failed: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=10), retrying in 1s
+2025-07-10 19:02:41,476 - WARNING - \u26a0\ufe0f Attempt 2 failed: 502 Server Error: Bad Gateway for url: https://api.eia.gov/v2/electricity/rto/daily-region-data/data/?api_key=TM4wtophQtxXHgmPVfUwYIOs4tinPyGphWtgSSb4&frequency=daily&start=2025-04-12&end=2025-07-10&data%5B0%5D=value&facets%5Brespondent%5D%5B%5D=AZPS&sort%5B0%5D%5Bcolumn%5D=period&sort%5B0%5D%5Bdirection%5D=asc&offset=0&length=5000, retrying in 2s
+2025-07-10 19:02:54,402 - ERROR - \u274c Final failure: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=10)
+2025-07-10 19:02:54,403 - ERROR - \u274c Energy fetch failed for Phoenix: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=10)
+2025-07-10 19:02:54,403 - INFO - \u26a1 Fetching energy for Seattle
+2025-07-10 19:03:05,362 - WARNING - \u26a0\ufe0f Attempt 1 failed: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=10), retrying in 1s
+2025-07-10 19:03:10,273 - ERROR - \u274c Energy fetch failed for Seattle: agg function failed [how->mean,dtype->object]
+2025-07-10 19:03:10,274 - INFO - \u2705 Raw data fetch complete
+2025-07-10 19:13:16,917 - INFO - \U0001f680 Starting raw data fetch (90 days)
+2025-07-10 19:13:18,044 - INFO - \u2705 Raw weather data saved: data/raw/weather/New_York_weather_raw.csv
+2025-07-10 19:13:19,099 - INFO - \u2705 Raw weather data saved: data/raw/weather/Chicago_weather_raw.csv
+2025-07-10 19:13:20,172 - INFO - \u2705 Raw weather data saved: data/raw/weather/Houston_weather_raw.csv
+2025-07-10 19:13:21,231 - INFO - \u2705 Raw weather data saved: data/raw/weather/Phoenix_weather_raw.csv
+2025-07-10 19:13:22,347 - INFO - \u2705 Raw weather data saved: data/raw/weather/Seattle_weather_raw.csv
+2025-07-10 19:13:27,388 - INFO - \u2705 Raw energy data saved: data/raw/energy/New_York_energy_raw.csv
+2025-07-10 19:13:34,294 - INFO - \u2705 Raw energy data saved: data/raw/energy/Chicago_energy_raw.csv
+2025-07-10 19:13:37,586 - INFO - \u2705 Raw energy data saved: data/raw/energy/Houston_energy_raw.csv
+2025-07-10 19:13:42,389 - INFO - \u2705 Raw energy data saved: data/raw/energy/Phoenix_energy_raw.csv
+2025-07-10 19:13:45,906 - INFO - \u2705 Raw energy data saved: data/raw/energy/Seattle_energy_raw.csv
+2025-07-10 19:13:45,907 - INFO - \u2705 Raw data fetch complete
+2025-07-10 19:21:09,671 - INFO - \U0001f680 Starting raw data fetch (last 90 days)
+2025-07-10 19:21:09,672 - INFO - \U0001f324\ufe0f Fetching weather for New York
+2025-07-10 19:21:11,006 - INFO - \u2705 Weather saved: data/raw/weather/New_York_weather_raw.csv
+2025-07-10 19:21:11,006 - INFO - \U0001f324\ufe0f Fetching weather for Chicago
+2025-07-10 19:21:12,166 - INFO - \u2705 Weather saved: data/raw/weather/Chicago_weather_raw.csv
+2025-07-10 19:21:12,166 - INFO - \U0001f324\ufe0f Fetching weather for Houston
+2025-07-10 19:21:13,338 - INFO - \u2705 Weather saved: data/raw/weather/Houston_weather_raw.csv
+2025-07-10 19:21:13,338 - INFO - \U0001f324\ufe0f Fetching weather for Phoenix
+2025-07-10 19:21:23,820 - WARNING - \u26a0\ufe0f Attempt 1 failed: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=10), retrying in 1s
+2025-07-10 19:21:26,049 - INFO - \u2705 Weather saved: data/raw/weather/Phoenix_weather_raw.csv
+2025-07-10 19:21:26,050 - INFO - \U0001f324\ufe0f Fetching weather for Seattle
+2025-07-10 19:21:27,247 - INFO - \u2705 Weather saved: data/raw/weather/Seattle_weather_raw.csv
+2025-07-10 19:21:27,248 - INFO - \u26a1 Fetching energy for New York
+2025-07-10 19:21:35,912 - ERROR - \u274c Energy fetch failed for New York: agg function failed [how->mean,dtype->object]
+2025-07-10 19:21:35,912 - INFO - \u26a1 Fetching energy for Chicago
+2025-07-10 19:21:44,848 - ERROR - \u274c Energy fetch failed for Chicago: agg function failed [how->mean,dtype->object]
+2025-07-10 19:21:44,849 - INFO - \u26a1 Fetching energy for Houston
+2025-07-10 19:21:50,469 - ERROR - \u274c Energy fetch failed for Houston: agg function failed [how->mean,dtype->object]
+2025-07-10 19:21:50,469 - INFO - \u26a1 Fetching energy for Phoenix
+2025-07-10 19:21:57,137 - ERROR - \u274c Energy fetch failed for Phoenix: agg function failed [how->mean,dtype->object]
+2025-07-10 19:21:57,137 - INFO - \u26a1 Fetching energy for Seattle
+2025-07-10 19:22:02,664 - ERROR - \u274c Energy fetch failed for Seattle: agg function failed [how->mean,dtype->object]
+2025-07-10 19:22:02,666 - INFO - \u2705 Raw data fetch complete
+2025-07-11 16:06:53,354 - INFO - \U0001f680 Starting raw data fetch (90 days)
+2025-07-11 16:06:54,659 - INFO - \u2705 Raw weather data saved: data/raw/weather/New_York_weather_raw.csv
+2025-07-11 16:06:55,913 - INFO - \u2705 Raw weather data saved: data/raw/weather/Chicago_weather_raw.csv
+2025-07-11 16:06:57,112 - INFO - \u2705 Raw weather data saved: data/raw/weather/Houston_weather_raw.csv
+2025-07-11 16:06:58,249 - INFO - \u2705 Raw weather data saved: data/raw/weather/Phoenix_weather_raw.csv
+2025-07-11 16:06:59,492 - INFO - \u2705 Raw weather data saved: data/raw/weather/Seattle_weather_raw.csv
+2025-07-11 16:07:07,848 - INFO - \u2705 Raw energy data saved: data/raw/energy/New_York_energy_raw.csv
+2025-07-11 16:07:16,764 - INFO - \u2705 Raw energy data saved: data/raw/energy/Chicago_energy_raw.csv
+2025-07-11 16:07:24,318 - INFO - \u2705 Raw energy data saved: data/raw/energy/Houston_energy_raw.csv
+2025-07-11 16:07:31,287 - INFO - \u2705 Raw energy data saved: data/raw/energy/Phoenix_energy_raw.csv
+2025-07-11 16:07:39,423 - INFO - \u2705 Raw energy data saved: data/raw/energy/Seattle_energy_raw.csv
+2025-07-11 16:07:39,425 - INFO - \u2705 Raw data fetch complete
+2025-07-11 16:19:54,225 - INFO - \U0001f680 Starting fetch of last 90 days for all cities
+2025-07-11 16:19:54,226 - INFO - \U0001f324\ufe0f Fetching weather for New York
+2025-07-11 16:19:55,655 - INFO - \u2705 Weather saved: data/raw/weather/New_York_weather_90_days.csv
+2025-07-11 16:19:55,655 - INFO - \U0001f324\ufe0f Fetching weather for Chicago
+2025-07-11 16:19:57,018 - INFO - \u2705 Weather saved: data/raw/weather/Chicago_weather_90_days.csv
+2025-07-11 16:19:57,019 - INFO - \U0001f324\ufe0f Fetching weather for Houston
+2025-07-11 16:19:58,359 - INFO - \u2705 Weather saved: data/raw/weather/Houston_weather_90_days.csv
+2025-07-11 16:19:58,359 - INFO - \U0001f324\ufe0f Fetching weather for Phoenix
+2025-07-11 16:19:59,621 - INFO - \u2705 Weather saved: data/raw/weather/Phoenix_weather_90_days.csv
+2025-07-11 16:19:59,621 - INFO - \U0001f324\ufe0f Fetching weather for Seattle
+2025-07-11 16:20:00,963 - INFO - \u2705 Weather saved: data/raw/weather/Seattle_weather_90_days.csv
+2025-07-11 16:20:00,964 - INFO - \u26a1 Fetching energy for New York
+2025-07-11 16:20:05,969 - ERROR - \u274c Energy fetch failed for New York: agg function failed [how->mean,dtype->object]
+2025-07-11 16:20:05,970 - INFO - \u26a1 Fetching energy for Chicago
+2025-07-11 16:20:12,691 - ERROR - \u274c Energy fetch failed for Chicago: agg function failed [how->mean,dtype->object]
+2025-07-11 16:20:12,691 - INFO - \u26a1 Fetching energy for Houston
+2025-07-11 16:20:19,285 - ERROR - \u274c Energy fetch failed for Houston: agg function failed [how->mean,dtype->object]
+2025-07-11 16:20:19,285 - INFO - \u26a1 Fetching energy for Phoenix
+2025-07-11 16:20:26,041 - ERROR - \u274c Energy fetch failed for Phoenix: agg function failed [how->mean,dtype->object]
+2025-07-11 16:20:26,042 - INFO - \u26a1 Fetching energy for Seattle
+2025-07-11 16:20:32,937 - ERROR - \u274c Energy fetch failed for Seattle: agg function failed [how->mean,dtype->object]
+2025-07-11 16:20:32,938 - INFO - \u2705 Fetch completed
+2025-07-11 16:25:04,232 - INFO - \U0001f680 Starting fetch of last 90 days for all cities
+2025-07-11 16:25:05,861 - INFO - \u2705 Weather saved: data/raw/weather/New_York_weather_90_days.csv
+2025-07-11 16:25:07,166 - INFO - \u2705 Weather saved: data/raw/weather/Chicago_weather_90_days.csv
+2025-07-11 16:25:08,424 - INFO - \u2705 Weather saved: data/raw/weather/Houston_weather_90_days.csv
+2025-07-11 16:25:09,737 - INFO - \u2705 Weather saved: data/raw/weather/Phoenix_weather_90_days.csv
+2025-07-11 16:25:11,698 - INFO - \u2705 Weather saved: data/raw/weather/Seattle_weather_90_days.csv
+2025-07-11 16:25:19,900 - INFO - \u2705 Energy saved: data/raw/energy/New_York_energy_90_days.csv
+2025-07-11 16:25:28,331 - INFO - \u2705 Energy saved: data/raw/energy/Chicago_energy_90_days.csv
+2025-07-11 16:25:35,597 - INFO - \u2705 Energy saved: data/raw/energy/Houston_energy_90_days.csv
+2025-07-11 16:25:42,641 - INFO - \u2705 Energy saved: data/raw/energy/Phoenix_energy_90_days.csv
+2025-07-11 16:25:50,909 - INFO - \u2705 Energy saved: data/raw/energy/Seattle_energy_90_days.csv
+2025-07-11 16:25:50,910 - INFO - \u2705 Fetch completed
+2025-07-11 16:40:36,343 - INFO - \U0001f680 Starting fetch of last 90 days for all cities
+2025-07-11 16:40:37,968 - INFO - \u2705 Weather saved: data/raw/weather/New_York_weather_90_days.csv
+2025-07-11 16:40:39,465 - INFO - \u2705 Weather saved: data/raw/weather/Chicago_weather_90_days.csv
+2025-07-11 16:40:40,785 - INFO - \u2705 Weather saved: data/raw/weather/Houston_weather_90_days.csv
+2025-07-11 16:40:42,155 - INFO - \u2705 Weather saved: data/raw/weather/Phoenix_weather_90_days.csv
+2025-07-11 16:40:43,472 - INFO - \u2705 Weather saved: data/raw/weather/Seattle_weather_90_days.csv
+2025-07-11 16:40:54,417 - WARNING - \u26a0\ufe0f Attempt 1: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=10), retrying in 1s�
+2025-07-11 16:40:59,317 - ERROR - \u274c Energy fetch failed for New York: "Column(s) ['fuel_type', 'unit'] do not exist"
+2025-07-11 16:41:04,158 - ERROR - \u274c Energy fetch failed for Chicago: "Column(s) ['fuel_type', 'unit'] do not exist"
+2025-07-11 16:41:10,428 - ERROR - \u274c Energy fetch failed for Houston: "Column(s) ['fuel_type', 'unit'] do not exist"
+2025-07-11 16:41:17,542 - ERROR - \u274c Energy fetch failed for Phoenix: "Column(s) ['fuel_type', 'unit'] do not exist"
+2025-07-11 16:41:23,525 - ERROR - \u274c Energy fetch failed for Seattle: "Column(s) ['fuel_type', 'unit'] do not exist"
+2025-07-11 16:41:23,525 - INFO - \u2705 Fetch completed
+2025-07-11 16:43:14,898 - INFO - \U0001f680 Starting fetch of last 90 days for all cities
+2025-07-11 16:43:16,176 - INFO - \u2705 Weather saved: data/raw/weather/New_York_weather_90_days.csv
+2025-07-11 16:43:17,447 - INFO - \u2705 Weather saved: data/raw/weather/Chicago_weather_90_days.csv
+2025-07-11 16:43:18,744 - INFO - \u2705 Weather saved: data/raw/weather/Houston_weather_90_days.csv
+2025-07-11 16:43:20,021 - INFO - \u2705 Weather saved: data/raw/weather/Phoenix_weather_90_days.csv
+2025-07-11 16:43:21,258 - INFO - \u2705 Weather saved: data/raw/weather/Seattle_weather_90_days.csv
+2025-07-11 16:43:23,542 - ERROR - \u274c Energy fetch failed for New York: "Column(s) ['fuel_type', 'unit'] do not exist"
+2025-07-11 16:43:25,536 - ERROR - \u274c Energy fetch failed for Chicago: "Column(s) ['fuel_type', 'unit'] do not exist"
+2025-07-11 16:43:27,898 - ERROR - \u274c Energy fetch failed for Houston: "Column(s) ['fuel_type', 'unit'] do not exist"
+2025-07-11 16:43:29,721 - ERROR - \u274c Energy fetch failed for Phoenix: "Column(s) ['fuel_type', 'unit'] do not exist"
+2025-07-11 16:43:31,614 - ERROR - \u274c Energy fetch failed for Seattle: "Column(s) ['fuel_type', 'unit'] do not exist"
+2025-07-11 16:43:31,615 - INFO - \u2705 Fetch completed
+2025-07-11T17:28:23.394916 -  Fetching weather data for new_york
+2025-07-11T17:28:24.885909 -  Saved weather data: data/raw/weather/new_york_weather_90_days.csv (90 rows)
+2025-07-11T17:28:24.886552 -  Fetching energy data for new_york
+2025-07-11T17:28:28.903379 -  Saved energy data: data/raw/energy/new_york_energy_90_days.csv (90 rows)
+2025-07-11T17:28:28.904943 -  Fetching weather data for chicago
+2025-07-11T17:28:30.244851 -  Saved weather data: data/raw/weather/chicago_weather_90_days.csv (90 rows)
+2025-07-11T17:28:30.246111 -  Fetching energy data for chicago
+2025-07-11T17:28:33.920083 -  Saved energy data: data/raw/energy/chicago_energy_90_days.csv (90 rows)
+2025-07-11T17:28:33.921890 -  Fetching weather data for houston
+2025-07-11T17:28:35.310422 -  Saved weather data: data/raw/weather/houston_weather_90_days.csv (90 rows)
+2025-07-11T17:28:35.311096 -  Fetching energy data for houston
+2025-07-11T17:28:38.738854 -  Saved energy data: data/raw/energy/houston_energy_90_days.csv (90 rows)
+2025-07-11T17:28:38.740419 -  Fetching weather data for phoenix
+2025-07-11T17:28:59.260388 -  Attempt 1 failed: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=20). Retrying in 1s
+2025-07-11T17:29:01.606434 -  Saved weather data: data/raw/weather/phoenix_weather_90_days.csv (90 rows)
+2025-07-11T17:29:01.606909 -  Fetching energy data for phoenix
+2025-07-11T17:29:04.840071 -  Saved energy data: data/raw/energy/phoenix_energy_90_days.csv (90 rows)
+2025-07-11T17:29:04.842810 -  Fetching weather data for seattle
+2025-07-11T17:29:06.159206 -  Saved weather data: data/raw/weather/seattle_weather_90_days.csv (90 rows)
+2025-07-11T17:29:06.160330 -  Fetching energy data for seattle
+2025-07-11T17:29:08.864292 -  Saved energy data: data/raw/energy/seattle_energy_90_days.csv (90 rows)
+2025-07-11T17:34:34.930455 -  Fetching weather data for new_york
+2025-07-11T17:34:36.351137 -  Saved weather data: data/raw/weather/new_york_weather_90_days.csv (90 rows)
+2025-07-11T17:34:36.351989 -  Fetching energy data for new_york
+2025-07-11T17:34:39.149017 -  Energy fetch failed for new_york: agg function failed [how->mean,dtype->object]
+2025-07-11T17:34:39.155151 -  Fetching weather data for chicago
+2025-07-11T17:34:40.659964 -  Saved weather data: data/raw/weather/chicago_weather_90_days.csv (90 rows)
+2025-07-11T17:34:40.661320 -  Fetching energy data for chicago
+2025-07-11T17:34:43.445990 -  Energy fetch failed for chicago: agg function failed [how->mean,dtype->object]
+2025-07-11T17:34:43.448122 -  Fetching weather data for houston
+2025-07-11T17:34:44.993130 -  Saved weather data: data/raw/weather/houston_weather_90_days.csv (90 rows)
+2025-07-11T17:34:44.993981 -  Fetching energy data for houston
+2025-07-11T17:34:47.970901 -  Energy fetch failed for houston: agg function failed [how->mean,dtype->object]
+2025-07-11T17:34:47.972965 -  Fetching weather data for phoenix
+2025-07-11T17:34:49.348405 -  Saved weather data: data/raw/weather/phoenix_weather_90_days.csv (90 rows)
+2025-07-11T17:34:49.349220 -  Fetching energy data for phoenix
+2025-07-11T17:34:52.506763 -  Energy fetch failed for phoenix: agg function failed [how->mean,dtype->object]
+2025-07-11T17:34:52.508776 -  Fetching weather data for seattle
+2025-07-11T17:34:54.074507 -  Saved weather data: data/raw/weather/seattle_weather_90_days.csv (90 rows)
+2025-07-11T17:34:54.075749 -  Fetching energy data for seattle
+2025-07-11T17:34:56.799969 -  Energy fetch failed for seattle: agg function failed [how->mean,dtype->object]
+2025-07-11T17:39:29.341107 -  Fetching weather data for new_york
+2025-07-11T17:39:30.759353 -  Saved weather data: data/raw/weather/new_york_weather_90_days.csv (90 rows)
+2025-07-11T17:39:30.760056 -  Fetching energy data for new_york
+2025-07-11T17:39:33.416366 -  Saved energy data: data/raw/energy/new_york_energy_90_days.csv (90 rows)
+2025-07-11T17:39:33.417931 -  Fetching weather data for chicago
+2025-07-11T17:39:34.719395 -  Saved weather data: data/raw/weather/chicago_weather_90_days.csv (90 rows)
+2025-07-11T17:39:34.721085 -  Fetching energy data for chicago
+2025-07-11T17:39:37.478833 -  Saved energy data: data/raw/energy/chicago_energy_90_days.csv (90 rows)
+2025-07-11T17:39:37.480122 -  Fetching weather data for houston
+2025-07-11T17:39:38.781893 -  Saved weather data: data/raw/weather/houston_weather_90_days.csv (90 rows)
+2025-07-11T17:39:38.782796 -  Fetching energy data for houston
+2025-07-11T17:39:41.603669 -  Saved energy data: data/raw/energy/houston_energy_90_days.csv (90 rows)
+2025-07-11T17:39:41.605107 -  Fetching weather data for phoenix
+2025-07-11T17:39:43.220451 -  Saved weather data: data/raw/weather/phoenix_weather_90_days.csv (90 rows)
+2025-07-11T17:39:43.221063 -  Fetching energy data for phoenix
+2025-07-11T17:39:45.777391 -  Saved energy data: data/raw/energy/phoenix_energy_90_days.csv (90 rows)
+2025-07-11T17:39:45.778683 -  Fetching weather data for seattle
+2025-07-11T17:39:47.077352 -  Saved weather data: data/raw/weather/seattle_weather_90_days.csv (90 rows)
+2025-07-11T17:39:47.077998 -  Fetching energy data for seattle
+2025-07-11T17:39:49.797868 -  Saved energy data: data/raw/energy/seattle_energy_90_days.csv (90 rows)
+2025-07-11T17:45:42.054869 -  Attempt 1 failed: Simulated failure. Retrying in 1s
+2025-07-11T17:45:43.055787 -  Attempt 2 failed: Simulated failure. Retrying in 2s
+2025-07-11T17:45:45.334358 -  Fetching weather data for TestCity
+2025-07-11T17:45:45.342640 -  Saved weather data: data/raw/weather/testcity_weather_90_days.csv (2 rows)
+2025-07-11T17:45:45.345489 -  Fetching energy data for TestCity
+2025-07-11T17:45:45.351896 -  Saved energy data: data/raw/energy/testcity_energy_90_days.csv (2 rows)
+2025-07-11T17:53:10.296276 -  Attempt 1 failed: Simulated failure. Retrying in 1s
+2025-07-11T17:53:11.298013 -  Attempt 2 failed: Simulated failure. Retrying in 2s
+2025-07-11T17:53:13.309002 -  Fetching weather data for TestCity
+2025-07-11T17:53:13.334610 -  Saved weather data: data/raw/weather/testcity_weather_90_days.csv (2 rows)
+2025-07-11T17:53:13.342984 -  Fetching energy data for TestCity
+2025-07-11T17:53:13.352457 -  Saved energy data: data/raw/energy/testcity_energy_90_days.csv (2 rows)
+2025-07-11T18:11:40.334908 -  Attempt 1 failed: Simulated failure. Retrying in 1s
+2025-07-11T18:11:41.335792 -  Attempt 2 failed: Simulated failure. Retrying in 2s
+2025-07-11T18:11:43.339787 -  Fetching weather data for TestCity
+2025-07-11T18:11:43.351185 -  Saved weather data: data/raw/weather/testcity_weather_90_days.csv (2 rows)
+2025-07-11T18:11:43.354212 -  Fetching energy data for TestCity
+2025-07-11T18:11:43.360197 -  Saved energy data: data/raw/energy/testcity_energy_90_days.csv (2 rows)
+2025-07-11T18:13:43.727692 -  Fetching weather data for new_york
+2025-07-11T18:14:03.998010 -  Attempt 1 failed: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=20). Retrying in 1s
+2025-07-11T18:14:21.098622 -  Attempt 2 failed: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)). Retrying in 2s
+2025-07-11T18:16:11.180951 -  Fetching weather data for new_york
+2025-07-11T18:16:13.683596 -  Saved weather data: data/raw/weather/new_york_weather_90_days.csv (90 rows)
+2025-07-11T18:16:13.684281 -  Fetching energy data for new_york
+2025-07-11T18:16:27.011598 -  Saved energy data: data/raw/energy/new_york_energy_90_days.csv (90 rows)
+2025-07-11T18:16:27.013698 -  Fetching weather data for chicago
+2025-07-11T18:16:43.312581 -  Saved weather data: data/raw/weather/chicago_weather_90_days.csv (90 rows)
+2025-07-11T18:16:43.313736 -  Fetching energy data for chicago
+2025-07-11T18:16:54.440414 -  Saved energy data: data/raw/energy/chicago_energy_90_days.csv (90 rows)
+2025-07-11T18:16:54.442371 -  Fetching weather data for houston
+2025-07-11T18:16:58.963706 -  Saved weather data: data/raw/weather/houston_weather_90_days.csv (90 rows)
+2025-07-11T18:16:58.966009 -  Fetching energy data for houston
+2025-07-11T18:17:23.292427 -  Saved energy data: data/raw/energy/houston_energy_90_days.csv (90 rows)
+2025-07-11T18:17:23.294363 -  Fetching weather data for phoenix
+2025-07-11T18:17:24.519096 -  Saved weather data: data/raw/weather/phoenix_weather_90_days.csv (90 rows)
+2025-07-11T18:17:24.519943 -  Fetching energy data for phoenix
+2025-07-11T18:17:55.502639 -  Attempt 1 failed: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=20). Retrying in 1s
+2025-07-11T18:18:36.750858 -  Saved energy data: data/raw/energy/phoenix_energy_90_days.csv (90 rows)
+2025-07-11T18:18:36.752800 -  Fetching weather data for seattle
+2025-07-11T18:18:38.151392 -  Saved weather data: data/raw/weather/seattle_weather_90_days.csv (90 rows)
+2025-07-11T18:18:38.152018 -  Fetching energy data for seattle
+2025-07-11T18:18:49.185277 -  Saved energy data: data/raw/energy/seattle_energy_90_days.csv (90 rows)
+2025-07-11T18:25:40.946757 -  Fetching raw weather + energy data...
+2025-07-11T18:25:40.947300 - Fetching weather data for new_york
+2025-07-11T18:25:42.272413 -  Saved weather data: data/raw/weather/new_york_weather_90_days.csv (90 rows)
+2025-07-11T18:25:42.273031 - Fetching energy data for new_york
+2025-07-11T18:25:55.610346 -  Energy fetch failed for new_york: "Column(s) ['value_units'] do not exist"
+2025-07-11T18:25:55.612919 - Fetching weather data for chicago
+2025-07-11T18:25:56.842831 -  Saved weather data: data/raw/weather/chicago_weather_90_days.csv (90 rows)
+2025-07-11T18:25:56.843827 - Fetching energy data for chicago
+2025-07-11T18:26:06.783047 -  Energy fetch failed for chicago: "Column(s) ['value_units'] do not exist"
+2025-07-11T18:26:06.785520 - Fetching weather data for houston
+2025-07-11T18:26:08.094139 -  Saved weather data: data/raw/weather/houston_weather_90_days.csv (90 rows)
+2025-07-11T18:26:08.095139 - Fetching energy data for houston
+2025-07-11T18:26:18.876495 -  Energy fetch failed for houston: "Column(s) ['value_units'] do not exist"
+2025-07-11T18:26:18.879675 - Fetching weather data for phoenix
+2025-07-11T18:26:20.184874 -  Saved weather data: data/raw/weather/phoenix_weather_90_days.csv (90 rows)
+2025-07-11T18:26:20.185493 - Fetching energy data for phoenix
+2025-07-11T18:26:27.636141 -  Energy fetch failed for phoenix: "Column(s) ['value_units'] do not exist"
+2025-07-11T18:26:27.638188 - Fetching weather data for seattle
+2025-07-11T18:26:48.095529 -  Attempt 1 failed: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=20). Retrying in 1s
+2025-07-11T18:26:50.292988 -  Saved weather data: data/raw/weather/seattle_weather_90_days.csv (90 rows)
+2025-07-11T18:26:50.293628 - Fetching energy data for seattle
+2025-07-11T18:26:56.903974 -  Energy fetch failed for seattle: "Column(s) ['value_units'] do not exist"
+2025-07-11T18:28:17.016367 -  Fetching raw weather + energy data...
+2025-07-11T18:28:17.016855 - Fetching weather data for new_york
+2025-07-11T18:28:18.363924 -  Saved weather data: data/raw/weather/new_york_weather_90_days.csv (90 rows)
+2025-07-11T18:28:18.364576 - Fetching energy data for new_york
+2025-07-11T18:28:39.444576 -  Attempt 1 failed: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=20). Retrying in 1s
+2025-07-11T18:28:43.136111 -  Saved energy data: data/raw/energy/new_york_energy_90_days.csv (90 rows)
+2025-07-11T18:28:43.137773 - Fetching weather data for chicago
+2025-07-11T18:28:44.374518 -  Saved weather data: data/raw/weather/chicago_weather_90_days.csv (90 rows)
+2025-07-11T18:28:44.376212 - Fetching energy data for chicago
+2025-07-11T18:28:46.657159 -  Saved energy data: data/raw/energy/chicago_energy_90_days.csv (90 rows)
+2025-07-11T18:28:46.658942 - Fetching weather data for houston
+2025-07-11T18:28:47.948022 -  Saved weather data: data/raw/weather/houston_weather_90_days.csv (90 rows)
+2025-07-11T18:28:47.949050 - Fetching energy data for houston
+2025-07-11T18:28:50.537902 -  Saved energy data: data/raw/energy/houston_energy_90_days.csv (90 rows)
+2025-07-11T18:28:50.540382 - Fetching weather data for phoenix
+2025-07-11T18:28:51.926040 -  Saved weather data: data/raw/weather/phoenix_weather_90_days.csv (90 rows)
+2025-07-11T18:28:51.926678 - Fetching energy data for phoenix
+2025-07-11T18:28:54.537766 -  Saved energy data: data/raw/energy/phoenix_energy_90_days.csv (90 rows)
+2025-07-11T18:28:54.539389 - Fetching weather data for seattle
+2025-07-11T18:28:56.200127 -  Saved weather data: data/raw/weather/seattle_weather_90_days.csv (90 rows)
+2025-07-11T18:28:56.201234 - Fetching energy data for seattle
+2025-07-11T18:28:59.013830 -  Saved energy data: data/raw/energy/seattle_energy_90_days.csv (90 rows)
+2025-07-14 04:30:07,533 - INFO - \U0001f504 Starting pipeline run
+2025-07-14 04:30:07,533 - INFO - \U0001f680 Starting: Data Fetching
+2025-07-14 04:31:51,513 - ERROR - \u274c Failed: Data Fetching
+2025-07-14 04:31:51,514 - INFO - \U0001f680 Starting: Data Processing
+2025-07-14 04:31:53,820 - INFO - \u2705 Finished: Data Processing in 2.30s
+2025-07-14 04:31:53,821 - INFO - \U0001f680 Starting: Data Analysis
+2025-07-14 04:31:55,642 - INFO - \u2705 Finished: Data Analysis in 1.82s
+2025-07-14 04:31:56,448 - INFO - \U0001f680 Starting: Launch Dashboard
+2025-07-14 04:35:41,512 - INFO - \U0001f504 Starting pipeline run
+2025-07-14 04:35:41,512 - INFO - \U0001f680 Starting: Data Fetching
+2025-07-14 04:36:20,467 - INFO - \u2705 Finished: Data Fetching in 38.95s
+2025-07-14 04:36:20,467 - INFO - \U0001f680 Starting: Data Processing
+2025-07-14 04:36:22,362 - INFO - \u2705 Finished: Data Processing in 1.89s
+2025-07-14 04:36:22,362 - INFO - \U0001f680 Starting: Data Analysis
+2025-07-14 04:36:23,608 - INFO - \u2705 Finished: Data Analysis in 1.25s
+2025-07-14 04:36:24,295 - INFO - \U0001f680 Starting: Launch Dashboard
+2025-07-14 04:36:24,496 - ERROR - \u274c Failed: Launch Dashboard
+2025-07-14 04:36:24,497 - INFO - \U0001f3af Pipeline execution complete.
+2025-07-14 04:49:21,886 - INFO - \U0001f504 Starting pipeline run
+2025-07-14 04:49:21,886 - INFO - \U0001f680 Starting: Data Fetching
+2025-07-14 04:50:02,844 - INFO - \u2705 Finished: Data Fetching in 40.96s
+2025-07-14 04:50:02,844 - INFO - \U0001f680 Starting: Data Processing
+2025-07-14 04:50:04,158 - INFO - \u2705 Finished: Data Processing in 1.31s
+2025-07-14 04:50:04,158 - INFO - \U0001f680 Starting: Data Analysis
+2025-07-14 04:50:05,764 - INFO - \u2705 Finished: Data Analysis in 1.61s
+2025-07-14 04:50:06,254 - INFO - \U0001f680 Starting: Launch Dashboard
+2025-07-14 04:50:06,501 - ERROR - \u274c Failed: Launch Dashboard
+2025-07-14 04:50:06,502 - INFO - \U0001f3af Pipeline execution complete.
+2025-07-14 04:54:26,927 - INFO - \U0001f504 Starting pipeline run
+2025-07-14 04:54:26,928 - INFO - \U0001f680 Starting: Data Fetching
+2025-07-14 04:54:50,538 - INFO - \u2705 Finished: Data Fetching in 23.61s
+2025-07-14 04:54:50,538 - INFO - \U0001f680 Starting: Data Processing
+2025-07-14 04:54:51,776 - INFO - \u2705 Finished: Data Processing in 1.24s
+2025-07-14 04:54:51,776 - INFO - \U0001f680 Starting: Data Analysis
+2025-07-14 04:54:53,234 - INFO - \u2705 Finished: Data Analysis in 1.46s
+2025-07-14 04:54:53,723 - INFO - \U0001f680 Starting: Launch Dashboard
+2025-07-14 05:04:58,219 - INFO - \U0001f504 Starting pipeline run
+2025-07-14 05:04:58,220 - INFO - \U0001f680 Starting: Data Fetching
+2025-07-14 05:05:36,607 - INFO - \u2705 Finished: Data Fetching in 38.39s
+2025-07-14 05:05:36,608 - INFO - \U0001f680 Starting: Data Processing
+2025-07-14 05:05:38,778 - INFO - \u2705 Finished: Data Processing in 2.17s
+2025-07-14 05:05:38,778 - INFO - \U0001f680 Starting: Data Analysis
+2025-07-14 05:05:39,961 - INFO - \u2705 Finished: Data Analysis in 1.18s
+2025-07-14 05:05:41,059 - INFO - \U0001f680 Starting: Launch Dashboard

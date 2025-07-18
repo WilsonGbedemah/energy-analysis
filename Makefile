@@ -1,64 +1,54 @@
-# Makefile for Energy Analysis Project
+# Makefile for Energy Analysis Project (using uv, no pre-commit)
 
-ENV = .venv
+.PHONY: install check test fetch process analyze pipeline run-dashboard clean help
+.DEFAULT_GOAL := help
 
-.PHONY: help install lint format check test fetch process run-dashboard clean
+VENV = .venv
+PYTHON = $(VENV)/Scripts/python.exe
 
-help:
-	@echo "Usage:"
-	@echo "  make install         Install dependencies into virtual environment"
-	@echo "  make lint            Lint code using ruff"
-	@echo "  make format          Format code using black and ruff"
-	@echo "  make check           Lint + format check (without fixing)"
-	@echo "  make test            Run tests with pytest"
-	@echo "  make fetch           Fetch latest weather and energy data"
-	@echo "  make process         Merge and validate 90-day data"
-	@echo "  make run-dashboard   Launch Streamlit dashboard"
-	@echo "  make clean           Remove generated artifacts"
+install: ## Create venv and install dependencies using uv
+	@echo "🚀 Creating virtual environment and syncing dependencies with uv..."
+	@if exist "$(VENV)" rmdir /s /q $(VENV)
+	@uv venv $(VENV)
+	@uv sync --dev
 
-install:
-	@echo "🔧 Setting up virtual environment and installing dependencies..."
-	uv venv $(ENV)
-	. $(ENV)/bin/activate && uv pip install -r pyproject.toml
+check: ## Run code quality checks
+	@echo "🔐 Checking lock file consistency..."
+	@uv lock --locked
+	@echo "🔍 Linting with Ruff..."
+	@$(PYTHON) -m ruff check src/ tests/
+	@echo "🧪 Checking dependencies with deptry..."
+	@$(PYTHON) -m deptry .
 
-lint:
-	@echo "🔍 Running Ruff for linting..."
-	. $(ENV)/bin/activate && ruff check src/ tests/
-
-format:
-	@echo "🎨 Formatting code with Black and Ruff..."
-	. $(ENV)/bin/activate && black src/ tests/
-	. $(ENV)/bin/activate && ruff check src/ tests/ --fix
-
-check:
-	@echo "🔍 Running Ruff and Black in check mode..."
-	. $(ENV)/bin/activate && ruff check src/ tests/
-	. $(ENV)/bin/activate && black --check src/ tests/
-
-test:
+test: ## Run unit tests
 	@echo "🧪 Running tests with pytest..."
-	PYTHONPATH=src . $(ENV)/bin/activate && pytest tests/
+	@$(PYTHON) -m pytest tests/
 
-fetch:
-	@echo "📦 Fetching latest daily weather + energy data..."
-	. $(ENV)/bin/activate && python run_fetcher.py
+fetch: ## Fetch raw weather and energy data
+	@echo "📦 Fetching raw weather + energy data..."
+	@$(PYTHON) src/data_fetcher.py
 
-process:
-	@echo "🧼 Processing 90-day data and generating quality report..."
-	. $(ENV)/bin/activate && python run_processor.py
+process: ## Clean and validate raw data
+	@echo "🧼 Running data processor..."
+	@$(PYTHON) src/data_processor.py
 
-analyze:
-	@echo "📊 Running analysis pipeline..."
-	. $(ENV)/bin/activate && python run_analysis.py
+analyze: ## Run data analysis
+	@echo "📊 Running analysis..."
+	@$(PYTHON) src/analysis.py
 
-pipeline:
-	@echo "🔄 Running full end-to-end pipeline..."
-	. $(ENV)/bin/activate && python run_pipeline.py
+pipeline: ## Run full ETL
+	@echo "🔄 Running complete pipeline..."
+	@$(PYTHON) src/pipeline.py
 
-run-dashboard:
+run-dashboard: ## Start Streamlit dashboard
 	@echo "🚀 Launching Streamlit dashboard..."
-	. $(ENV)/bin/activate && streamlit run dashboards/app.py
+	@cmd /C "set STREAMLIT_BROWSER_GATHER_USAGE_STATS=false && set STREAMLIT_SERVER_HEADLESS=true && .venv\\Scripts\\python.exe -m streamlit run dashboards\\app.py"
 
-clean:
-	@echo "🧹 Cleaning temporary files and logs..."
-	rm -rf __pycache__ .pytest_cache .ruff_cache data/processed/*.csv logs/pipeline.log
+clean: ## Remove temp files and logs
+	@echo "🧹 Cleaning up artifacts..."
+	@del /q /s __pycache__ >nul 2>&1
+	@del /q /s .pytest_cache .ruff_cache logs\*.log data\processed\*.csv >nul 2>&1
+
+help: ## Show available Make targets
+	@$(PYTHON) -c "import re; \
+	[[print(f'\033[36m{m[0]:<20}\033[0m {m[1]}') for m in re.findall(r'^([a-zA-Z_-]+):.*?## (.*)$$', open('Makefile').read(), re.M)] for makefile in ('$(MAKEFILE_LIST)').strip().split()]"

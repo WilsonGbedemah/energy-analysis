@@ -1,27 +1,38 @@
-import sys
-import os
 import pytest
-from unittest.mock import patch, MagicMock
+import subprocess
+import logging
+from unittest import mock
+from src import pipeline
 
-# Add src/ to path
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src")))
-from pipeline import run_pipeline
+
+def test_run_step_success(capfd):
+    with mock.patch("subprocess.run") as mock_run:
+        mock_run.return_value.returncode = 0
+        pipeline.run_step("Test Step", "echo test")
+        out, _ = capfd.readouterr()
+        assert "✅ Test Step completed" in out
 
 
-@patch("pipeline.generate_analysis_report")
-@patch("pipeline.process_and_merge_data")
-@patch("pipeline.fetch_last_90_days")
-def test_run_pipeline_success(mock_fetch, mock_process, mock_analyze):
-    # Mock return values
-    mock_fetch.return_value = None
-    mock_df = MagicMock(name="merged_df")
-    mock_process.return_value = mock_df
-    mock_analyze.return_value = {}
+def test_run_step_failure(capfd):
+    with mock.patch("subprocess.run") as mock_run:
+        mock_run.return_value.returncode = 1
+        pipeline.run_step("Fail Step", "false")
+        out, _ = capfd.readouterr()
+        assert "❌ Fail Step failed." in out
 
-    # Run pipeline
-    run_pipeline()
 
-    # Assert calls
-    mock_fetch.assert_called_once()
-    mock_process.assert_called_once()
-    mock_analyze.assert_called_once_with(mock_df, save=True)
+def test_is_dashboard_running_true():
+    with mock.patch("subprocess.check_output") as mock_check:
+        mock_check.return_value = b"streamlit.exe"
+        assert pipeline.is_dashboard_running() is True
+
+
+def test_is_dashboard_running_false():
+    with mock.patch("subprocess.check_output") as mock_check:
+        mock_check.return_value = b"python.exe"
+        assert pipeline.is_dashboard_running() is False
+
+
+def test_is_dashboard_running_exception():
+    with mock.patch("subprocess.check_output", side_effect=Exception("fail")):
+        assert pipeline.is_dashboard_running() is False

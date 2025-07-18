@@ -1,88 +1,99 @@
-import sys
 import os
+import shutil
 import pandas as pd
-import pytest
-from unittest.mock import patch, MagicMock
-from io import StringIO
-import logging
+from datetime import datetime, timedelta
+from data_processor import (
+    process_city_data,
+    generate_data_quality_report,
+    process_all_cities
+)
 
-# Add src to Python path
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src")))
-import data_processor
+# Setup test directories
+TEST_DATA_DIR = "tests/test_data"
+TEST_WEATHER_PATH = f"{TEST_DATA_DIR}/weather.csv"
+TEST_ENERGY_PATH = f"{TEST_DATA_DIR}/energy.csv"
+TEST_PROCESSED_DIR = "data/processed"
+TEST_LOG_FILE = "logs/processor_run.log"
+
+def setup_module(module):
+    os.makedirs(TEST_DATA_DIR, exist_ok=True)
+
+    today = datetime.today().date()
+    dates = [(today - timedelta(days=i)) for i in range(3)]
+
+    # Weather test data
+    weather_df = pd.DataFrame({
+        "date": [d.isoformat() for d in dates],
+        "tmax_f": [100, 95, 105],
+        "tmin_f": [70, 68, 65],
+        "tmax_c": [37.78, 35.0, 40.56],
+        "tmin_c": [21.1, 20.0, 18.33]
+    })
+    weather_df.to_csv(TEST_WEATHER_PATH, index=False)
+
+    # Energy test data
+    energy_df = pd.DataFrame({
+        "date": [d.isoformat() for d in dates],
+        "energy_mwh": [1000, 980, 1020]
+    })
+    energy_df.to_csv(TEST_ENERGY_PATH, index=False)
 
 
-@patch("pandas.read_csv")
-@patch("os.path.exists", return_value=True)
-def test_process_and_merge_data(mock_exists, mock_read_csv):
-    """Test merging of weather and energy data from raw files"""
-    # Mock weather and energy DataFrames
-    mock_weather = pd.DataFrame([
-        {"city": "New York", "date": "2024-04-01", "tmax_f": 85, "tmin_f": 60},
-        {"city": "New York", "date": "2024-04-02", "tmax_f": 88, "tmin_f": 62}
-    ])
+def teardown_module(module):
+    if os.path.exists(TEST_DATA_DIR):
+        shutil.rmtree(TEST_DATA_DIR)
+    for file in os.listdir(TEST_PROCESSED_DIR):
+        if file.startswith("test_city"):
+            os.remove(os.path.join(TEST_PROCESSED_DIR, file))
 
-    mock_energy = pd.DataFrame([
-        {"city": "New York", "date": "2024-04-01", "energy_mwh": 2100},
-        {"city": "New York", "date": "2024-04-02", "energy_mwh": 2200}
-    ])
 
-    # Return weather first, then energy
-    mock_read_csv.side_effect = [mock_weather, mock_energy]
-
-    df = data_processor.process_and_merge_data(save_output=False)
-
-    # Assertions
-    assert isinstance(df, pd.DataFrame)
+def test_process_city_data_creates_cleaned_file():
+    df = process_city_data(TEST_WEATHER_PATH, TEST_ENERGY_PATH, city="test_city")
     assert not df.empty
-    assert df.shape[0] == 2
-    assert set(["city", "date", "tmax_f", "tmin_f", "energy_mwh"]).issubset(df.columns)
+    assert "energy_mwh" in df.columns
+    assert "tmax_f" in df.columns
+
+    out_file = os.path.join(TEST_PROCESSED_DIR, "test_city_cleaned.csv")
+    assert os.path.exists(out_file)
 
 
-def test_generate_data_quality_report_creates_report():
-    """Test quality check logic and return structure"""
-    df = pd.DataFrame([
-        {"city": "Seattle", "date": "2024-04-01", "tmax_f": 100, "tmin_f": 60, "energy_mwh": 1500},
-        {"city": "Seattle", "date": "2024-04-02", "tmax_f": 135, "tmin_f": 65, "energy_mwh": 1600},  # Outlier
-        {"city": "Seattle", "date": "2024-04-03", "tmax_f": 75, "tmin_f": None, "energy_mwh": -50}  # Missing + negative
-    ])
-
-    with patch.object(pd.DataFrame, "to_csv") as mock_to_csv:
-        quality_df = data_processor.generate_data_quality_report(df)
-
-    assert isinstance(quality_df, pd.DataFrame)
-    assert "temperature_outliers" in quality_df.index
-    assert "energy_issues" in quality_df.index  # updated from "negative_energy"
-    assert "missing_values" in quality_df.index
-    assert "data_freshness" in quality_df.index
+def test_generate_data_quality_report_outputs_expected_fields():
+    df = pd.read_csv(os.path.join(TEST_PROCESSED_DIR, "test_city_cleaned.csv"))
+    report = generate_data_quality_report(df, "test_city")
+    assert not report.empty
+    assert set(["check", "column", "count", "note"]).issubset(report.columns)
 
 
-def test_process_and_merge_data_missing_files(tmp_path):
-    """Ensure FileNotFoundError is raised if raw files are missing"""
-    # Temporarily change to an empty directory
-    original_cwd = os.getcwd()
-    os.chdir(tmp_path)
+def test_process_city_data_with_missing_energy_column():
+    # Simulate missing 'energy_mwh', fallback to 'demand'
+    energy_df = pd.read_csv(TEST_ENERGY_PATH)
+    energy_df.rename(columns={"energy_mwh": "demand"}, inplace=True)
+    path = f"{TEST_DATA_DIR}/energy_renamed.csv"
+    energy_df.to_csv(path, index=False)
 
-    with pytest.raises(FileNotFoundError):
-        data_processor.process_and_merge_data()
-
-    os.chdir(original_cwd)
+    df = process_city_data(TEST_WEATHER_PATH, path, city="test_city_renamed")
+    assert "energy_mwh" in df.columns
 
 
-@patch("pandas.read_csv")
-@patch("os.path.exists", return_value=True)
-def test_logging_for_data_processing(mock_exists, mock_read_csv, caplog):
-    """Ensure logs are written during the process"""
-    caplog.set_level(logging.INFO)
+def test_process_city_data_with_outliers_and_nulls():
+    # Insert nulls and outliers
+    weather_df = pd.read_csv(TEST_WEATHER_PATH)
+    weather_df.loc[0, "tmax_f"] = 150  # Outlier
+    weather_df.loc[1, "tmin_f"] = -60  # Outlier
+    weather_df.loc[2, "tmax_f"] = None  # Missing
 
-    mock_weather = pd.DataFrame([
-        {"city": "New York", "date": "2024-04-01", "tmax_f": 85, "tmin_f": 60}
-    ])
-    mock_energy = pd.DataFrame([
-        {"city": "New York", "date": "2024-04-01", "energy_mwh": 2100}
-    ])
-    mock_read_csv.side_effect = [mock_weather, mock_energy]
+    energy_df = pd.read_csv(TEST_ENERGY_PATH)
+    energy_df.loc[2, "energy_mwh"] = -5  # Invalid
+    weather_df.to_csv(TEST_WEATHER_PATH, index=False)
+    energy_df.to_csv(TEST_ENERGY_PATH, index=False)
 
-    data_processor.process_and_merge_data(save_output=False)
+    df = process_city_data(TEST_WEATHER_PATH, TEST_ENERGY_PATH, city="test_city_invalid")
+    report_file = os.path.join(TEST_PROCESSED_DIR, "test_city_invalid_quality_report.csv")
+    report_df = pd.read_csv(report_file)
+    assert "temperature_outliers" in report_df["check"].values
+    assert "energy_issues" in report_df["check"].values
 
-    assert any("Merged dataset shape" in record.message for record in caplog.records)
-    assert any("Data quality report saved" in record.message for record in caplog.records)
+
+def test_process_all_cities_runs_without_error():
+    process_all_cities()
+    # Should not raise error

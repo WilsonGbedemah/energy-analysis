@@ -1,0 +1,2 @@
+check,column,count,note,is_fresh
+data_freshness,date,3,Checks if the most recent entry is within 2 days. Older data may signal fetch failure or API lag.,False
