@@ -200,3 +200,570 @@
 2025-07-14 05:05:32,748 - INFO - Fetching energy for seattle from 2025-01-15 to 2025-07-14
 2025-07-14 05:05:36,363 - INFO - \u2705 Energy data ready for seattle: 90 records
 2025-07-14 05:05:36,368 - INFO - \u2705 Saved energy data: data/raw/energy/seattle_energy_90_days.csv
+2025-07-19 14:37:04,541 - INFO - Fetching weather for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 14:37:07,679 - WARNING - new_york: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 14:37:07,679 - INFO - \u2705 Weather data ready for new_york: 90 records
+2025-07-19 14:37:07,688 - INFO - \u2705 Saved weather data: data/raw/weather/new_york_weather_90_days.csv
+2025-07-19 14:37:07,689 - INFO - Fetching energy for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 14:37:11,685 - INFO - \u2705 Energy data ready for new_york: 90 records
+2025-07-19 14:37:11,690 - INFO - \u2705 Saved energy data: data/raw/energy/new_york_energy_90_days.csv
+2025-07-19 14:37:11,691 - INFO - Fetching weather for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 14:37:12,873 - WARNING - chicago: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 14:37:12,874 - INFO - \u2705 Weather data ready for chicago: 90 records
+2025-07-19 14:37:12,880 - INFO - \u2705 Saved weather data: data/raw/weather/chicago_weather_90_days.csv
+2025-07-19 14:37:12,880 - INFO - Fetching energy for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 14:37:15,375 - INFO - \u2705 Energy data ready for chicago: 90 records
+2025-07-19 14:37:15,416 - INFO - \u2705 Saved energy data: data/raw/energy/chicago_energy_90_days.csv
+2025-07-19 14:37:15,417 - INFO - Fetching weather for houston from 2025-01-20 to 2025-07-19
+2025-07-19 14:37:16,592 - WARNING - houston: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 14:37:16,592 - INFO - \u2705 Weather data ready for houston: 90 records
+2025-07-19 14:37:16,633 - INFO - \u2705 Saved weather data: data/raw/weather/houston_weather_90_days.csv
+2025-07-19 14:37:16,634 - INFO - Fetching energy for houston from 2025-01-20 to 2025-07-19
+2025-07-19 14:37:19,904 - INFO - \u2705 Energy data ready for houston: 90 records
+2025-07-19 14:37:19,946 - INFO - \u2705 Saved energy data: data/raw/energy/houston_energy_90_days.csv
+2025-07-19 14:37:19,946 - INFO - Fetching weather for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 14:37:21,750 - WARNING - phoenix: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 14:37:21,750 - INFO - \u2705 Weather data ready for phoenix: 90 records
+2025-07-19 14:37:21,755 - INFO - \u2705 Saved weather data: data/raw/weather/phoenix_weather_90_days.csv
+2025-07-19 14:37:21,755 - INFO - Fetching energy for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 14:37:24,497 - INFO - \u2705 Energy data ready for phoenix: 90 records
+2025-07-19 14:37:24,505 - INFO - \u2705 Saved energy data: data/raw/energy/phoenix_energy_90_days.csv
+2025-07-19 14:37:24,506 - INFO - Fetching weather for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 14:37:25,666 - WARNING - seattle: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 14:37:25,666 - INFO - \u2705 Weather data ready for seattle: 90 records
+2025-07-19 14:37:25,669 - INFO - \u2705 Saved weather data: data/raw/weather/seattle_weather_90_days.csv
+2025-07-19 14:37:25,670 - INFO - Fetching energy for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 14:37:28,527 - INFO - \u2705 Energy data ready for seattle: 90 records
+2025-07-19 14:37:28,530 - INFO - \u2705 Saved energy data: data/raw/energy/seattle_energy_90_days.csv
+2025-07-19 15:08:52,588 - INFO - Fetching weather for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 15:09:04,712 - WARNING - Request exception on attempt 1: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=10) - Retrying in 1s
+2025-07-19 15:09:06,972 - WARNING - new_york: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 15:09:06,972 - INFO - \u2705 Weather data ready for new_york: 90 records
+2025-07-19 15:09:06,976 - INFO - \u2705 Saved weather data: data/raw/weather/new_york_weather_90_days.csv
+2025-07-19 15:09:06,977 - INFO - Fetching energy for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 15:09:12,343 - INFO - \u2705 Energy data ready for new_york: 90 records
+2025-07-19 15:09:12,346 - INFO - \u2705 Saved energy data: data/raw/energy/new_york_energy_90_days.csv
+2025-07-19 15:09:12,346 - INFO - Fetching weather for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 15:09:13,507 - WARNING - chicago: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 15:09:13,507 - INFO - \u2705 Weather data ready for chicago: 90 records
+2025-07-19 15:09:13,511 - INFO - \u2705 Saved weather data: data/raw/weather/chicago_weather_90_days.csv
+2025-07-19 15:09:13,513 - INFO - Fetching energy for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 15:09:17,039 - INFO - \u2705 Energy data ready for chicago: 90 records
+2025-07-19 15:09:17,043 - INFO - \u2705 Saved energy data: data/raw/energy/chicago_energy_90_days.csv
+2025-07-19 15:09:17,044 - INFO - Fetching weather for houston from 2025-01-20 to 2025-07-19
+2025-07-19 15:09:18,239 - WARNING - houston: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 15:09:18,240 - INFO - \u2705 Weather data ready for houston: 90 records
+2025-07-19 15:09:18,248 - INFO - \u2705 Saved weather data: data/raw/weather/houston_weather_90_days.csv
+2025-07-19 15:09:18,249 - INFO - Fetching energy for houston from 2025-01-20 to 2025-07-19
+2025-07-19 15:09:21,160 - INFO - \u2705 Energy data ready for houston: 90 records
+2025-07-19 15:09:21,163 - INFO - \u2705 Saved energy data: data/raw/energy/houston_energy_90_days.csv
+2025-07-19 15:09:21,164 - INFO - Fetching weather for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 15:09:22,392 - WARNING - phoenix: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 15:09:22,393 - INFO - \u2705 Weather data ready for phoenix: 90 records
+2025-07-19 15:09:22,396 - INFO - \u2705 Saved weather data: data/raw/weather/phoenix_weather_90_days.csv
+2025-07-19 15:09:22,397 - INFO - Fetching energy for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 15:09:25,438 - INFO - \u2705 Energy data ready for phoenix: 90 records
+2025-07-19 15:09:25,441 - INFO - \u2705 Saved energy data: data/raw/energy/phoenix_energy_90_days.csv
+2025-07-19 15:09:25,442 - INFO - Fetching weather for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 15:09:26,686 - WARNING - seattle: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 15:09:26,686 - INFO - \u2705 Weather data ready for seattle: 90 records
+2025-07-19 15:09:26,690 - INFO - \u2705 Saved weather data: data/raw/weather/seattle_weather_90_days.csv
+2025-07-19 15:09:26,690 - INFO - Fetching energy for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 15:09:30,234 - INFO - \u2705 Energy data ready for seattle: 90 records
+2025-07-19 15:09:30,238 - INFO - \u2705 Saved energy data: data/raw/energy/seattle_energy_90_days.csv
+2025-07-19 15:17:19,239 - INFO - Fetching weather for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 15:17:21,370 - WARNING - new_york: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 15:17:21,371 - INFO - \u2705 Weather data ready for new_york: 90 records
+2025-07-19 15:17:21,391 - INFO - \u2705 Saved weather data: data/raw/weather/new_york_weather_90_days.csv
+2025-07-19 15:17:21,391 - INFO - Fetching energy for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 15:17:26,760 - INFO - \u2705 Energy data ready for new_york: 90 records
+2025-07-19 15:17:26,764 - INFO - \u2705 Saved energy data: data/raw/energy/new_york_energy_90_days.csv
+2025-07-19 15:17:26,765 - INFO - Fetching weather for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 15:17:27,972 - WARNING - chicago: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 15:17:27,973 - INFO - \u2705 Weather data ready for chicago: 90 records
+2025-07-19 15:17:27,976 - INFO - \u2705 Saved weather data: data/raw/weather/chicago_weather_90_days.csv
+2025-07-19 15:17:27,976 - INFO - Fetching energy for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 15:17:31,401 - INFO - \u2705 Energy data ready for chicago: 90 records
+2025-07-19 15:17:31,404 - INFO - \u2705 Saved energy data: data/raw/energy/chicago_energy_90_days.csv
+2025-07-19 15:17:31,404 - INFO - Fetching weather for houston from 2025-01-20 to 2025-07-19
+2025-07-19 15:17:32,567 - WARNING - houston: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 15:17:32,567 - INFO - \u2705 Weather data ready for houston: 90 records
+2025-07-19 15:17:32,576 - INFO - \u2705 Saved weather data: data/raw/weather/houston_weather_90_days.csv
+2025-07-19 15:17:32,577 - INFO - Fetching energy for houston from 2025-01-20 to 2025-07-19
+2025-07-19 15:17:36,011 - INFO - \u2705 Energy data ready for houston: 90 records
+2025-07-19 15:17:36,015 - INFO - \u2705 Saved energy data: data/raw/energy/houston_energy_90_days.csv
+2025-07-19 15:17:36,016 - INFO - Fetching weather for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 15:17:37,187 - WARNING - phoenix: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 15:17:37,187 - INFO - \u2705 Weather data ready for phoenix: 90 records
+2025-07-19 15:17:37,190 - INFO - \u2705 Saved weather data: data/raw/weather/phoenix_weather_90_days.csv
+2025-07-19 15:17:37,191 - INFO - Fetching energy for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 15:17:40,833 - INFO - \u2705 Energy data ready for phoenix: 90 records
+2025-07-19 15:17:40,837 - INFO - \u2705 Saved energy data: data/raw/energy/phoenix_energy_90_days.csv
+2025-07-19 15:17:40,838 - INFO - Fetching weather for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 15:17:42,040 - WARNING - seattle: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 15:17:42,040 - INFO - \u2705 Weather data ready for seattle: 90 records
+2025-07-19 15:17:42,044 - INFO - \u2705 Saved weather data: data/raw/weather/seattle_weather_90_days.csv
+2025-07-19 15:17:42,044 - INFO - Fetching energy for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 15:17:45,850 - INFO - \u2705 Energy data ready for seattle: 90 records
+2025-07-19 15:17:45,853 - INFO - \u2705 Saved energy data: data/raw/energy/seattle_energy_90_days.csv
+2025-07-19 15:37:37,474 - INFO - Fetching weather for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 15:37:39,641 - WARNING - new_york: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 15:37:39,641 - INFO - \u2705 Weather data ready for new_york: 90 records
+2025-07-19 15:37:39,649 - INFO - \u2705 Saved weather data: data/raw/weather/new_york_weather_90_days.csv
+2025-07-19 15:37:39,649 - INFO - Fetching energy for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 15:37:43,532 - INFO - \u2705 Energy data ready for new_york: 90 records
+2025-07-19 15:37:43,537 - INFO - \u2705 Saved energy data: data/raw/energy/new_york_energy_90_days.csv
+2025-07-19 15:37:43,537 - INFO - Fetching weather for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 15:37:44,708 - WARNING - chicago: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 15:37:44,709 - INFO - \u2705 Weather data ready for chicago: 90 records
+2025-07-19 15:37:44,711 - INFO - \u2705 Saved weather data: data/raw/weather/chicago_weather_90_days.csv
+2025-07-19 15:37:44,711 - INFO - Fetching energy for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 15:37:47,289 - INFO - \u2705 Energy data ready for chicago: 90 records
+2025-07-19 15:37:47,292 - INFO - \u2705 Saved energy data: data/raw/energy/chicago_energy_90_days.csv
+2025-07-19 15:37:47,292 - INFO - Fetching weather for houston from 2025-01-20 to 2025-07-19
+2025-07-19 15:37:48,467 - WARNING - houston: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 15:37:48,467 - INFO - \u2705 Weather data ready for houston: 90 records
+2025-07-19 15:37:48,472 - INFO - \u2705 Saved weather data: data/raw/weather/houston_weather_90_days.csv
+2025-07-19 15:37:48,472 - INFO - Fetching energy for houston from 2025-01-20 to 2025-07-19
+2025-07-19 15:37:50,966 - INFO - \u2705 Energy data ready for houston: 90 records
+2025-07-19 15:37:50,970 - INFO - \u2705 Saved energy data: data/raw/energy/houston_energy_90_days.csv
+2025-07-19 15:37:50,970 - INFO - Fetching weather for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 15:37:52,175 - WARNING - phoenix: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 15:37:52,175 - INFO - \u2705 Weather data ready for phoenix: 90 records
+2025-07-19 15:37:52,182 - INFO - \u2705 Saved weather data: data/raw/weather/phoenix_weather_90_days.csv
+2025-07-19 15:37:52,182 - INFO - Fetching energy for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 15:37:54,884 - INFO - \u2705 Energy data ready for phoenix: 90 records
+2025-07-19 15:37:54,888 - INFO - \u2705 Saved energy data: data/raw/energy/phoenix_energy_90_days.csv
+2025-07-19 15:37:54,888 - INFO - Fetching weather for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 15:37:56,057 - WARNING - seattle: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 15:37:56,057 - INFO - \u2705 Weather data ready for seattle: 90 records
+2025-07-19 15:37:56,060 - INFO - \u2705 Saved weather data: data/raw/weather/seattle_weather_90_days.csv
+2025-07-19 15:37:56,060 - INFO - Fetching energy for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 15:37:59,570 - INFO - \u2705 Energy data ready for seattle: 90 records
+2025-07-19 15:37:59,575 - INFO - \u2705 Saved energy data: data/raw/energy/seattle_energy_90_days.csv
+2025-07-19 15:50:04,736 - INFO - Fetching weather for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 15:50:06,516 - WARNING - new_york: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 15:50:06,516 - INFO - \u2705 Weather data ready for new_york: 90 records
+2025-07-19 15:50:06,523 - INFO - \u2705 Saved weather data: data/raw/weather/new_york_weather_90_days.csv
+2025-07-19 15:50:06,523 - INFO - Fetching energy for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 15:50:10,121 - INFO - \u2705 Energy data ready for new_york: 90 records
+2025-07-19 15:50:10,124 - INFO - \u2705 Saved energy data: data/raw/energy/new_york_energy_90_days.csv
+2025-07-19 15:50:10,125 - INFO - Fetching weather for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 15:50:11,359 - WARNING - chicago: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 15:50:11,359 - INFO - \u2705 Weather data ready for chicago: 90 records
+2025-07-19 15:50:11,365 - INFO - \u2705 Saved weather data: data/raw/weather/chicago_weather_90_days.csv
+2025-07-19 15:50:11,366 - INFO - Fetching energy for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 15:50:13,899 - INFO - \u2705 Energy data ready for chicago: 90 records
+2025-07-19 15:50:13,902 - INFO - \u2705 Saved energy data: data/raw/energy/chicago_energy_90_days.csv
+2025-07-19 15:50:13,902 - INFO - Fetching weather for houston from 2025-01-20 to 2025-07-19
+2025-07-19 15:50:15,052 - WARNING - houston: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 15:50:15,052 - INFO - \u2705 Weather data ready for houston: 90 records
+2025-07-19 15:50:15,056 - INFO - \u2705 Saved weather data: data/raw/weather/houston_weather_90_days.csv
+2025-07-19 15:50:15,056 - INFO - Fetching energy for houston from 2025-01-20 to 2025-07-19
+2025-07-19 15:50:17,221 - INFO - \u2705 Energy data ready for houston: 90 records
+2025-07-19 15:50:17,224 - INFO - \u2705 Saved energy data: data/raw/energy/houston_energy_90_days.csv
+2025-07-19 15:50:17,224 - INFO - Fetching weather for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 15:50:18,371 - WARNING - phoenix: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 15:50:18,372 - INFO - \u2705 Weather data ready for phoenix: 90 records
+2025-07-19 15:50:18,374 - INFO - \u2705 Saved weather data: data/raw/weather/phoenix_weather_90_days.csv
+2025-07-19 15:50:18,374 - INFO - Fetching energy for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 15:50:20,952 - INFO - \u2705 Energy data ready for phoenix: 90 records
+2025-07-19 15:50:20,955 - INFO - \u2705 Saved energy data: data/raw/energy/phoenix_energy_90_days.csv
+2025-07-19 15:50:20,955 - INFO - Fetching weather for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 15:50:22,104 - WARNING - seattle: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 15:50:22,105 - INFO - \u2705 Weather data ready for seattle: 90 records
+2025-07-19 15:50:22,108 - INFO - \u2705 Saved weather data: data/raw/weather/seattle_weather_90_days.csv
+2025-07-19 15:50:22,108 - INFO - Fetching energy for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 15:50:24,222 - INFO - \u2705 Energy data ready for seattle: 90 records
+2025-07-19 15:50:24,226 - INFO - \u2705 Saved energy data: data/raw/energy/seattle_energy_90_days.csv
+2025-07-19 16:45:31,984 - INFO - Fetching weather for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 16:45:34,236 - WARNING - new_york: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 16:45:34,237 - INFO - \u2705 Weather data ready for new_york: 90 records
+2025-07-19 16:45:34,245 - INFO - \u2705 Saved weather data: data/raw/weather/new_york_weather_90_days.csv
+2025-07-19 16:45:34,246 - INFO - Fetching energy for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 16:45:37,794 - INFO - \u2705 Energy data ready for new_york: 90 records
+2025-07-19 16:45:37,797 - INFO - \u2705 Saved energy data: data/raw/energy/new_york_energy_90_days.csv
+2025-07-19 16:45:37,798 - INFO - Fetching weather for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 16:45:38,993 - WARNING - chicago: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 16:45:38,994 - INFO - \u2705 Weather data ready for chicago: 90 records
+2025-07-19 16:45:38,998 - INFO - \u2705 Saved weather data: data/raw/weather/chicago_weather_90_days.csv
+2025-07-19 16:45:38,999 - INFO - Fetching energy for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 16:45:41,709 - INFO - \u2705 Energy data ready for chicago: 90 records
+2025-07-19 16:45:41,714 - INFO - \u2705 Saved energy data: data/raw/energy/chicago_energy_90_days.csv
+2025-07-19 16:45:41,714 - INFO - Fetching weather for houston from 2025-01-20 to 2025-07-19
+2025-07-19 16:45:42,922 - WARNING - houston: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 16:45:42,922 - INFO - \u2705 Weather data ready for houston: 90 records
+2025-07-19 16:45:42,925 - INFO - \u2705 Saved weather data: data/raw/weather/houston_weather_90_days.csv
+2025-07-19 16:45:42,926 - INFO - Fetching energy for houston from 2025-01-20 to 2025-07-19
+2025-07-19 16:45:45,351 - INFO - \u2705 Energy data ready for houston: 90 records
+2025-07-19 16:45:45,354 - INFO - \u2705 Saved energy data: data/raw/energy/houston_energy_90_days.csv
+2025-07-19 16:45:45,354 - INFO - Fetching weather for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 16:45:46,553 - WARNING - phoenix: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 16:45:46,554 - INFO - \u2705 Weather data ready for phoenix: 90 records
+2025-07-19 16:45:46,563 - INFO - \u2705 Saved weather data: data/raw/weather/phoenix_weather_90_days.csv
+2025-07-19 16:45:46,564 - INFO - Fetching energy for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 16:45:48,997 - INFO - \u2705 Energy data ready for phoenix: 90 records
+2025-07-19 16:45:49,002 - INFO - \u2705 Saved energy data: data/raw/energy/phoenix_energy_90_days.csv
+2025-07-19 16:45:49,003 - INFO - Fetching weather for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 16:45:50,177 - WARNING - seattle: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 16:45:50,177 - INFO - \u2705 Weather data ready for seattle: 90 records
+2025-07-19 16:45:50,182 - INFO - \u2705 Saved weather data: data/raw/weather/seattle_weather_90_days.csv
+2025-07-19 16:45:50,182 - INFO - Fetching energy for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 16:45:53,019 - INFO - \u2705 Energy data ready for seattle: 90 records
+2025-07-19 16:45:53,023 - INFO - \u2705 Saved energy data: data/raw/energy/seattle_energy_90_days.csv
+2025-07-19 16:53:26,362 - INFO - Fetching weather for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 16:53:37,468 - WARNING - Request exception on attempt 1: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=10) - Retrying in 1s
+2025-07-19 16:53:39,705 - WARNING - new_york: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 16:53:39,705 - INFO - \u2705 Weather data ready for new_york: 90 records
+2025-07-19 16:53:39,714 - INFO - \u2705 Saved weather data: data/raw/weather/new_york_weather_90_days.csv
+2025-07-19 16:53:39,714 - INFO - Fetching energy for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 16:53:42,273 - INFO - \u2705 Energy data ready for new_york: 90 records
+2025-07-19 16:53:42,276 - INFO - \u2705 Saved energy data: data/raw/energy/new_york_energy_90_days.csv
+2025-07-19 16:53:42,276 - INFO - Fetching weather for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 16:53:43,465 - WARNING - chicago: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 16:53:43,465 - INFO - \u2705 Weather data ready for chicago: 90 records
+2025-07-19 16:53:43,469 - INFO - \u2705 Saved weather data: data/raw/weather/chicago_weather_90_days.csv
+2025-07-19 16:53:43,469 - INFO - Fetching energy for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 16:53:45,673 - INFO - \u2705 Energy data ready for chicago: 90 records
+2025-07-19 16:53:45,678 - INFO - \u2705 Saved energy data: data/raw/energy/chicago_energy_90_days.csv
+2025-07-19 16:53:45,678 - INFO - Fetching weather for houston from 2025-01-20 to 2025-07-19
+2025-07-19 16:53:46,903 - WARNING - houston: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 16:53:46,904 - INFO - \u2705 Weather data ready for houston: 90 records
+2025-07-19 16:53:46,911 - INFO - \u2705 Saved weather data: data/raw/weather/houston_weather_90_days.csv
+2025-07-19 16:53:46,912 - INFO - Fetching energy for houston from 2025-01-20 to 2025-07-19
+2025-07-19 16:53:49,184 - INFO - \u2705 Energy data ready for houston: 90 records
+2025-07-19 16:53:49,190 - INFO - \u2705 Saved energy data: data/raw/energy/houston_energy_90_days.csv
+2025-07-19 16:53:49,190 - INFO - Fetching weather for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 16:53:50,384 - WARNING - phoenix: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 16:53:50,384 - INFO - \u2705 Weather data ready for phoenix: 90 records
+2025-07-19 16:53:50,389 - INFO - \u2705 Saved weather data: data/raw/weather/phoenix_weather_90_days.csv
+2025-07-19 16:53:50,389 - INFO - Fetching energy for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 16:53:52,591 - INFO - \u2705 Energy data ready for phoenix: 90 records
+2025-07-19 16:53:52,594 - INFO - \u2705 Saved energy data: data/raw/energy/phoenix_energy_90_days.csv
+2025-07-19 16:53:52,594 - INFO - Fetching weather for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 16:53:53,748 - WARNING - seattle: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 16:53:53,748 - INFO - \u2705 Weather data ready for seattle: 90 records
+2025-07-19 16:53:53,751 - INFO - \u2705 Saved weather data: data/raw/weather/seattle_weather_90_days.csv
+2025-07-19 16:53:53,751 - INFO - Fetching energy for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 16:53:55,613 - INFO - \u2705 Energy data ready for seattle: 90 records
+2025-07-19 16:53:55,616 - INFO - \u2705 Saved energy data: data/raw/energy/seattle_energy_90_days.csv
+2025-07-19 17:03:20,341 - INFO - Fetching weather for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 17:03:23,403 - WARNING - new_york: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 17:03:23,403 - INFO - \u2705 Weather data ready for new_york: 90 records
+2025-07-19 17:03:23,407 - INFO - \u2705 Saved weather data: data/raw/weather/new_york_weather_90_days.csv
+2025-07-19 17:03:23,408 - INFO - Fetching energy for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 17:03:32,441 - INFO - \u2705 Energy data ready for new_york: 90 records
+2025-07-19 17:03:32,444 - INFO - \u2705 Saved energy data: data/raw/energy/new_york_energy_90_days.csv
+2025-07-19 17:03:32,444 - INFO - Fetching weather for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 17:03:34,325 - WARNING - chicago: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 17:03:34,325 - INFO - \u2705 Weather data ready for chicago: 90 records
+2025-07-19 17:03:34,327 - INFO - \u2705 Saved weather data: data/raw/weather/chicago_weather_90_days.csv
+2025-07-19 17:03:34,327 - INFO - Fetching energy for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 17:03:45,083 - WARNING - Request exception on attempt 1: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=10) - Retrying in 1s
+2025-07-19 17:03:50,891 - INFO - \u2705 Energy data ready for chicago: 90 records
+2025-07-19 17:03:50,894 - INFO - \u2705 Saved energy data: data/raw/energy/chicago_energy_90_days.csv
+2025-07-19 17:03:50,894 - INFO - Fetching weather for houston from 2025-01-20 to 2025-07-19
+2025-07-19 17:03:53,694 - WARNING - houston: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 17:03:53,694 - INFO - \u2705 Weather data ready for houston: 90 records
+2025-07-19 17:03:53,700 - INFO - \u2705 Saved weather data: data/raw/weather/houston_weather_90_days.csv
+2025-07-19 17:03:53,700 - INFO - Fetching energy for houston from 2025-01-20 to 2025-07-19
+2025-07-19 17:04:01,700 - INFO - \u2705 Energy data ready for houston: 90 records
+2025-07-19 17:04:01,705 - INFO - \u2705 Saved energy data: data/raw/energy/houston_energy_90_days.csv
+2025-07-19 17:04:01,706 - INFO - Fetching weather for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 17:04:04,311 - WARNING - phoenix: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 17:04:04,311 - INFO - \u2705 Weather data ready for phoenix: 90 records
+2025-07-19 17:04:04,314 - INFO - \u2705 Saved weather data: data/raw/weather/phoenix_weather_90_days.csv
+2025-07-19 17:04:04,314 - INFO - Fetching energy for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 17:04:13,157 - INFO - \u2705 Energy data ready for phoenix: 90 records
+2025-07-19 17:04:13,161 - INFO - \u2705 Saved energy data: data/raw/energy/phoenix_energy_90_days.csv
+2025-07-19 17:04:13,161 - INFO - Fetching weather for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 17:04:15,342 - WARNING - seattle: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 17:04:15,343 - INFO - \u2705 Weather data ready for seattle: 90 records
+2025-07-19 17:04:15,351 - INFO - \u2705 Saved weather data: data/raw/weather/seattle_weather_90_days.csv
+2025-07-19 17:04:15,352 - INFO - Fetching energy for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 17:04:21,860 - INFO - \u2705 Energy data ready for seattle: 90 records
+2025-07-19 17:04:21,865 - INFO - \u2705 Saved energy data: data/raw/energy/seattle_energy_90_days.csv
+2025-07-19 17:14:05,580 - INFO - Fetching weather for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 17:14:07,621 - WARNING - new_york: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 17:14:07,622 - INFO - \u2705 Weather data ready for new_york: 90 records
+2025-07-19 17:14:07,636 - INFO - \u2705 Saved weather data: data/raw/weather/new_york_weather_90_days.csv
+2025-07-19 17:14:07,637 - INFO - Fetching energy for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 17:14:12,511 - INFO - \u2705 Energy data ready for new_york: 90 records
+2025-07-19 17:14:12,514 - INFO - \u2705 Saved energy data: data/raw/energy/new_york_energy_90_days.csv
+2025-07-19 17:14:12,514 - INFO - Fetching weather for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 17:14:14,021 - WARNING - chicago: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 17:14:14,022 - INFO - \u2705 Weather data ready for chicago: 90 records
+2025-07-19 17:14:14,030 - INFO - \u2705 Saved weather data: data/raw/weather/chicago_weather_90_days.csv
+2025-07-19 17:14:14,030 - INFO - Fetching energy for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 17:14:17,229 - INFO - \u2705 Energy data ready for chicago: 90 records
+2025-07-19 17:14:17,233 - INFO - \u2705 Saved energy data: data/raw/energy/chicago_energy_90_days.csv
+2025-07-19 17:14:17,234 - INFO - Fetching weather for houston from 2025-01-20 to 2025-07-19
+2025-07-19 17:14:18,577 - WARNING - houston: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 17:14:18,577 - INFO - \u2705 Weather data ready for houston: 90 records
+2025-07-19 17:14:18,582 - INFO - \u2705 Saved weather data: data/raw/weather/houston_weather_90_days.csv
+2025-07-19 17:14:18,582 - INFO - Fetching energy for houston from 2025-01-20 to 2025-07-19
+2025-07-19 17:14:21,077 - INFO - \u2705 Energy data ready for houston: 90 records
+2025-07-19 17:14:21,082 - INFO - \u2705 Saved energy data: data/raw/energy/houston_energy_90_days.csv
+2025-07-19 17:14:21,083 - INFO - Fetching weather for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 17:14:22,449 - WARNING - phoenix: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 17:14:22,449 - INFO - \u2705 Weather data ready for phoenix: 90 records
+2025-07-19 17:14:22,456 - INFO - \u2705 Saved weather data: data/raw/weather/phoenix_weather_90_days.csv
+2025-07-19 17:14:22,456 - INFO - Fetching energy for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 17:14:25,055 - INFO - \u2705 Energy data ready for phoenix: 90 records
+2025-07-19 17:14:25,059 - INFO - \u2705 Saved energy data: data/raw/energy/phoenix_energy_90_days.csv
+2025-07-19 17:14:25,059 - INFO - Fetching weather for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 17:14:26,475 - WARNING - seattle: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 17:14:26,475 - INFO - \u2705 Weather data ready for seattle: 90 records
+2025-07-19 17:14:26,480 - INFO - \u2705 Saved weather data: data/raw/weather/seattle_weather_90_days.csv
+2025-07-19 17:14:26,480 - INFO - Fetching energy for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 17:14:31,094 - INFO - \u2705 Energy data ready for seattle: 90 records
+2025-07-19 17:14:31,099 - INFO - \u2705 Saved energy data: data/raw/energy/seattle_energy_90_days.csv
+2025-07-19 17:31:46,611 - INFO - Fetching weather for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 17:31:49,567 - WARNING - new_york: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 17:31:49,568 - INFO - \u2705 Weather data ready for new_york: 90 records
+2025-07-19 17:31:49,574 - INFO - \u2705 Saved weather data: data/raw/weather/new_york_weather_90_days.csv
+2025-07-19 17:31:49,574 - INFO - Fetching energy for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 17:31:53,592 - INFO - \u2705 Energy data ready for new_york: 90 records
+2025-07-19 17:31:53,595 - INFO - \u2705 Saved energy data: data/raw/energy/new_york_energy_90_days.csv
+2025-07-19 17:31:53,595 - INFO - Fetching weather for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 17:31:55,238 - WARNING - chicago: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 17:31:55,238 - INFO - \u2705 Weather data ready for chicago: 90 records
+2025-07-19 17:31:55,241 - INFO - \u2705 Saved weather data: data/raw/weather/chicago_weather_90_days.csv
+2025-07-19 17:31:55,242 - INFO - Fetching energy for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 17:31:57,387 - INFO - \u2705 Energy data ready for chicago: 90 records
+2025-07-19 17:31:57,390 - INFO - \u2705 Saved energy data: data/raw/energy/chicago_energy_90_days.csv
+2025-07-19 17:31:57,390 - INFO - Fetching weather for houston from 2025-01-20 to 2025-07-19
+2025-07-19 17:31:59,344 - WARNING - houston: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 17:31:59,344 - INFO - \u2705 Weather data ready for houston: 90 records
+2025-07-19 17:31:59,350 - INFO - \u2705 Saved weather data: data/raw/weather/houston_weather_90_days.csv
+2025-07-19 17:31:59,351 - INFO - Fetching energy for houston from 2025-01-20 to 2025-07-19
+2025-07-19 17:32:01,801 - INFO - \u2705 Energy data ready for houston: 90 records
+2025-07-19 17:32:01,809 - INFO - \u2705 Saved energy data: data/raw/energy/houston_energy_90_days.csv
+2025-07-19 17:32:01,809 - INFO - Fetching weather for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 17:32:04,108 - WARNING - phoenix: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 17:32:04,108 - INFO - \u2705 Weather data ready for phoenix: 90 records
+2025-07-19 17:32:04,114 - INFO - \u2705 Saved weather data: data/raw/weather/phoenix_weather_90_days.csv
+2025-07-19 17:32:04,115 - INFO - Fetching energy for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 17:32:06,934 - INFO - \u2705 Energy data ready for phoenix: 90 records
+2025-07-19 17:32:06,940 - INFO - \u2705 Saved energy data: data/raw/energy/phoenix_energy_90_days.csv
+2025-07-19 17:32:06,940 - INFO - Fetching weather for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 17:32:08,737 - WARNING - seattle: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 17:32:08,737 - INFO - \u2705 Weather data ready for seattle: 90 records
+2025-07-19 17:32:08,741 - INFO - \u2705 Saved weather data: data/raw/weather/seattle_weather_90_days.csv
+2025-07-19 17:32:08,742 - INFO - Fetching energy for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 17:32:11,168 - INFO - \u2705 Energy data ready for seattle: 90 records
+2025-07-19 17:32:11,171 - INFO - \u2705 Saved energy data: data/raw/energy/seattle_energy_90_days.csv
+2025-07-19 18:04:33,729 - INFO - Fetching weather for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 18:04:36,919 - WARNING - new_york: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 18:04:36,919 - INFO - \u2705 Weather data ready for new_york: 90 records
+2025-07-19 18:04:36,925 - INFO - \u2705 Saved weather data: data/raw/weather/new_york_weather_90_days.csv
+2025-07-19 18:04:36,925 - INFO - Fetching energy for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 18:04:42,970 - INFO - \u2705 Energy data ready for new_york: 90 records
+2025-07-19 18:04:42,975 - INFO - \u2705 Saved energy data: data/raw/energy/new_york_energy_90_days.csv
+2025-07-19 18:04:42,975 - INFO - Fetching weather for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 18:04:45,052 - WARNING - chicago: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 18:04:45,052 - INFO - \u2705 Weather data ready for chicago: 90 records
+2025-07-19 18:04:45,057 - INFO - \u2705 Saved weather data: data/raw/weather/chicago_weather_90_days.csv
+2025-07-19 18:04:45,057 - INFO - Fetching energy for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 18:04:49,302 - INFO - \u2705 Energy data ready for chicago: 90 records
+2025-07-19 18:04:49,307 - INFO - \u2705 Saved energy data: data/raw/energy/chicago_energy_90_days.csv
+2025-07-19 18:04:49,307 - INFO - Fetching weather for houston from 2025-01-20 to 2025-07-19
+2025-07-19 18:04:51,467 - WARNING - houston: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 18:04:51,467 - INFO - \u2705 Weather data ready for houston: 90 records
+2025-07-19 18:04:51,471 - INFO - \u2705 Saved weather data: data/raw/weather/houston_weather_90_days.csv
+2025-07-19 18:04:51,471 - INFO - Fetching energy for houston from 2025-01-20 to 2025-07-19
+2025-07-19 18:04:55,391 - INFO - \u2705 Energy data ready for houston: 90 records
+2025-07-19 18:04:55,395 - INFO - \u2705 Saved energy data: data/raw/energy/houston_energy_90_days.csv
+2025-07-19 18:04:55,396 - INFO - Fetching weather for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 18:05:05,950 - WARNING - Request exception on attempt 1: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=10) - Retrying in 1s
+2025-07-19 18:05:09,261 - WARNING - phoenix: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 18:05:09,261 - INFO - \u2705 Weather data ready for phoenix: 90 records
+2025-07-19 18:05:09,266 - INFO - \u2705 Saved weather data: data/raw/weather/phoenix_weather_90_days.csv
+2025-07-19 18:05:09,267 - INFO - Fetching energy for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 18:05:12,815 - INFO - \u2705 Energy data ready for phoenix: 90 records
+2025-07-19 18:05:12,819 - INFO - \u2705 Saved energy data: data/raw/energy/phoenix_energy_90_days.csv
+2025-07-19 18:05:12,819 - INFO - Fetching weather for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 18:05:14,783 - WARNING - seattle: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 18:05:14,784 - INFO - \u2705 Weather data ready for seattle: 90 records
+2025-07-19 18:05:14,791 - INFO - \u2705 Saved weather data: data/raw/weather/seattle_weather_90_days.csv
+2025-07-19 18:05:14,792 - INFO - Fetching energy for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 18:05:20,566 - INFO - \u2705 Energy data ready for seattle: 90 records
+2025-07-19 18:05:20,569 - INFO - \u2705 Saved energy data: data/raw/energy/seattle_energy_90_days.csv
+2025-07-19 18:24:04,182 - INFO - Fetching weather for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 18:24:12,955 - WARNING - new_york: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 18:24:12,955 - INFO - \u2705 Weather data ready for new_york: 90 records
+2025-07-19 18:24:12,962 - INFO - \u2705 Saved weather data: data/raw/weather/new_york_weather_90_days.csv
+2025-07-19 18:24:12,963 - INFO - Fetching energy for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 18:24:17,859 - INFO - \u2705 Energy data ready for new_york: 90 records
+2025-07-19 18:24:17,862 - INFO - \u2705 Saved energy data: data/raw/energy/new_york_energy_90_days.csv
+2025-07-19 18:24:17,863 - INFO - Fetching weather for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 18:24:19,990 - WARNING - chicago: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 18:24:19,991 - INFO - \u2705 Weather data ready for chicago: 90 records
+2025-07-19 18:24:19,993 - INFO - \u2705 Saved weather data: data/raw/weather/chicago_weather_90_days.csv
+2025-07-19 18:24:19,993 - INFO - Fetching energy for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 18:24:24,770 - INFO - \u2705 Energy data ready for chicago: 90 records
+2025-07-19 18:24:24,775 - INFO - \u2705 Saved energy data: data/raw/energy/chicago_energy_90_days.csv
+2025-07-19 18:24:24,775 - INFO - Fetching weather for houston from 2025-01-20 to 2025-07-19
+2025-07-19 18:24:35,165 - WARNING - Request exception on attempt 1: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=10) - Retrying in 1s
+2025-07-19 18:24:38,591 - WARNING - houston: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 18:24:38,591 - INFO - \u2705 Weather data ready for houston: 90 records
+2025-07-19 18:24:38,593 - INFO - \u2705 Saved weather data: data/raw/weather/houston_weather_90_days.csv
+2025-07-19 18:24:38,593 - INFO - Fetching energy for houston from 2025-01-20 to 2025-07-19
+2025-07-19 18:24:44,542 - INFO - \u2705 Energy data ready for houston: 90 records
+2025-07-19 18:24:44,545 - INFO - \u2705 Saved energy data: data/raw/energy/houston_energy_90_days.csv
+2025-07-19 18:24:44,545 - INFO - Fetching weather for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 18:24:46,775 - WARNING - phoenix: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 18:24:46,775 - INFO - \u2705 Weather data ready for phoenix: 90 records
+2025-07-19 18:24:46,778 - INFO - \u2705 Saved weather data: data/raw/weather/phoenix_weather_90_days.csv
+2025-07-19 18:24:46,778 - INFO - Fetching energy for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 18:24:51,802 - INFO - \u2705 Energy data ready for phoenix: 90 records
+2025-07-19 18:24:51,805 - INFO - \u2705 Saved energy data: data/raw/energy/phoenix_energy_90_days.csv
+2025-07-19 18:24:51,805 - INFO - Fetching weather for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 18:24:55,558 - WARNING - seattle: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 18:24:55,558 - INFO - \u2705 Weather data ready for seattle: 90 records
+2025-07-19 18:24:55,565 - INFO - \u2705 Saved weather data: data/raw/weather/seattle_weather_90_days.csv
+2025-07-19 18:24:55,566 - INFO - Fetching energy for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 18:25:06,303 - WARNING - Request exception on attempt 1: HTTPSConnectionPool(host='api.eia.gov', port=443): Read timed out. (read timeout=10) - Retrying in 1s
+2025-07-19 18:25:11,593 - INFO - \u2705 Energy data ready for seattle: 90 records
+2025-07-19 18:25:11,596 - INFO - \u2705 Saved energy data: data/raw/energy/seattle_energy_90_days.csv
+2025-07-19 18:47:51,057 - INFO - Fetching weather for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 18:47:53,077 - WARNING - new_york: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 18:47:53,077 - INFO - \u2705 Weather data ready for new_york: 90 records
+2025-07-19 18:47:53,081 - INFO - \u2705 Saved weather data: data/raw/weather/new_york_weather_90_days.csv
+2025-07-19 18:47:53,081 - INFO - Fetching energy for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 18:47:56,392 - INFO - \u2705 Energy data ready for new_york: 90 records
+2025-07-19 18:47:56,395 - INFO - \u2705 Saved energy data: data/raw/energy/new_york_energy_90_days.csv
+2025-07-19 18:47:56,395 - INFO - Fetching weather for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 18:47:57,578 - WARNING - chicago: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 18:47:57,578 - INFO - \u2705 Weather data ready for chicago: 90 records
+2025-07-19 18:47:57,583 - INFO - \u2705 Saved weather data: data/raw/weather/chicago_weather_90_days.csv
+2025-07-19 18:47:57,584 - INFO - Fetching energy for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 18:48:00,484 - INFO - \u2705 Energy data ready for chicago: 90 records
+2025-07-19 18:48:00,488 - INFO - \u2705 Saved energy data: data/raw/energy/chicago_energy_90_days.csv
+2025-07-19 18:48:00,488 - INFO - Fetching weather for houston from 2025-01-20 to 2025-07-19
+2025-07-19 18:48:01,687 - WARNING - houston: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 18:48:01,687 - INFO - \u2705 Weather data ready for houston: 90 records
+2025-07-19 18:48:01,689 - INFO - \u2705 Saved weather data: data/raw/weather/houston_weather_90_days.csv
+2025-07-19 18:48:01,689 - INFO - Fetching energy for houston from 2025-01-20 to 2025-07-19
+2025-07-19 18:48:03,796 - INFO - \u2705 Energy data ready for houston: 90 records
+2025-07-19 18:48:03,801 - INFO - \u2705 Saved energy data: data/raw/energy/houston_energy_90_days.csv
+2025-07-19 18:48:03,802 - INFO - Fetching weather for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 18:48:05,012 - WARNING - phoenix: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 18:48:05,012 - INFO - \u2705 Weather data ready for phoenix: 90 records
+2025-07-19 18:48:05,017 - INFO - \u2705 Saved weather data: data/raw/weather/phoenix_weather_90_days.csv
+2025-07-19 18:48:05,017 - INFO - Fetching energy for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 18:48:07,467 - INFO - \u2705 Energy data ready for phoenix: 90 records
+2025-07-19 18:48:07,470 - INFO - \u2705 Saved energy data: data/raw/energy/phoenix_energy_90_days.csv
+2025-07-19 18:48:07,471 - INFO - Fetching weather for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 18:48:08,660 - WARNING - seattle: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 18:48:08,661 - INFO - \u2705 Weather data ready for seattle: 90 records
+2025-07-19 18:48:08,665 - INFO - \u2705 Saved weather data: data/raw/weather/seattle_weather_90_days.csv
+2025-07-19 18:48:08,665 - INFO - Fetching energy for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 18:48:12,188 - INFO - \u2705 Energy data ready for seattle: 90 records
+2025-07-19 18:48:12,192 - INFO - \u2705 Saved energy data: data/raw/energy/seattle_energy_90_days.csv
+2025-07-19 18:53:16,130 - INFO - Fetching weather for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 18:53:18,140 - WARNING - new_york: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 18:53:18,140 - INFO - \u2705 Weather data ready for new_york: 90 records
+2025-07-19 18:53:18,145 - INFO - \u2705 Saved weather data: data/raw/weather/new_york_weather_90_days.csv
+2025-07-19 18:53:18,146 - INFO - Fetching energy for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 18:53:20,807 - INFO - \u2705 Energy data ready for new_york: 90 records
+2025-07-19 18:53:20,809 - INFO - \u2705 Saved energy data: data/raw/energy/new_york_energy_90_days.csv
+2025-07-19 18:53:20,810 - INFO - Fetching weather for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 18:53:21,967 - WARNING - chicago: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 18:53:21,967 - INFO - \u2705 Weather data ready for chicago: 90 records
+2025-07-19 18:53:21,970 - INFO - \u2705 Saved weather data: data/raw/weather/chicago_weather_90_days.csv
+2025-07-19 18:53:21,971 - INFO - Fetching energy for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 18:53:24,249 - INFO - \u2705 Energy data ready for chicago: 90 records
+2025-07-19 18:53:24,252 - INFO - \u2705 Saved energy data: data/raw/energy/chicago_energy_90_days.csv
+2025-07-19 18:53:24,252 - INFO - Fetching weather for houston from 2025-01-20 to 2025-07-19
+2025-07-19 18:53:25,472 - WARNING - houston: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 18:53:25,472 - INFO - \u2705 Weather data ready for houston: 90 records
+2025-07-19 18:53:25,477 - INFO - \u2705 Saved weather data: data/raw/weather/houston_weather_90_days.csv
+2025-07-19 18:53:25,478 - INFO - Fetching energy for houston from 2025-01-20 to 2025-07-19
+2025-07-19 18:53:27,790 - INFO - \u2705 Energy data ready for houston: 90 records
+2025-07-19 18:53:27,795 - INFO - \u2705 Saved energy data: data/raw/energy/houston_energy_90_days.csv
+2025-07-19 18:53:27,795 - INFO - Fetching weather for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 18:53:28,959 - WARNING - phoenix: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 18:53:28,959 - INFO - \u2705 Weather data ready for phoenix: 90 records
+2025-07-19 18:53:28,965 - INFO - \u2705 Saved weather data: data/raw/weather/phoenix_weather_90_days.csv
+2025-07-19 18:53:28,966 - INFO - Fetching energy for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 18:53:31,013 - INFO - \u2705 Energy data ready for phoenix: 90 records
+2025-07-19 18:53:31,017 - INFO - \u2705 Saved energy data: data/raw/energy/phoenix_energy_90_days.csv
+2025-07-19 18:53:31,017 - INFO - Fetching weather for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 18:53:32,438 - WARNING - seattle: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 18:53:32,438 - INFO - \u2705 Weather data ready for seattle: 90 records
+2025-07-19 18:53:32,440 - INFO - \u2705 Saved weather data: data/raw/weather/seattle_weather_90_days.csv
+2025-07-19 18:53:32,440 - INFO - Fetching energy for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 18:53:34,595 - INFO - \u2705 Energy data ready for seattle: 90 records
+2025-07-19 18:53:34,598 - INFO - \u2705 Saved energy data: data/raw/energy/seattle_energy_90_days.csv
+2025-07-19 19:20:20,014 - INFO - Fetching weather for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 19:20:22,044 - WARNING - new_york: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 19:20:22,044 - INFO - \u2705 Weather data ready for new_york: 90 records
+2025-07-19 19:20:22,050 - INFO - \u2705 Saved weather data: data/raw/weather/new_york_weather_90_days.csv
+2025-07-19 19:20:22,051 - INFO - Fetching energy for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 19:20:25,021 - INFO - \u2705 Energy data ready for new_york: 90 records
+2025-07-19 19:20:25,024 - INFO - \u2705 Saved energy data: data/raw/energy/new_york_energy_90_days.csv
+2025-07-19 19:20:25,024 - INFO - Fetching weather for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 19:20:26,709 - WARNING - chicago: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 19:20:26,709 - INFO - \u2705 Weather data ready for chicago: 90 records
+2025-07-19 19:20:26,711 - INFO - \u2705 Saved weather data: data/raw/weather/chicago_weather_90_days.csv
+2025-07-19 19:20:26,712 - INFO - Fetching energy for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 19:20:29,350 - INFO - \u2705 Energy data ready for chicago: 90 records
+2025-07-19 19:20:29,354 - INFO - \u2705 Saved energy data: data/raw/energy/chicago_energy_90_days.csv
+2025-07-19 19:20:29,355 - INFO - Fetching weather for houston from 2025-01-20 to 2025-07-19
+2025-07-19 19:20:30,573 - WARNING - houston: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 19:20:30,573 - INFO - \u2705 Weather data ready for houston: 90 records
+2025-07-19 19:20:30,578 - INFO - \u2705 Saved weather data: data/raw/weather/houston_weather_90_days.csv
+2025-07-19 19:20:30,579 - INFO - Fetching energy for houston from 2025-01-20 to 2025-07-19
+2025-07-19 19:20:34,210 - INFO - \u2705 Energy data ready for houston: 90 records
+2025-07-19 19:20:34,214 - INFO - \u2705 Saved energy data: data/raw/energy/houston_energy_90_days.csv
+2025-07-19 19:20:34,215 - INFO - Fetching weather for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 19:20:35,938 - WARNING - phoenix: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 19:20:35,938 - INFO - \u2705 Weather data ready for phoenix: 90 records
+2025-07-19 19:20:35,942 - INFO - \u2705 Saved weather data: data/raw/weather/phoenix_weather_90_days.csv
+2025-07-19 19:20:35,943 - INFO - Fetching energy for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 19:20:39,125 - INFO - \u2705 Energy data ready for phoenix: 90 records
+2025-07-19 19:20:39,130 - INFO - \u2705 Saved energy data: data/raw/energy/phoenix_energy_90_days.csv
+2025-07-19 19:20:39,131 - INFO - Fetching weather for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 19:20:40,398 - WARNING - seattle: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 19:20:40,399 - INFO - \u2705 Weather data ready for seattle: 90 records
+2025-07-19 19:20:40,404 - INFO - \u2705 Saved weather data: data/raw/weather/seattle_weather_90_days.csv
+2025-07-19 19:20:40,404 - INFO - Fetching energy for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 19:20:43,790 - INFO - \u2705 Energy data ready for seattle: 90 records
+2025-07-19 19:20:43,795 - INFO - \u2705 Saved energy data: data/raw/energy/seattle_energy_90_days.csv
+2025-07-19 19:31:51,511 - INFO - Fetching weather for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 19:32:02,641 - WARNING - Request exception on attempt 1: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=10) - Retrying in 1s
+2025-07-19 19:32:04,894 - WARNING - new_york: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 19:32:04,894 - INFO - \u2705 Weather data ready for new_york: 90 records
+2025-07-19 19:32:04,900 - INFO - \u2705 Saved weather data: data/raw/weather/new_york_weather_90_days.csv
+2025-07-19 19:32:04,900 - INFO - Fetching energy for new_york from 2025-01-20 to 2025-07-19
+2025-07-19 19:32:08,283 - INFO - \u2705 Energy data ready for new_york: 90 records
+2025-07-19 19:32:08,287 - INFO - \u2705 Saved energy data: data/raw/energy/new_york_energy_90_days.csv
+2025-07-19 19:32:08,287 - INFO - Fetching weather for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 19:32:09,520 - WARNING - chicago: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 19:32:09,520 - INFO - \u2705 Weather data ready for chicago: 90 records
+2025-07-19 19:32:09,524 - INFO - \u2705 Saved weather data: data/raw/weather/chicago_weather_90_days.csv
+2025-07-19 19:32:09,524 - INFO - Fetching energy for chicago from 2025-01-20 to 2025-07-19
+2025-07-19 19:32:12,835 - INFO - \u2705 Energy data ready for chicago: 90 records
+2025-07-19 19:32:12,840 - INFO - \u2705 Saved energy data: data/raw/energy/chicago_energy_90_days.csv
+2025-07-19 19:32:12,840 - INFO - Fetching weather for houston from 2025-01-20 to 2025-07-19
+2025-07-19 19:32:14,065 - WARNING - houston: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 19:32:14,066 - INFO - \u2705 Weather data ready for houston: 90 records
+2025-07-19 19:32:14,075 - INFO - \u2705 Saved weather data: data/raw/weather/houston_weather_90_days.csv
+2025-07-19 19:32:14,076 - INFO - Fetching energy for houston from 2025-01-20 to 2025-07-19
+2025-07-19 19:32:16,324 - INFO - \u2705 Energy data ready for houston: 90 records
+2025-07-19 19:32:16,329 - INFO - \u2705 Saved energy data: data/raw/energy/houston_energy_90_days.csv
+2025-07-19 19:32:16,329 - INFO - Fetching weather for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 19:32:17,582 - WARNING - phoenix: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 19:32:17,582 - INFO - \u2705 Weather data ready for phoenix: 90 records
+2025-07-19 19:32:17,590 - INFO - \u2705 Saved weather data: data/raw/weather/phoenix_weather_90_days.csv
+2025-07-19 19:32:17,590 - INFO - Fetching energy for phoenix from 2025-01-20 to 2025-07-19
+2025-07-19 19:32:20,992 - INFO - \u2705 Energy data ready for phoenix: 90 records
+2025-07-19 19:32:20,996 - INFO - \u2705 Saved energy data: data/raw/energy/phoenix_energy_90_days.csv
+2025-07-19 19:32:20,996 - INFO - Fetching weather for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 19:32:22,209 - WARNING - seattle: Weather data not up-to-date (latest: 2025-07-16)
+2025-07-19 19:32:22,209 - INFO - \u2705 Weather data ready for seattle: 90 records
+2025-07-19 19:32:22,213 - INFO - \u2705 Saved weather data: data/raw/weather/seattle_weather_90_days.csv
+2025-07-19 19:32:22,213 - INFO - Fetching energy for seattle from 2025-01-20 to 2025-07-19
+2025-07-19 19:32:25,591 - INFO - \u2705 Energy data ready for seattle: 90 records
+2025-07-19 19:32:25,595 - INFO - \u2705 Saved energy data: data/raw/energy/seattle_energy_90_days.csv

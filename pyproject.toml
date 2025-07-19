@@ -8,11 +8,12 @@ requires-python = ">=3.10"
 dependencies = [
     "pandas>=2.2.3",
     "numpy>=1.26.4",
-    "scikit-learn>=1.6.1",
+    "scikit-learn>=1.6.1",   # noqa: DEP002
     "plotly>=5.22.0",
     "streamlit>=1.30.0",
     "requests>=2.32.3",
     "python-dotenv>=1.0.1",
+    "statsmodels>=0.14.1"  # noqa: DEP002
 ]
 
 [build-system]
@@ -69,6 +70,7 @@ ignore_missing_imports = true
 
 [tool.deptry]
 exclude = [".venv"]
+ignore = ["scikit-learn", "statsmodels"]
 known_first_party = ["energy_analysis", "data_fetcher", "data_processor", "src"]
 
 [tool.deptry.per_rule_ignores]

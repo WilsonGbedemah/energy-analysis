@@ -1,9 +1,4 @@
 date,respondent,respondent-name,type,type-name,timezone,timezone-description,demand,value-units,city
-2025-04-15,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,359103,megawatthours,new_york
-2025-04-16,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,383841,megawatthours,new_york
-2025-04-17,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,345024,megawatthours,new_york
-2025-04-18,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,342717,megawatthours,new_york
-2025-04-19,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,339863,megawatthours,new_york
 2025-04-20,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,308781,megawatthours,new_york
 2025-04-21,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,360073,megawatthours,new_york
 2025-04-22,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,349802,megawatthours,new_york
@@ -88,4 +83,9 @@ date,respondent,respondent-name,type,type-name,timezone,timezone-description,dem
 2025-07-10,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,527963,megawatthours,new_york
 2025-07-11,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,535035,megawatthours,new_york
 2025-07-12,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,514307,megawatthours,new_york
-2025-07-13,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,509114,megawatthours,new_york
+2025-07-13,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,511525,megawatthours,new_york
+2025-07-14,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,553017,megawatthours,new_york
+2025-07-15,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,556763,megawatthours,new_york
+2025-07-16,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,592140,megawatthours,new_york
+2025-07-17,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,589724,megawatthours,new_york
+2025-07-18,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,482873,megawatthours,new_york

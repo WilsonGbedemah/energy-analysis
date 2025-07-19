@@ -1,9 +1,4 @@
 date,respondent,respondent-name,type,type-name,timezone,timezone-description,demand,value-units,city
-2025-04-15,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1174237,megawatthours,houston
-2025-04-16,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1223818,megawatthours,houston
-2025-04-17,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1272816,megawatthours,houston
-2025-04-18,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1287137,megawatthours,houston
-2025-04-19,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1201797,megawatthours,houston
 2025-04-20,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1156174,megawatthours,houston
 2025-04-21,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1207627,megawatthours,houston
 2025-04-22,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1285560,megawatthours,houston
@@ -87,5 +82,10 @@ date,respondent,respondent-name,type,type-name,timezone,timezone-description,dem
 2025-07-09,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1471587,megawatthours,houston
 2025-07-10,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1534068,megawatthours,houston
 2025-07-11,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1542283,megawatthours,houston
-2025-07-12,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1494292,megawatthours,houston
-2025-07-13,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1448423,megawatthours,houston
+2025-07-12,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1493102,megawatthours,houston
+2025-07-13,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1424677,megawatthours,houston
+2025-07-14,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1510140,megawatthours,houston
+2025-07-15,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1575662,megawatthours,houston
+2025-07-16,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1597302,megawatthours,houston
+2025-07-17,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1572318,megawatthours,houston
+2025-07-18,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1572951,megawatthours,houston

@@ -1,10 +1,4 @@
 date,respondent,respondent-name,type,type-name,timezone,timezone-description,demand,value-units,city
-2025-04-15,SCL,Seattle City Light,D,Demand,Pacific,Pacific,24264,megawatthours,seattle
-2025-04-16,SCL,Seattle City Light,D,Demand,Pacific,Pacific,22975,megawatthours,seattle
-2025-04-17,SCL,Seattle City Light,D,Demand,Pacific,Pacific,23060,megawatthours,seattle
-2025-04-18,SCL,Seattle City Light,D,Demand,Pacific,Pacific,23362,megawatthours,seattle
-2025-04-19,SCL,Seattle City Light,D,Demand,Pacific,Pacific,22180,megawatthours,seattle
-2025-04-20,SCL,Seattle City Light,D,Demand,Pacific,Pacific,22896,megawatthours,seattle
 2025-04-21,SCL,Seattle City Light,D,Demand,Pacific,Pacific,25441,megawatthours,seattle
 2025-04-22,SCL,Seattle City Light,D,Demand,Pacific,Pacific,24942,megawatthours,seattle
 2025-04-23,SCL,Seattle City Light,D,Demand,Pacific,Pacific,23675,megawatthours,seattle
@@ -88,4 +82,10 @@ date,respondent,respondent-name,type,type-name,timezone,timezone-description,dem
 2025-07-10,SCL,Seattle City Light,D,Demand,Pacific,Pacific,22212,megawatthours,seattle
 2025-07-11,SCL,Seattle City Light,D,Demand,Pacific,Pacific,23941,megawatthours,seattle
 2025-07-12,SCL,Seattle City Light,D,Demand,Pacific,Pacific,24080,megawatthours,seattle
-2025-07-13,SCL,Seattle City Light,D,Demand,Pacific,Pacific,24451,megawatthours,seattle
+2025-07-13,SCL,Seattle City Light,D,Demand,Pacific,Pacific,24864,megawatthours,seattle
+2025-07-14,SCL,Seattle City Light,D,Demand,Pacific,Pacific,25822,megawatthours,seattle
+2025-07-15,SCL,Seattle City Light,D,Demand,Pacific,Pacific,26321,megawatthours,seattle
+2025-07-16,SCL,Seattle City Light,D,Demand,Pacific,Pacific,27180,megawatthours,seattle
+2025-07-17,SCL,Seattle City Light,D,Demand,Pacific,Pacific,25557,megawatthours,seattle
+2025-07-18,SCL,Seattle City Light,D,Demand,Pacific,Pacific,23662,megawatthours,seattle
+2025-07-19,SCL,Seattle City Light,DF,Day-ahead demand forecast,Pacific,Pacific,20981,megawatthours,seattle

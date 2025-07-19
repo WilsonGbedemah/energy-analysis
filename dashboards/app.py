@@ -5,147 +5,461 @@ import streamlit as st
 import plotly.express as px
 import plotly.graph_objects as go
 from datetime import datetime
-from sklearn.linear_model import LinearRegression
 
-# Streamlit Config
-st.set_page_config(page_title="US Weather + Energy Dashboard", layout="wide")
-st.title("⚡ US Weather + Energy Usage Dashboard")
-st.caption("Explore 90-day weather and electricity trends for 5 major US cities.")
+# ─── Streamlit Config ───────────────────────────── #
+st.set_page_config(page_title="Energy Demand & Quality Dashboard", layout="wide")
+st.title("📈 US Energy Demand & Weather Data Quality Dashboard")
+st.caption("Tracking electricity trends and data quality across major US cities")
+st.markdown(f"🕒 **Last updated:** {datetime.utcnow().strftime('%B %d, %Y at %H:%M UTC')}")
 
-# ─── Load Data ───────────────────────────────────────────── #
+# ─── Load Data ─────────────────────────────────── #
 @st.cache_data
 def load_data():
-    merged = pd.read_csv("data/processed/merged_data.csv", parse_dates=["date"])
-    geo = pd.read_csv("data/processed/geographic_overview.csv")
-    heatmap = pd.read_csv("data/processed/heatmap_matrix.csv", index_col=0)
-    return merged, geo, heatmap
+    try:
+        merged = pd.read_csv("data/processed/merged_data.csv", parse_dates=["date"])
+        geo = pd.read_csv("data/processed/geographic_overview.csv")
+        heatmap = pd.read_csv("data/processed/heatmap_matrix.csv", index_col=0)
+        
+        # Load quality reports
+        quality_reports = []
+        for f in os.listdir("data/processed"):
+            if f.endswith("_quality_report.csv"):
+                df = pd.read_csv(os.path.join("data/processed", f))
+                df["city"] = f.replace("_quality_report.csv", "").replace("_", " ").title()
+                quality_reports.append(df)
+        
+        quality_df = pd.concat(quality_reports, ignore_index=True) if quality_reports else pd.DataFrame()
+        return merged, geo, heatmap, quality_df
+    except Exception as e:
+        st.error(f"Error loading data: {e}")
+        return pd.DataFrame(), pd.DataFrame(), pd.DataFrame(), pd.DataFrame()
 
-merged_df, geo_df, heatmap_matrix = load_data()
+merged_df, geo_df, heatmap_matrix, quality_df = load_data()
+cities = merged_df["city"].unique().tolist() if not merged_df.empty else []
 
-cities = merged_df["city"].unique().tolist()
-
-# ─── Sidebar Filters ─────────────────────────────────────── #
+# ─── Sidebar ──────────────────────────────────── #
 st.sidebar.header("🔍 Filter Options")
-selected_cities = st.sidebar.multiselect("Select cities", options=cities, default=cities)
-date_range = st.sidebar.date_input("Date range", [merged_df.date.min(), merged_df.date.max()])
+date_range = st.sidebar.date_input("Date Range", 
+    value=[merged_df.date.min(), merged_df.date.max()] if not merged_df.empty else [datetime.today(), datetime.today()],
+    min_value=merged_df.date.min() if not merged_df.empty else datetime.today(),
+    max_value=merged_df.date.max() if not merged_df.empty else datetime.today()
+)
 
-# Apply filters
-filtered = merged_df[
-    (merged_df["city"].isin(selected_cities)) &
+# Visualization mode selection
+viz_mode = st.sidebar.radio("Visualization Mode", 
+    options=["Overview", "Single City Analysis", "City Comparison"],
+    index=0
+)
+
+# Filter data based on date range
+filtered_df = merged_df[
     (merged_df["date"] >= pd.to_datetime(date_range[0])) &
     (merged_df["date"] <= pd.to_datetime(date_range[1]))
-]
+] if not merged_df.empty else pd.DataFrame()
 
-# ─── 1. Geographic Overview ──────────────────────────────── #
-st.header("1️⃣ Geographic Overview")
-st.caption(f"🗓️ Data last updated: {geo_df['date'].max()}")
+# ─── Overview Page ─────────────────────────────── #
+if viz_mode == "Overview":
+    st.header("📘 Dashboard Overview")
+    
+    st.markdown("""
+    ## Welcome to the Energy Demand & Weather Dashboard
+    
+    This dashboard provides insights into:
+    - Electricity demand patterns across US cities
+    - Relationship between weather and energy consumption
+    - Data quality metrics for our datasets
+    
+    ### How to Use This Dashboard
+    
+    1. **Select Visualization Mode** in the sidebar:
+       - *Overview*: This introduction page
+       - *Single City Analysis*: Detailed charts for one city at a time
+       - *City Comparison*: Compare metrics between two cities
+    
+    2. **Adjust Date Range** to focus on specific time periods
+    
+    ### Chart Explanations
+    
+    **📉 Time Series Analysis**
+    - Shows daily maximum temperature and energy consumption over time
+    - Weekend days are shaded gray for easy identification
+    - Helps identify seasonal patterns and anomalies
+    
+    **🔗 Correlation Analysis**
+    - Scatter plot showing relationship between temperature and energy use
+    - Includes trendline and R² value
+    - Positive correlation suggests increased cooling demand in hotter weather
+    
+    **🔥 Usage Heatmap**
+    - Visualizes energy consumption by temperature range and weekday
+    - Colors indicate consumption levels (red = higher, blue = lower)
+    - Helps identify usage patterns under different weather conditions
+    
+    **🧪 Data Quality Overview**
+    - Tracks data issues across cities including:
+      - Missing values in critical fields
+      - Temperature outliers (unrealistic values)
+      - Negative energy readings (invalid data)
+      - Data freshness (how current our data is)
+    """)
+    
+    if not quality_df.empty:
+        st.subheader("Current Data Quality Status")
+        
+        # Summary cards
+        col1, col2, col3, col4 = st.columns(4)
+        with col1:
+            missing = quality_df[quality_df["check"] == "missing_values"]["count"].sum()
+            st.metric("Missing Values", missing, help="Count of null values in critical columns")
+        
+        with col2:
+            outliers = quality_df[quality_df["check"] == "temperature_outliers"]["count"].sum()
+            st.metric("Temperature Outliers", outliers, help="Readings outside -50°F to 130°F range")
+        
+        with col3:
+            energy_issues = quality_df[quality_df["check"] == "energy_issues"]["count"].sum()
+            st.metric("Energy Data Issues", energy_issues, help="Negative or missing energy values")
+        
+        with col4:
+            stale = quality_df[quality_df["check"] == "data_freshness"]
+            stale_cities = stale[stale["count"] > 2]["city"].unique()
+            st.metric("Stale Data Cities", len(stale_cities), help="Cities with data older than 2 days")
+        
+        # Detailed quality checks
+        st.markdown("""
+        ### Quality Check Documentation
+        
+        **Missing Values**
+        - Checks for null values in temperature and energy fields
+        - Why it matters: Missing data can skew analysis and modeling results
+        
+        **Temperature Outliers**
+        - Flags readings below -50°F or above 130°F
+        - Why it matters: These extreme values likely indicate sensor errors
+        
+        **Energy Issues**
+        - Detects negative or missing energy values
+        - Why it matters: Negative consumption is physically impossible
+        
+        **Data Freshness**
+        - Tracks when data was last updated
+        - Why it matters: Stale data reduces decision-making relevance
+        """)
 
-geo_data = geo_df.copy()
-geo_data["energy_color"] = np.where(geo_data["energy_pct_change"] > 0, "red", "green")
+# ─── Single City Analysis ──────────────────────── #
+elif viz_mode == "Single City Analysis":
+    st.header("📊 Single City Analysis")
+    
+    if not cities:
+        st.warning("No city data available for selected date range")
+    else:
+        # Geographic Overview
+        st.subheader("📍 Current Snapshot")
+        geo_city = st.selectbox("Select City for Geographic Overview", cities, key="geo_city")
+        city_data = filtered_df[filtered_df["city"] == geo_city]
+        
+        if city_data.empty:
+            st.warning(f"No data available for {geo_city} in selected date range")
+        else:
+            city_coords = {
+                "new_york": {"lat": 40.7128, "lon": -74.0060},
+                "chicago": {"lat": 41.8781, "lon": -87.6298},
+                "houston": {"lat": 29.7604, "lon": -95.3698},
+                "phoenix": {"lat": 33.4484, "lon": -112.0740},
+                "seattle": {"lat": 47.6062, "lon": -122.3321}
+            }
+            
+            latest_data = geo_df[geo_df["city"] == geo_city.lower()].iloc[-1] if not geo_df.empty else None
+            
+            if latest_data is not None:
+                col1, col2, col3 = st.columns(3)
+                with col1:
+                    st.metric("Max Temperature", f"{latest_data['tmax_f']}°F")
+                with col2:
+                    st.metric("Energy Demand", f"{latest_data['energy_mwh']:,.0f} MWh")
+                with col3:
+                    change = latest_data['energy_pct_change']
+                    st.metric("Daily Change", f"{change:.1f}%", 
+                             delta_color="inverse" if change > 0 else "normal")
+                
+                # Map visualization
+                fig = go.Figure(go.Scattergeo(
+                    lon = [city_coords[geo_city.lower()]["lon"]],
+                    lat = [city_coords[geo_city.lower()]["lat"]],
+                    text = f"{geo_city.title()}<br>Temp: {latest_data['tmax_f']}°F<br>Energy: {latest_data['energy_mwh']:,.0f} MWh",
+                    marker = dict(
+                        size = 20,
+                        color = "red" if latest_data['energy_pct_change'] > 0 else "green",
+                        opacity = 0.8
+                    )
+                ))
+                fig.update_layout(
+                    geo = dict(
+                        scope = 'usa',
+                        projection_type = 'albers usa',
+                        showland = True,
+                        landcolor = "rgb(250, 250, 250)",
+                        subunitcolor = "rgb(217, 217, 217)",
+                        countrycolor = "rgb(217, 217, 217)",
+                        countrywidth = 0.5,
+                        subunitwidth = 0.5
+                    ),
+                    height = 400,
+                    margin = {"r":0,"t":0,"l":0,"b":0}
+                )
+                st.plotly_chart(fig, use_container_width=True)
+        
+        # Time Series
+        st.subheader("📉 Temperature & Energy Trend")
+        ts_city = st.selectbox("Select City for Time Series", cities, key="ts_city")
+        ts_data = filtered_df[filtered_df["city"] == ts_city]
+        
+        if not ts_data.empty:
+            fig = go.Figure()
+            fig.add_trace(go.Scatter(
+                x=ts_data["date"], 
+                y=ts_data["tmax_f"], 
+                name="Max Temp (°F)",
+                line=dict(color='firebrick')
+            ))
+            fig.add_trace(go.Scatter(
+                x=ts_data["date"], 
+                y=ts_data["energy_mwh"], 
+                name="Energy (MWh)",
+                yaxis="y2",
+                line=dict(color='navy', dash='dot')
+            ))
+            
+            # Highlight weekends
+            for date in ts_data["date"]:
+                if date.weekday() >= 5:  # Saturday or Sunday
+                    fig.add_vrect(
+                        x0=date, x1=date + pd.Timedelta(days=1),
+                        fillcolor="lightgray", opacity=0.2,
+                        line_width=0
+                    )
+            
+            fig.update_layout(
+                yaxis=dict(title="Temperature (°F)"),
+                yaxis2=dict(title="Energy (MWh)", overlaying="y", side="right"),
+                height=450,
+                hovermode="x unified"
+            )
+            st.plotly_chart(fig, use_container_width=True)
+        
+        # Correlation
+        st.subheader("🔗 Temperature vs. Energy Correlation")
+        corr_city = st.selectbox("Select City for Correlation", cities, key="corr_city")
+        corr_data = filtered_df[filtered_df["city"] == corr_city]
+        
+        if not corr_data.empty:
+            fig = px.scatter(
+                corr_data, 
+                x="tmax_f", 
+                y="energy_mwh",
+                trendline="ols",
+                hover_data=["date"],
+                labels={"tmax_f": "Max Temperature (°F)", "energy_mwh": "Energy (MWh)"}
+            )
+            r = corr_data["tmax_f"].corr(corr_data["energy_mwh"])
+            fig.add_annotation(
+                text=f"R = {r:.2f}, R² = {r**2:.2f}",
+                xref="paper", yref="paper",
+                x=0.95, y=0.95,
+                showarrow=False,
+                bgcolor="white"
+            )
+            st.plotly_chart(fig, use_container_width=True)
+        
+        # Heatmap
+        st.subheader("🔥 Energy Usage Patterns")
+        hm_city = st.selectbox("Select City for Heatmap", cities, key="hm_city")
+        hm_data = filtered_df[filtered_df["city"] == hm_city]
+        
+        if not hm_data.empty:
+            def temp_band(t):
+                if t < 50: return "<50°F"
+                elif t < 60: return "50-60°F"
+                elif t < 70: return "60-70°F"
+                elif t < 80: return "70-80°F"
+                elif t < 90: return "80-90°F"
+                return ">90°F"
+            
+            heat_data = hm_data.copy()
+            heat_data["weekday"] = heat_data["date"].dt.day_name()
+            heat_data["temp_range"] = heat_data["tmax_f"].apply(temp_band)
+            
+            # Ensure all temperature ranges exist
+            temp_ranges = ["<50°F", "50-60°F", "60-70°F", "70-80°F", "80-90°F", ">90°F"]
+            weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+            
+            pivot = heat_data.pivot_table(
+                index="temp_range",
+                columns="weekday",
+                values="energy_mwh",
+                aggfunc="mean"
+            ).reindex(index=temp_ranges, columns=weekdays).fillna(0)
+            
+            fig = go.Figure(go.Heatmap(
+                z=pivot.values,
+                x=pivot.columns,
+                y=pivot.index,
+                colorscale="RdBu_r",
+                hoverinfo="text",
+                text=[["{:.1f} MWh".format(val) for val in row] for row in pivot.values],
+                colorbar=dict(title="Avg Energy (MWh)")
+            ))
+            fig.update_layout(
+                height=500,
+                xaxis_title="Day of Week",
+                yaxis_title="Temperature Range"
+            )
+            st.plotly_chart(fig, use_container_width=True)
+# ─── City Comparison ───────────────────────────── #
+elif viz_mode == "City Comparison":
+    st.header("📊 City Comparison")
+    
+    if len(cities) < 2:
+        st.warning("Need at least 2 cities for comparison")
+    else:
+        col1, col2 = st.columns(2)
+        with col1:
+            city1 = st.selectbox("Select First City", cities, key="city1")
+        with col2:
+            city2 = st.selectbox("Select Second City", [c for c in cities if c != city1], key="city2")
+        
+        compare_data = filtered_df[filtered_df["city"].isin([city1, city2])]
+        
+        if len(compare_data["city"].unique()) < 2:
+            st.warning("Not enough data for selected cities in date range")
+        else:
+            # Time Series Comparison
+            st.subheader("📉 Temperature & Energy Trend Comparison")
+            
+            fig = go.Figure()
+            for city, color in zip([city1, city2], ["#1f77b4", "#ff7f0e"]):
+                city_df = compare_data[compare_data["city"] == city]
+                fig.add_trace(go.Scatter(
+                    x=city_df["date"],
+                    y=city_df["tmax_f"],
+                    name=f"{city} Temp",
+                    line=dict(color=color),
+                    yaxis="y1"
+                ))
+                fig.add_trace(go.Scatter(
+                    x=city_df["date"],
+                    y=city_df["energy_mwh"],
+                    name=f"{city} Energy",
+                    line=dict(color=color, dash="dot"),
+                    yaxis="y2"
+                ))
+            
+            fig.update_layout(
+                yaxis=dict(title="Temperature (°F)"),
+                yaxis2=dict(title="Energy (MWh)", overlaying="y", side="right"),
+                height=450,
+                legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
+            )
+            st.plotly_chart(fig, use_container_width=True)
+            
+            # Correlation Comparison
+            st.subheader("🔗 Correlation Comparison")
+            
+            fig = px.scatter(
+                compare_data,
+                x="tmax_f",
+                y="energy_mwh",
+                color="city",
+                trendline="ols",
+                hover_data=["date"],
+                labels={"tmax_f": "Max Temperature (°F)", "energy_mwh": "Energy (MWh)"},
+                color_discrete_sequence=["#1f77b4", "#ff7f0e"]
+            )
+            
+            # Add R values for each city
+            for i, city in enumerate([city1, city2]):
+                city_df = compare_data[compare_data["city"] == city]
+                r = city_df["tmax_f"].corr(city_df["energy_mwh"])
+                fig.add_annotation(
+                    text=f"{city}: R = {r:.2f}",
+                    xref="paper",
+                    yref="paper",
+                    x=0.95,
+                    y=0.90 - (i * 0.05),
+                    showarrow=False,
+                    bgcolor="white"
+                )
+            
+            st.plotly_chart(fig, use_container_width=True)
+            
+            # Heatmap Comparison
+            st.subheader("🔥 Usage Pattern Comparison")
+            
+            def temp_band(t):
+                if t < 50: return "<50°F"
+                elif t < 60: return "50-60°F"
+                elif t < 70: return "60-70°F"
+                elif t < 80: return "70-80°F"
+                elif t < 90: return "80-90°F"
+                return ">90°F"
+            
+            temp_ranges = ["<50°F", "50-60°F", "60-70°F", "70-80°F", "80-90°F", ">90°F"]
+            weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+            
+            col1, col2 = st.columns(2)
+            for i, city in enumerate([city1, city2]):
+                with col1 if i == 0 else col2:
+                    st.markdown(f"**{city}**")
+                    city_data = compare_data[compare_data["city"] == city].copy()
+                    city_data["weekday"] = city_data["date"].dt.day_name()
+                    city_data["temp_range"] = city_data["tmax_f"].apply(temp_band)
+                    
+                    pivot = city_data.pivot_table(
+                        index="temp_range",
+                        columns="weekday",
+                        values="energy_mwh",
+                        aggfunc="mean"
+                    ).reindex(index=temp_ranges, columns=weekdays).fillna(0)
+                    
+                    fig = go.Figure(go.Heatmap(
+                        z=pivot.values,
+                        x=pivot.columns,
+                        y=pivot.index,
+                        colorscale="RdBu_r",
+                        hoverinfo="text",
+                        text=[["{:.1f} MWh".format(val) for val in row] for row in pivot.values],
+                        colorbar=dict(title="Avg Energy (MWh)")
+                    ))
+                    fig.update_layout(
+                        height=500,
+                        xaxis_title="Day of Week",
+                        yaxis_title="Temperature Range"
+                    )
+                    st.plotly_chart(fig, use_container_width=True)
 
-# Hard-coded lat/lon (for 5 cities)
-city_coords = {
-    "new_york": {"lat": 40.7128, "lon": -74.0060},
-    "chicago": {"lat": 41.8781, "lon": -87.6298},
-    "houston": {"lat": 29.7604, "lon": -95.3698},
-    "phoenix": {"lat": 33.4484, "lon": -112.0740},
-    "seattle": {"lat": 47.6062, "lon": -122.3321}
-}
-
-map_fig = go.Figure()
-for _, row in geo_data.iterrows():
-    city = row["city"]
-    lat, lon = city_coords[city]["lat"], city_coords[city]["lon"]
-    hover_text = f"{city.title()}<br>Temp: {row.tmax_f}°F<br>Energy: {int(row.energy_mwh)} MWh<br>Change: {row.energy_pct_change:.1f}%"
-    map_fig.add_trace(go.Scattergeo(
-        lon=[lon], lat=[lat],
-        text=hover_text,
-        marker=dict(size=15, color=row.energy_color),
-        name=city.title()
-    ))
-map_fig.update_layout(
-    geo=dict(scope="usa", projection_type="albers usa"),
-    title="📍 Current Energy + Temperature Snapshot",
-    height=450
-)
-st.plotly_chart(map_fig, use_container_width=True)
-
-# ─── 2. Time Series Analysis ─────────────────────────────── #
-st.header("2️⃣ Temperature vs Energy Time Series")
-
-city_option = st.selectbox("Select a city", ["All Cities"] + cities)
-ts_df = filtered if city_option == "All Cities" else filtered[filtered.city == city_option]
-
-fig = go.Figure()
-fig.add_trace(go.Scatter(x=ts_df.date, y=ts_df.tmax_f, name="Max Temp (°F)", yaxis="y1"))
-fig.add_trace(go.Scatter(x=ts_df.date, y=ts_df.energy_mwh, name="Energy Usage (MWh)", yaxis="y2", line=dict(dash="dot")))
-
-# Highlight weekends
-for date in ts_df.date:
-    if date.weekday() >= 5:
-        fig.add_vrect(x0=date, x1=date + pd.Timedelta(days=1), fillcolor="lightgrey", opacity=0.2, line_width=0)
-
-fig.update_layout(
-    title="Temperature and Energy Usage Over Time",
-    xaxis_title="Date",
-    yaxis=dict(title="Temperature (°F)"),
-    yaxis2=dict(title="Energy (MWh)", overlaying="y", side="right"),
-    height=450
-)
-st.plotly_chart(fig, use_container_width=True)
-
-# ─── 3. Correlation Analysis ─────────────────────────────── #
-st.header("3️⃣ Temperature vs Energy Correlation")
-
-scatter_df = merged_df[merged_df.city.isin(selected_cities)]
-fig = px.scatter(
-    scatter_df, x="tmax_f", y="energy_mwh", color="city", trendline="ols",
-    hover_data=["date"], title="Temperature vs Energy Consumption"
-)
-
-# Compute correlation
-r = scatter_df["tmax_f"].corr(scatter_df["energy_mwh"])
-r2 = r ** 2
-fig.add_annotation(
-    text=f"R = {r:.2f}, R² = {r2:.2f}",
-    xref="paper", yref="paper",
-    x=0.95, y=0.95, showarrow=False
-)
-st.plotly_chart(fig, use_container_width=True)
-
-# ─── 4. Usage Patterns Heatmap ───────────────────────────── #
-st.header("4️⃣ Energy Usage by Temperature & Weekday")
-
-hm_city = st.selectbox("Select city for heatmap", cities)
-city_df = merged_df[merged_df.city == hm_city].copy()
-city_df["weekday"] = city_df.date.dt.day_name()
-
-def temp_band(t):
-    if t < 50: return "<50°F"
-    elif t < 60: return "50-60°F"
-    elif t < 70: return "60-70°F"
-    elif t < 80: return "70-80°F"
-    elif t < 90: return "80-90°F"
-    return ">90°F"
-
-city_df["temp_range"] = city_df["tmax_f"].apply(temp_band)
-pivot = city_df.pivot_table(
-    index="temp_range", columns="weekday", values="energy_mwh", aggfunc="mean"
-).fillna(0).reindex([
-    "<50°F", "50-60°F", "60-70°F", "70-80°F", "80-90°F", ">90°F"
-])
-
-fig = go.Figure(data=go.Heatmap(
-    z=pivot.values,
-    x=pivot.columns,
-    y=pivot.index,
-    text=np.round(pivot.values, 1).astype(str),
-    hoverinfo="text",
-    colorscale="RdBu_r",
-    colorbar_title="Avg MWh"
-))
-fig.update_layout(
-    title=f"Avg Energy Usage by Temperature and Day ({hm_city.title()})",
-    height=450
-)
-st.plotly_chart(fig, use_container_width=True)
+# ─── Data Quality Section (Appears in all modes) ─ #
+if not quality_df.empty and viz_mode != "Overview":
+    st.header("🧪 Data Quality Metrics")
+    
+    # Summary cards
+    cols = st.columns(4)
+    metrics = [
+        ("Missing Values", "missing_values"),
+        ("Temperature Outliers", "temperature_outliers"),
+        ("Energy Issues", "energy_issues"),
+        ("Stale Data", "data_freshness")
+    ]
+    
+    for i, (title, check) in enumerate(metrics):
+        with cols[i]:
+            if check == "data_freshness":
+                stale = quality_df[quality_df["check"] == check]
+                stale = stale[stale["count"] > 2]["city"].nunique()
+                st.metric(title, stale)
+            else:
+                total = quality_df[quality_df["check"] == check]["count"].sum()
+                st.metric(title, total)
+    
+    # Detailed quality table
+    st.subheader("Detailed Quality Report")
+    st.dataframe(quality_df, use_container_width=True)

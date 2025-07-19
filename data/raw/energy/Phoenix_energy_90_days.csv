@@ -1,10 +1,4 @@
 date,respondent,respondent-name,type,type-name,timezone,timezone-description,demand,value-units,city
-2025-04-15,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,93311,megawatthours,phoenix
-2025-04-16,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,89815,megawatthours,phoenix
-2025-04-17,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,80434,megawatthours,phoenix
-2025-04-18,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,82099,megawatthours,phoenix
-2025-04-19,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,75082,megawatthours,phoenix
-2025-04-20,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,77575,megawatthours,phoenix
 2025-04-21,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,83202,megawatthours,phoenix
 2025-04-22,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,82373,megawatthours,phoenix
 2025-04-23,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,82526,megawatthours,phoenix
@@ -88,4 +82,10 @@ date,respondent,respondent-name,type,type-name,timezone,timezone-description,dem
 2025-07-10,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,157730,megawatthours,phoenix
 2025-07-11,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,154112,megawatthours,phoenix
 2025-07-12,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,143389,megawatthours,phoenix
-2025-07-13,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,145861,megawatthours,phoenix
+2025-07-13,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,138591,megawatthours,phoenix
+2025-07-14,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,144670,megawatthours,phoenix
+2025-07-15,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,145208,megawatthours,phoenix
+2025-07-16,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,134198,megawatthours,phoenix
+2025-07-17,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,139812,megawatthours,phoenix
+2025-07-18,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,141754,megawatthours,phoenix
+2025-07-19,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,Pacific,Pacific,133179,megawatthours,phoenix

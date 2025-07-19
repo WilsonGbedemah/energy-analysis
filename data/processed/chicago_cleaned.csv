@@ -1,5 +1,4 @@
 date,tmax_c,tmin_c,tmax_f,tmin_f,city_x,respondent,respondent-name,type,type-name,timezone,timezone-description,energy_mwh,value-units,city_y,city
-2025-04-20,1.5,0.72,34.7,33.3,chicago,PJM,"PJM Interconnection, LLC",D,Demand,Pacific,Pacific,1778229,megawatthours,chicago,chicago
 2025-04-21,1.61,0.72,34.9,33.3,chicago,PJM,"PJM Interconnection, LLC",D,Demand,Pacific,Pacific,1954729,megawatthours,chicago,chicago
 2025-04-22,2.33,0.5,36.19,32.9,chicago,PJM,"PJM Interconnection, LLC",D,Demand,Pacific,Pacific,1972440,megawatthours,chicago,chicago
 2025-04-23,2.44,1.33,36.39,34.39,chicago,PJM,"PJM Interconnection, LLC",D,Demand,Pacific,Pacific,1965444,megawatthours,chicago,chicago
@@ -82,3 +81,8 @@ date,tmax_c,tmin_c,tmax_f,tmin_f,city_x,respondent,respondent-name,type,type-nam
 2025-07-09,2.94,2.06,37.29,35.71,chicago,PJM,"PJM Interconnection, LLC",D,Demand,Pacific,Pacific,2801956,megawatthours,chicago,chicago
 2025-07-10,2.94,1.94,37.29,35.49,chicago,PJM,"PJM Interconnection, LLC",D,Demand,Pacific,Pacific,2734933,megawatthours,chicago,chicago
 2025-07-11,3.22,2.11,37.8,35.8,chicago,PJM,"PJM Interconnection, LLC",D,Demand,Pacific,Pacific,2870812,megawatthours,chicago,chicago
+2025-07-12,2.89,2.06,37.2,35.71,chicago,PJM,"PJM Interconnection, LLC",D,Demand,Pacific,Pacific,2747174,megawatthours,chicago,chicago
+2025-07-13,2.72,1.94,36.9,35.49,chicago,PJM,"PJM Interconnection, LLC",D,Demand,Pacific,Pacific,2671369,megawatthours,chicago,chicago
+2025-07-14,3.06,1.89,37.51,35.4,chicago,PJM,"PJM Interconnection, LLC",D,Demand,Pacific,Pacific,2836449,megawatthours,chicago,chicago
+2025-07-15,3.28,2.11,37.9,35.8,chicago,PJM,"PJM Interconnection, LLC",D,Demand,Pacific,Pacific,2885264,megawatthours,chicago,chicago
+2025-07-16,3.22,2.11,37.8,35.8,chicago,PJM,"PJM Interconnection, LLC",D,Demand,Pacific,Pacific,2952010,megawatthours,chicago,chicago
