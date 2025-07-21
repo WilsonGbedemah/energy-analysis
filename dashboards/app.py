@@ -94,57 +94,30 @@ if viz_mode == "Overview":
     - Visualizes energy consumption by temperature range and weekday
     - Colors indicate consumption levels (red = higher, blue = lower)
     - Helps identify usage patterns under different weather conditions
-    
-    **🧪 Data Quality Overview**
-    - Tracks data issues across cities including:
-      - Missing values in critical fields
-      - Temperature outliers (unrealistic values)
-      - Negative energy readings (invalid data)
-      - Data freshness (how current our data is)
     """)
     
-    if not quality_df.empty:
-        st.subheader("Current Data Quality Status")
-        
-        # Summary cards
-        col1, col2, col3, col4 = st.columns(4)
-        with col1:
-            missing = quality_df[quality_df["check"] == "missing_values"]["count"].sum()
-            st.metric("Missing Values", missing, help="Count of null values in critical columns")
-        
-        with col2:
-            outliers = quality_df[quality_df["check"] == "temperature_outliers"]["count"].sum()
-            st.metric("Temperature Outliers", outliers, help="Readings outside -50°F to 130°F range")
-        
-        with col3:
-            energy_issues = quality_df[quality_df["check"] == "energy_issues"]["count"].sum()
-            st.metric("Energy Data Issues", energy_issues, help="Negative or missing energy values")
-        
-        with col4:
-            stale = quality_df[quality_df["check"] == "data_freshness"]
-            stale_cities = stale[stale["count"] > 2]["city"].unique()
-            st.metric("Stale Data Cities", len(stale_cities), help="Cities with data older than 2 days")
-        
-        # Detailed quality checks
-        st.markdown("""
-        ### Quality Check Documentation
-        
-        **Missing Values**
-        - Checks for null values in temperature and energy fields
-        - Why it matters: Missing data can skew analysis and modeling results
-        
-        **Temperature Outliers**
-        - Flags readings below -50°F or above 130°F
-        - Why it matters: These extreme values likely indicate sensor errors
-        
-        **Energy Issues**
-        - Detects negative or missing energy values
-        - Why it matters: Negative consumption is physically impossible
-        
-        **Data Freshness**
-        - Tracks when data was last updated
-        - Why it matters: Stale data reduces decision-making relevance
-        """)
+    # Display the complete merged data table
+    st.header("📊 Complete Energy and Weather Data")
+    st.markdown("This table shows all processed data across all cities")
+    
+    if not merged_df.empty:
+        st.dataframe(
+            merged_df,
+            column_config={
+                "date": st.column_config.DateColumn("Date", format="YYYY-MM-DD"),
+                "city": "City",
+                "tmax_f": st.column_config.NumberColumn("Max Temp (°F)", format="%.1f"),
+                "tmin_f": st.column_config.NumberColumn("Min Temp (°F)", format="%.1f"),
+                "energy_mwh": st.column_config.NumberColumn("Energy (MWh)", format=",.0f"),
+                "weekday": "Day of Week",
+                "month": "Month",
+                "day_type": "Day Type"
+            },
+            use_container_width=True,
+            height=600
+        )
+    else:
+        st.warning("No data available to display")
 
 # ─── Single City Analysis ──────────────────────── #
 elif viz_mode == "Single City Analysis":
@@ -315,6 +288,44 @@ elif viz_mode == "Single City Analysis":
                 yaxis_title="Temperature Range"
             )
             st.plotly_chart(fig, use_container_width=True)
+
+        # Data Quality Metrics
+        if not quality_df.empty:
+            st.header("🧪 Data Quality Metrics")
+            q_city = st.selectbox("Select City for Quality Report", cities, key="quality_city")
+            city_quality = quality_df[quality_df["city"] == q_city]
+            
+            # Create columns for metrics
+            col1, col2, col3, col4 = st.columns(4)
+            
+            with col1:
+                missing = city_quality[city_quality["check"] == "missing_values"]["count"].sum()
+                st.metric("Missing Values", missing, 
+                         help="Count of null values in critical columns")
+            
+            with col2:
+                outliers = city_quality[city_quality["check"] == "temperature_outliers"]["count"].sum()
+                st.metric("Temperature Outliers", outliers,
+                         help="Readings outside -50°F to 130°F range")
+            
+            with col3:
+                energy_issues = city_quality[city_quality["check"] == "energy_issues"]["count"].sum()
+                st.metric("Energy Data Issues", energy_issues,
+                         help="Negative or missing energy values")
+            
+            with col4:
+                freshness = city_quality[city_quality["check"] == "data_freshness"]
+                if not freshness.empty:
+                    days_old = freshness["count"].values[0]
+                    is_fresh = freshness["is_fresh"].values[0]
+                    st.metric("Data Freshness", 
+                            f"{days_old} days",
+                            "Fresh" if is_fresh else "Stale",
+                            help="How current the data is (fresh = ≤2 days old)",
+                            delta_color="normal")
+                else:
+                    st.metric("Data Freshness", "N/A")
+
 # ─── City Comparison ───────────────────────────── #
 elif viz_mode == "City Comparison":
     st.header("📊 City Comparison")
@@ -436,30 +447,3 @@ elif viz_mode == "City Comparison":
                         yaxis_title="Temperature Range"
                     )
                     st.plotly_chart(fig, use_container_width=True)
-
-# ─── Data Quality Section (Appears in all modes) ─ #
-if not quality_df.empty and viz_mode != "Overview":
-    st.header("🧪 Data Quality Metrics")
-    
-    # Summary cards
-    cols = st.columns(4)
-    metrics = [
-        ("Missing Values", "missing_values"),
-        ("Temperature Outliers", "temperature_outliers"),
-        ("Energy Issues", "energy_issues"),
-        ("Stale Data", "data_freshness")
-    ]
-    
-    for i, (title, check) in enumerate(metrics):
-        with cols[i]:
-            if check == "data_freshness":
-                stale = quality_df[quality_df["check"] == check]
-                stale = stale[stale["count"] > 2]["city"].nunique()
-                st.metric(title, stale)
-            else:
-                total = quality_df[quality_df["check"] == check]["count"].sum()
-                st.metric(title, total)
-    
-    # Detailed quality table
-    st.subheader("Detailed Quality Report")
-    st.dataframe(quality_df, use_container_width=True)

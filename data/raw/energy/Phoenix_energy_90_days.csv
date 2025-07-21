@@ -1,5 +1,4 @@
 date,respondent,respondent-name,type,type-name,timezone,timezone-description,demand,value-units,city
-2025-04-21,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,83202,megawatthours,phoenix
 2025-04-22,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,82373,megawatthours,phoenix
 2025-04-23,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,82526,megawatthours,phoenix
 2025-04-24,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,82493,megawatthours,phoenix
@@ -88,4 +87,5 @@ date,respondent,respondent-name,type,type-name,timezone,timezone-description,dem
 2025-07-16,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,134198,megawatthours,phoenix
 2025-07-17,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,139812,megawatthours,phoenix
 2025-07-18,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,141754,megawatthours,phoenix
-2025-07-19,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,Pacific,Pacific,133179,megawatthours,phoenix
+2025-07-19,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,136060,megawatthours,phoenix
+2025-07-20,AZPS,Arizona Public Service Company,D,Demand,Pacific,Pacific,128251,megawatthours,phoenix

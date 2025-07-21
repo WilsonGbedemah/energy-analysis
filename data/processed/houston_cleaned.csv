@@ -1,6 +1,4 @@
 date,tmax_c,tmin_c,tmax_f,tmin_f,city_x,respondent,respondent-name,type,type-name,timezone,timezone-description,energy_mwh,value-units,city_y,city
-2025-04-21,3.0,2.11,37.4,35.8,houston,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1207627,megawatthours,houston,houston
-2025-04-22,3.06,1.94,37.51,35.49,houston,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1285560,megawatthours,houston,houston
 2025-04-23,2.5,2.06,36.5,35.71,houston,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1247638,megawatthours,houston,houston
 2025-04-24,2.94,1.94,37.29,35.49,houston,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1237172,megawatthours,houston,houston
 2025-04-25,3.11,1.94,37.6,35.49,houston,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1261867,megawatthours,houston,houston
@@ -86,3 +84,5 @@ date,tmax_c,tmin_c,tmax_f,tmin_f,city_x,respondent,respondent-name,type,type-nam
 2025-07-14,3.33,2.33,37.99,36.19,houston,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1510140,megawatthours,houston,houston
 2025-07-15,3.5,2.44,38.3,36.39,houston,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1575662,megawatthours,houston,houston
 2025-07-16,3.61,2.61,38.5,36.7,houston,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1597302,megawatthours,houston,houston
+2025-07-17,3.33,2.39,37.99,36.3,houston,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1572318,megawatthours,houston,houston
+2025-07-18,3.44,2.61,38.19,36.7,houston,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,Pacific,Pacific,1572266,megawatthours,houston,houston

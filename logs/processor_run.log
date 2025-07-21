@@ -457,3 +457,156 @@
 2025-07-19 19:32:26,849 - INFO - \U0001f4cb Quality report saved: data/processed/seattle_quality_report.csv
 2025-07-19 19:32:26,852 - INFO - \u2705 Cleaned data saved: data/processed/seattle_cleaned.csv
 2025-07-19 19:32:26,852 - INFO - \U0001f3af Done! 5 cities processed.
+2025-07-20 04:34:07,389 - INFO - \U0001f680 Starting full processing job
+2025-07-20 04:34:07,447 - WARNING - \U0001f4c6 chicago data is 3 days old (latest: 2025-07-17)
+2025-07-20 04:34:07,451 - INFO - \U0001f4cb Quality report saved: data/processed/chicago_quality_report.csv
+2025-07-20 04:34:07,456 - INFO - \u2705 Cleaned data saved: data/processed/chicago_cleaned.csv
+2025-07-20 04:34:07,495 - WARNING - \U0001f4c6 houston data is 3 days old (latest: 2025-07-17)
+2025-07-20 04:34:07,497 - INFO - \U0001f4cb Quality report saved: data/processed/houston_quality_report.csv
+2025-07-20 04:34:07,500 - INFO - \u2705 Cleaned data saved: data/processed/houston_cleaned.csv
+2025-07-20 04:34:07,535 - WARNING - \U0001f4c6 new_york data is 3 days old (latest: 2025-07-17)
+2025-07-20 04:34:07,539 - INFO - \U0001f4cb Quality report saved: data/processed/new_york_quality_report.csv
+2025-07-20 04:34:07,543 - INFO - \u2705 Cleaned data saved: data/processed/new_york_cleaned.csv
+2025-07-20 04:34:07,576 - WARNING - \U0001f4c6 phoenix data is 3 days old (latest: 2025-07-17)
+2025-07-20 04:34:07,579 - INFO - \U0001f4cb Quality report saved: data/processed/phoenix_quality_report.csv
+2025-07-20 04:34:07,583 - INFO - \u2705 Cleaned data saved: data/processed/phoenix_cleaned.csv
+2025-07-20 04:34:07,609 - WARNING - \U0001f4c6 seattle data is 3 days old (latest: 2025-07-17)
+2025-07-20 04:34:07,612 - INFO - \U0001f4cb Quality report saved: data/processed/seattle_quality_report.csv
+2025-07-20 04:34:07,615 - INFO - \u2705 Cleaned data saved: data/processed/seattle_cleaned.csv
+2025-07-20 04:34:07,616 - INFO - \U0001f3af Done! 5 cities processed.
+2025-07-20 06:10:02,243 - INFO - \U0001f680 Starting full processing job
+2025-07-20 06:10:02,283 - WARNING - \U0001f4c6 chicago data is 3 days old (latest: 2025-07-17)
+2025-07-20 06:10:02,287 - INFO - \U0001f4cb Quality report saved: data/processed/chicago_quality_report.csv
+2025-07-20 06:10:02,290 - INFO - \u2705 Cleaned data saved: data/processed/chicago_cleaned.csv
+2025-07-20 06:10:02,323 - WARNING - \U0001f4c6 houston data is 3 days old (latest: 2025-07-17)
+2025-07-20 06:10:02,324 - INFO - \U0001f4cb Quality report saved: data/processed/houston_quality_report.csv
+2025-07-20 06:10:02,327 - INFO - \u2705 Cleaned data saved: data/processed/houston_cleaned.csv
+2025-07-20 06:10:02,360 - WARNING - \U0001f4c6 new_york data is 3 days old (latest: 2025-07-17)
+2025-07-20 06:10:02,362 - INFO - \U0001f4cb Quality report saved: data/processed/new_york_quality_report.csv
+2025-07-20 06:10:02,365 - INFO - \u2705 Cleaned data saved: data/processed/new_york_cleaned.csv
+2025-07-20 06:10:02,396 - WARNING - \U0001f4c6 phoenix data is 3 days old (latest: 2025-07-17)
+2025-07-20 06:10:02,397 - INFO - \U0001f4cb Quality report saved: data/processed/phoenix_quality_report.csv
+2025-07-20 06:10:02,401 - INFO - \u2705 Cleaned data saved: data/processed/phoenix_cleaned.csv
+2025-07-20 06:10:02,432 - WARNING - \U0001f4c6 seattle data is 3 days old (latest: 2025-07-17)
+2025-07-20 06:10:02,434 - INFO - \U0001f4cb Quality report saved: data/processed/seattle_quality_report.csv
+2025-07-20 06:10:02,438 - INFO - \u2705 Cleaned data saved: data/processed/seattle_cleaned.csv
+2025-07-20 06:10:02,438 - INFO - \U0001f3af Done! 5 cities processed.
+2025-07-20 06:28:44,185 - INFO - \U0001f680 Starting full processing job
+2025-07-20 06:28:44,212 - WARNING - \U0001f4c6 chicago data is 3 days old (latest: 2025-07-17)
+2025-07-20 06:28:44,215 - INFO - \U0001f4cb Quality report saved: data/processed/chicago_quality_report.csv
+2025-07-20 06:28:44,218 - INFO - \u2705 Cleaned data saved: data/processed/chicago_cleaned.csv
+2025-07-20 06:28:44,240 - WARNING - \U0001f4c6 houston data is 3 days old (latest: 2025-07-17)
+2025-07-20 06:28:44,242 - INFO - \U0001f4cb Quality report saved: data/processed/houston_quality_report.csv
+2025-07-20 06:28:44,245 - INFO - \u2705 Cleaned data saved: data/processed/houston_cleaned.csv
+2025-07-20 06:28:44,268 - WARNING - \U0001f4c6 new_york data is 3 days old (latest: 2025-07-17)
+2025-07-20 06:28:44,269 - INFO - \U0001f4cb Quality report saved: data/processed/new_york_quality_report.csv
+2025-07-20 06:28:44,272 - INFO - \u2705 Cleaned data saved: data/processed/new_york_cleaned.csv
+2025-07-20 06:28:44,294 - WARNING - \U0001f4c6 phoenix data is 3 days old (latest: 2025-07-17)
+2025-07-20 06:28:44,295 - INFO - \U0001f4cb Quality report saved: data/processed/phoenix_quality_report.csv
+2025-07-20 06:28:44,299 - INFO - \u2705 Cleaned data saved: data/processed/phoenix_cleaned.csv
+2025-07-20 06:28:44,320 - WARNING - \U0001f4c6 seattle data is 3 days old (latest: 2025-07-17)
+2025-07-20 06:28:44,322 - INFO - \U0001f4cb Quality report saved: data/processed/seattle_quality_report.csv
+2025-07-20 06:28:44,325 - INFO - \u2705 Cleaned data saved: data/processed/seattle_cleaned.csv
+2025-07-20 06:28:44,325 - INFO - \U0001f3af Done! 5 cities processed.
+2025-07-20 07:18:06,473 - INFO - \U0001f680 Starting full processing job
+2025-07-20 07:18:06,495 - WARNING - \U0001f4c6 chicago data is 3 days old (latest: 2025-07-17)
+2025-07-20 07:18:06,499 - INFO - \U0001f4cb Quality report saved: data/processed/chicago_quality_report.csv
+2025-07-20 07:18:06,504 - INFO - \u2705 Cleaned data saved: data/processed/chicago_cleaned.csv
+2025-07-20 07:18:06,525 - WARNING - \U0001f4c6 houston data is 3 days old (latest: 2025-07-17)
+2025-07-20 07:18:06,526 - INFO - \U0001f4cb Quality report saved: data/processed/houston_quality_report.csv
+2025-07-20 07:18:06,530 - INFO - \u2705 Cleaned data saved: data/processed/houston_cleaned.csv
+2025-07-20 07:18:06,542 - WARNING - \U0001f4c6 new_york data is 3 days old (latest: 2025-07-17)
+2025-07-20 07:18:06,543 - INFO - \U0001f4cb Quality report saved: data/processed/new_york_quality_report.csv
+2025-07-20 07:18:06,547 - INFO - \u2705 Cleaned data saved: data/processed/new_york_cleaned.csv
+2025-07-20 07:18:06,561 - WARNING - \U0001f4c6 phoenix data is 3 days old (latest: 2025-07-17)
+2025-07-20 07:18:06,562 - INFO - \U0001f4cb Quality report saved: data/processed/phoenix_quality_report.csv
+2025-07-20 07:18:06,565 - INFO - \u2705 Cleaned data saved: data/processed/phoenix_cleaned.csv
+2025-07-20 07:18:06,578 - WARNING - \U0001f4c6 seattle data is 3 days old (latest: 2025-07-17)
+2025-07-20 07:18:06,580 - INFO - \U0001f4cb Quality report saved: data/processed/seattle_quality_report.csv
+2025-07-20 07:18:06,583 - INFO - \u2705 Cleaned data saved: data/processed/seattle_cleaned.csv
+2025-07-20 07:18:06,583 - INFO - \U0001f3af Done! 5 cities processed.
+2025-07-20 07:19:41,814 - INFO - \U0001f680 Starting full processing job
+2025-07-20 07:19:41,844 - WARNING - \U0001f4c6 chicago data is 3 days old (latest: 2025-07-17)
+2025-07-20 07:19:41,847 - INFO - \U0001f4cb Quality report saved: data/processed/chicago_quality_report.csv
+2025-07-20 07:19:41,850 - INFO - \u2705 Cleaned data saved: data/processed/chicago_cleaned.csv
+2025-07-20 07:19:41,873 - WARNING - \U0001f4c6 houston data is 3 days old (latest: 2025-07-17)
+2025-07-20 07:19:41,875 - INFO - \U0001f4cb Quality report saved: data/processed/houston_quality_report.csv
+2025-07-20 07:19:41,878 - INFO - \u2705 Cleaned data saved: data/processed/houston_cleaned.csv
+2025-07-20 07:19:41,899 - WARNING - \U0001f4c6 new_york data is 3 days old (latest: 2025-07-17)
+2025-07-20 07:19:41,901 - INFO - \U0001f4cb Quality report saved: data/processed/new_york_quality_report.csv
+2025-07-20 07:19:41,904 - INFO - \u2705 Cleaned data saved: data/processed/new_york_cleaned.csv
+2025-07-20 07:19:41,927 - WARNING - \U0001f4c6 phoenix data is 3 days old (latest: 2025-07-17)
+2025-07-20 07:19:41,928 - INFO - \U0001f4cb Quality report saved: data/processed/phoenix_quality_report.csv
+2025-07-20 07:19:41,931 - INFO - \u2705 Cleaned data saved: data/processed/phoenix_cleaned.csv
+2025-07-20 07:19:41,954 - WARNING - \U0001f4c6 seattle data is 3 days old (latest: 2025-07-17)
+2025-07-20 07:19:41,955 - INFO - \U0001f4cb Quality report saved: data/processed/seattle_quality_report.csv
+2025-07-20 07:19:41,959 - INFO - \u2705 Cleaned data saved: data/processed/seattle_cleaned.csv
+2025-07-20 07:19:41,959 - INFO - \U0001f3af Done! 5 cities processed.
+2025-07-20 07:34:13,624 - INFO - \U0001f680 Starting full processing job
+2025-07-20 07:34:13,652 - WARNING - \U0001f4c6 chicago data is 3 days old (latest: 2025-07-17)
+2025-07-20 07:34:13,655 - INFO - \U0001f4cb Quality report saved: data/processed/chicago_quality_report.csv
+2025-07-20 07:34:13,659 - INFO - \u2705 Cleaned data saved: data/processed/chicago_cleaned.csv
+2025-07-20 07:34:13,683 - WARNING - \U0001f4c6 houston data is 3 days old (latest: 2025-07-17)
+2025-07-20 07:34:13,684 - INFO - \U0001f4cb Quality report saved: data/processed/houston_quality_report.csv
+2025-07-20 07:34:13,687 - INFO - \u2705 Cleaned data saved: data/processed/houston_cleaned.csv
+2025-07-20 07:34:13,709 - WARNING - \U0001f4c6 new_york data is 3 days old (latest: 2025-07-17)
+2025-07-20 07:34:13,710 - INFO - \U0001f4cb Quality report saved: data/processed/new_york_quality_report.csv
+2025-07-20 07:34:13,713 - INFO - \u2705 Cleaned data saved: data/processed/new_york_cleaned.csv
+2025-07-20 07:34:13,735 - WARNING - \U0001f4c6 phoenix data is 3 days old (latest: 2025-07-17)
+2025-07-20 07:34:13,737 - INFO - \U0001f4cb Quality report saved: data/processed/phoenix_quality_report.csv
+2025-07-20 07:34:13,740 - INFO - \u2705 Cleaned data saved: data/processed/phoenix_cleaned.csv
+2025-07-20 07:34:13,754 - WARNING - \U0001f4c6 seattle data is 3 days old (latest: 2025-07-17)
+2025-07-20 07:34:13,756 - INFO - \U0001f4cb Quality report saved: data/processed/seattle_quality_report.csv
+2025-07-20 07:34:13,759 - INFO - \u2705 Cleaned data saved: data/processed/seattle_cleaned.csv
+2025-07-20 07:34:13,759 - INFO - \U0001f3af Done! 5 cities processed.
+2025-07-20 07:40:45,151 - INFO - \U0001f680 Starting full processing job
+2025-07-20 07:40:45,179 - WARNING - \U0001f4c6 chicago data is 3 days old (latest: 2025-07-17)
+2025-07-20 07:40:45,183 - INFO - \U0001f4cb Quality report saved: data/processed/chicago_quality_report.csv
+2025-07-20 07:40:45,187 - INFO - \u2705 Cleaned data saved: data/processed/chicago_cleaned.csv
+2025-07-20 07:40:45,218 - WARNING - \U0001f4c6 houston data is 3 days old (latest: 2025-07-17)
+2025-07-20 07:40:45,221 - INFO - \U0001f4cb Quality report saved: data/processed/houston_quality_report.csv
+2025-07-20 07:40:45,225 - INFO - \u2705 Cleaned data saved: data/processed/houston_cleaned.csv
+2025-07-20 07:40:45,256 - WARNING - \U0001f4c6 new_york data is 3 days old (latest: 2025-07-17)
+2025-07-20 07:40:45,258 - INFO - \U0001f4cb Quality report saved: data/processed/new_york_quality_report.csv
+2025-07-20 07:40:45,263 - INFO - \u2705 Cleaned data saved: data/processed/new_york_cleaned.csv
+2025-07-20 07:40:45,302 - WARNING - \U0001f4c6 phoenix data is 3 days old (latest: 2025-07-17)
+2025-07-20 07:40:45,304 - INFO - \U0001f4cb Quality report saved: data/processed/phoenix_quality_report.csv
+2025-07-20 07:40:45,309 - INFO - \u2705 Cleaned data saved: data/processed/phoenix_cleaned.csv
+2025-07-20 07:40:45,327 - WARNING - \U0001f4c6 seattle data is 3 days old (latest: 2025-07-17)
+2025-07-20 07:40:45,329 - INFO - \U0001f4cb Quality report saved: data/processed/seattle_quality_report.csv
+2025-07-20 07:40:45,336 - INFO - \u2705 Cleaned data saved: data/processed/seattle_cleaned.csv
+2025-07-20 07:40:45,336 - INFO - \U0001f3af Done! 5 cities processed.
+2025-07-20 07:42:28,240 - INFO - \U0001f680 Starting full processing job
+2025-07-20 07:42:28,270 - WARNING - \U0001f4c6 chicago data is 3 days old (latest: 2025-07-17)
+2025-07-20 07:42:28,274 - INFO - \U0001f4cb Quality report saved: data/processed/chicago_quality_report.csv
+2025-07-20 07:42:28,277 - INFO - \u2705 Cleaned data saved: data/processed/chicago_cleaned.csv
+2025-07-20 07:42:28,302 - WARNING - \U0001f4c6 houston data is 3 days old (latest: 2025-07-17)
+2025-07-20 07:42:28,304 - INFO - \U0001f4cb Quality report saved: data/processed/houston_quality_report.csv
+2025-07-20 07:42:28,308 - INFO - \u2705 Cleaned data saved: data/processed/houston_cleaned.csv
+2025-07-20 07:42:28,329 - WARNING - \U0001f4c6 new_york data is 3 days old (latest: 2025-07-17)
+2025-07-20 07:42:28,331 - INFO - \U0001f4cb Quality report saved: data/processed/new_york_quality_report.csv
+2025-07-20 07:42:28,336 - INFO - \u2705 Cleaned data saved: data/processed/new_york_cleaned.csv
+2025-07-20 07:42:28,359 - WARNING - \U0001f4c6 phoenix data is 3 days old (latest: 2025-07-17)
+2025-07-20 07:42:28,360 - INFO - \U0001f4cb Quality report saved: data/processed/phoenix_quality_report.csv
+2025-07-20 07:42:28,363 - INFO - \u2705 Cleaned data saved: data/processed/phoenix_cleaned.csv
+2025-07-20 07:42:28,377 - WARNING - \U0001f4c6 seattle data is 3 days old (latest: 2025-07-17)
+2025-07-20 07:42:28,379 - INFO - \U0001f4cb Quality report saved: data/processed/seattle_quality_report.csv
+2025-07-20 07:42:28,382 - INFO - \u2705 Cleaned data saved: data/processed/seattle_cleaned.csv
+2025-07-20 07:42:28,382 - INFO - \U0001f3af Done! 5 cities processed.
+2025-07-21 10:51:36,341 - INFO - \U0001f680 Starting full processing job
+2025-07-21 10:51:36,386 - WARNING - \U0001f4c6 chicago data is 3 days old (latest: 2025-07-18)
+2025-07-21 10:51:36,389 - INFO - \U0001f4cb Quality report saved: data/processed/chicago_quality_report.csv
+2025-07-21 10:51:36,393 - INFO - \u2705 Cleaned data saved: data/processed/chicago_cleaned.csv
+2025-07-21 10:51:36,423 - WARNING - \U0001f4c6 houston data is 3 days old (latest: 2025-07-18)
+2025-07-21 10:51:36,424 - INFO - \U0001f4cb Quality report saved: data/processed/houston_quality_report.csv
+2025-07-21 10:51:36,428 - INFO - \u2705 Cleaned data saved: data/processed/houston_cleaned.csv
+2025-07-21 10:51:36,457 - WARNING - \U0001f4c6 new_york data is 3 days old (latest: 2025-07-18)
+2025-07-21 10:51:36,458 - INFO - \U0001f4cb Quality report saved: data/processed/new_york_quality_report.csv
+2025-07-21 10:51:36,462 - INFO - \u2705 Cleaned data saved: data/processed/new_york_cleaned.csv
+2025-07-21 10:51:36,492 - WARNING - \U0001f4c6 phoenix data is 3 days old (latest: 2025-07-18)
+2025-07-21 10:51:36,493 - INFO - \U0001f4cb Quality report saved: data/processed/phoenix_quality_report.csv
+2025-07-21 10:51:36,497 - INFO - \u2705 Cleaned data saved: data/processed/phoenix_cleaned.csv
+2025-07-21 10:51:36,527 - WARNING - \U0001f4c6 seattle data is 3 days old (latest: 2025-07-18)
+2025-07-21 10:51:36,529 - INFO - \U0001f4cb Quality report saved: data/processed/seattle_quality_report.csv
+2025-07-21 10:51:36,532 - INFO - \u2705 Cleaned data saved: data/processed/seattle_cleaned.csv
+2025-07-21 10:51:36,532 - INFO - \U0001f3af Done! 5 cities processed.

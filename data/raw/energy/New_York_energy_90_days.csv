@@ -1,6 +1,4 @@
 date,respondent,respondent-name,type,type-name,timezone,timezone-description,demand,value-units,city
-2025-04-20,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,308781,megawatthours,new_york
-2025-04-21,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,360073,megawatthours,new_york
 2025-04-22,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,349802,megawatthours,new_york
 2025-04-23,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,339599,megawatthours,new_york
 2025-04-24,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,348022,megawatthours,new_york
@@ -89,3 +87,5 @@ date,respondent,respondent-name,type,type-name,timezone,timezone-description,dem
 2025-07-16,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,592140,megawatthours,new_york
 2025-07-17,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,589724,megawatthours,new_york
 2025-07-18,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,482873,megawatthours,new_york
+2025-07-19,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,458594,megawatthours,new_york
+2025-07-20,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,509431,megawatthours,new_york
