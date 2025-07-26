@@ -1,9 +1,4 @@
 date,respondent,respondent-name,type,type-name,timezone,timezone-description,demand,value-units,city
-2025-04-22,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,349802,megawatthours,new_york
-2025-04-23,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,339599,megawatthours,new_york
-2025-04-24,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,348022,megawatthours,new_york
-2025-04-25,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,357567,megawatthours,new_york
-2025-04-26,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,350143,megawatthours,new_york
 2025-04-27,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,319384,megawatthours,new_york
 2025-04-28,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,337969,megawatthours,new_york
 2025-04-29,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,351109,megawatthours,new_york
@@ -89,3 +84,8 @@ date,respondent,respondent-name,type,type-name,timezone,timezone-description,dem
 2025-07-18,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,482873,megawatthours,new_york
 2025-07-19,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,458594,megawatthours,new_york
 2025-07-20,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,509431,megawatthours,new_york
+2025-07-21,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,487180,megawatthours,new_york
+2025-07-22,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,441587,megawatthours,new_york
+2025-07-23,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,470924,megawatthours,new_york
+2025-07-24,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,532796,megawatthours,new_york
+2025-07-25,NYIS,New York Independent System Operator,D,Demand,Pacific,Pacific,575801,megawatthours,new_york

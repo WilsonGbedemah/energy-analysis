@@ -27,21 +27,32 @@ This project builds a **production-ready data pipeline** that combines **daily w
 ```
 energy-analysis/
 ├── dashboards/
-│   └── app.py                ← Streamlit dashboard
+│   └── app.py                # Streamlit dashboard
 ├── data/
-│   ├── raw/                  ← Raw data from APIs
-│   └── processed/            ← Cleaned, validated, and analyzed data
-├── logs/                     ← Log files for pipeline steps
+│   ├── raw/                  # Raw data from APIs
+│   └── processed/            # Cleaned, validated, and analyzed data
+├── logs/
+│   ├── analysis.log          # Analysis module logs
+│   ├── fetcher_run.log       # Data fetcher logs
+│   ├── pipeline.log          # Pipeline execution logs
+│   └── processor_run.log     # Data processor logs
 ├── src/
-│   ├── data_fetcher.py       ← Weather & energy data collection
-│   ├── data_processor.py     ← Cleaning + quality checks
-│   ├── analysis.py           ← Data aggregation + insights
-│   └── pipeline.py           ← Full ETL runner
-├── tests/                    ← Pytest-based unit tests
-├── Makefile                  ← Workflow automation
-├── .env                      ← Stores API keys (not versioned)
-├── README.md                 ← 📘 This file
-└── AI_USAGE.md               ← AI assistant audit (ChatGPT & Copilot)
+│   ├── data_fetcher.py       # Weather & energy data collection
+│   ├── data_processor.py     # Cleaning + quality checks
+│   ├── analysis.py           # Data aggregation + insights
+│   └── pipeline.py           # Full ETL runner
+├── tests/
+│   ├── test_data_fetcher.py
+│   ├── test_data_processor.py
+│   ├── test_analysis.py
+│   └── test_pipeline.py
+├── streamlit/
+│   └── config.toml           # Streamlit configuration
+├── Makefile                  # Workflow automation
+├── pyproject.toml            # Project metadata and dependencies
+├── .env                      # Stores API keys (not versioned)
+├── README.md                 # Project documentation
+└── AI_USAGE.md               # AI assistant audit(ChatGPT / GitHub Copilot)
 ```
 
 ---
